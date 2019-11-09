@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/src/CParser.o \
 	${OBJECTDIR}/src/main.o
 
 
@@ -60,12 +61,17 @@ LDLIBSOPTIONS=
 
 bin/parser: ${OBJECTFILES}
 	${MKDIR} -p bin
-	${LINK.c} -o bin/parser ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o bin/parser ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/src/main.o: src/main.c
+${OBJECTDIR}/src/CParser.o: src/CParser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.c) -g -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.c
+	$(COMPILE.cc) -g -std=c++98 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CParser.o src/CParser.cpp
+
+${OBJECTDIR}/src/main.o: src/main.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++98 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 # Subprojects
 .build-subprojects:
