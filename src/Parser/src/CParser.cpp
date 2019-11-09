@@ -53,6 +53,8 @@ int CParser::ReadParseFile() {
   char *start = this->_addr;
   char *end_of_line;
   int count = 0;
+  CRecord *CurrentRecord = new CRecord();
+
   while (1) {
     end_of_line = strstr(start, "\n");
     if (end_of_line == NULL)
@@ -61,9 +63,18 @@ int CParser::ReadParseFile() {
       break;
     memcpy(line_buffer, start, (end_of_line - (char *)start) + 1);
     line_buffer[(end_of_line - (char *)start) + 1] = 0;
-    if (strstr(line_buffer, "FDN") == line_buffer) {
-      count += 1;
+
+    if (char *token = strstr(line_buffer, ":")) {
+      char Key[strlen(line_buffer) + 1];
+      char Value[strlen(line_buffer) + 1];
+
+      strcpy(Key, line_buffer);
+      Key[token - line_buffer] = 0;
+      strcpy(Value, token);
+
+      CurrentRecord->AddField(new CRecordField(Key, Value));
     }
+
     // printf(line_buffer);
     // fflush(stdout);
     start = end_of_line + 1;

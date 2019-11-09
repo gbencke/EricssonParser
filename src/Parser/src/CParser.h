@@ -22,6 +22,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#include "CRecord.h"
+#include "CRecordField.h"
 #include "constants.h"
 
 class CParser {

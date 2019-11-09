@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>src/CParser.h</itemPath>
+      <itemPath>src/CRecord.h</itemPath>
+      <itemPath>src/CRecordField.h</itemPath>
       <itemPath>src/constants.h</itemPath>
       <itemPath>src/globals.h</itemPath>
     </logicalFolder>
@@ -16,6 +18,8 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/CParser.cpp</itemPath>
+      <itemPath>src/CRecord.cpp</itemPath>
+      <itemPath>src/CRecordField.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -56,6 +60,14 @@
       </item>
       <item path="src/CParser.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/CRecord.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CRecord.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/CRecordField.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CRecordField.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/constants.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/globals.h" ex="false" tool="3" flavor2="0">
@@ -87,6 +99,14 @@
       <item path="src/CParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/CParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/CRecord.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CRecord.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/CRecordField.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CRecordField.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/constants.h" ex="false" tool="3" flavor2="0">
       </item>
