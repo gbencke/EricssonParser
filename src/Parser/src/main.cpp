@@ -34,4 +34,5 @@ int main(int argc, char **argv) {
 
   Parser = new CParser(_DataFile);
   Parser->Parse();
+  printf("Execution time:%.2f", Parser->GetLastParsingTime());
 }

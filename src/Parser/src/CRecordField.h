@@ -14,8 +14,6 @@
 #ifndef CRECORDFIELD_H
 #define CRECORDFIELD_H
 
-#include <string.h>
-
 class CRecordField {
 public:
   CRecordField(const char *_Key, const char *Value);

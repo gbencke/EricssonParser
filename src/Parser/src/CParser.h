@@ -14,16 +14,9 @@
 #ifndef CPARSER_H
 #define CPARSER_H
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/mman.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-
 #include "CRecord.h"
 #include "CRecordField.h"
+#include "CRecordList.h"
 #include "constants.h"
 
 class CParser {
@@ -32,6 +25,7 @@ public:
   virtual ~CParser();
 
   int Parse();
+  double GetLastParsingTime();
 
 private:
   char *_DataFileToParse;
@@ -39,8 +33,12 @@ private:
   int _DataFileFd;
   char *_addr;
 
+  CRecordList *_RecordList;
+
   int MMapFile();
   int ReadParseFile();
+
+  double _lastParseTime;
 };
 
 #endif /* CPARSER_H */

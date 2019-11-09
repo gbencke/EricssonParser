@@ -10,13 +10,22 @@
  *
  * Created on November 9, 2019, 3:08 PM
  */
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <time.h>
 
 #include "CParser.h"
 
 CParser::CParser(const char *DataFileToParse) {
   this->_DataFileToParse = new char[strlen(DataFileToParse) + 1];
   strcpy(_DataFileToParse, DataFileToParse);
+  this->_RecordList = new CRecordList();
+  this->_lastParseTime = 0;
 }
 
 CParser::~CParser() {}
@@ -65,18 +74,26 @@ int CParser::ReadParseFile() {
     line_buffer[(end_of_line - (char *)start) + 1] = 0;
 
     if (char *token = strstr(line_buffer, ":")) {
+	if(!CurrentRecord){
+	    CurrentRecord = new CRecord();
+	}
       char Key[strlen(line_buffer) + 1];
       char Value[strlen(line_buffer) + 1];
 
       strcpy(Key, line_buffer);
       Key[token - line_buffer] = 0;
-      strcpy(Value, token);
+      strcpy(Value, token + 1);
 
       CurrentRecord->AddField(new CRecordField(Key, Value));
+    } else {
+	if(CurrentRecord){
+	      int numberRecords = this->_RecordList->AddRecord(CurrentRecord);
+	      //printf("CurrentNumberRecords:%d\n", numberRecords);
+	      //fflush(stdout);
+	      CurrentRecord = NULL;
+	}
     }
 
-    // printf(line_buffer);
-    // fflush(stdout);
     start = end_of_line + 1;
   }
   printf("Number of FDNs:%d \n", count);
@@ -85,11 +102,20 @@ int CParser::ReadParseFile() {
 }
 
 int CParser::Parse() {
+  clock_t start, end;
+
+  start = clock();
+
   if (this->MMapFile()) {
     return PARSER_ERROR;
   }
   if (this->ReadParseFile()) {
     return PARSER_ERROR;
   }
+  end = clock();
+
+  this->_lastParseTime = (double)((end - start) / CLOCKS_PER_SEC);
   return PARSER_SUCCESS;
 }
+
+double CParser::GetLastParsingTime() { return this->_lastParseTime; }

@@ -4,4 +4,6 @@ src/Parser/data/
 src/Parser/output/
 src/Parser/dist
 src/Parser/bin/parser
+src/Parser/src.backup
+
 

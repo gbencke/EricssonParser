@@ -17,6 +17,7 @@
 #define PARSER_SUCCESS 0
 #define PARSER_ERROR 1
 
-#define MAX_FIELDS 0xFF
+#define MAX_FIELDS 0x40
+#define MAX_RECORDS 0x4FFFFF
 
 #endif /* CONSTANTS_H */

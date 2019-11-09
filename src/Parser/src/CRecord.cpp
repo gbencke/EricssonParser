@@ -11,6 +11,7 @@
  * Created on November 9, 2019, 3:44 PM
  */
 
+#include "CRecord.h"
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,14 +20,13 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-#include "CRecord.h"
-
 CRecord::CRecord() {
 
   this->_NumberFields = 0;
   this->_MaxFields = MAX_FIELDS;
 
-  this->_Fields = (CRecordField **)malloc(sizeof(CRecord *) * this->_MaxFields);
+  this->_Fields =
+      (CRecordField **)malloc(sizeof(CRecordField *) * this->_MaxFields);
   memset(this->_Fields, 0, sizeof(CRecord *) * this->_MaxFields);
 }
 
