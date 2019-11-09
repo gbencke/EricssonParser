@@ -14,13 +14,26 @@
 #ifndef CTABLE_H
 #define CTABLE_H
 
+#include "CTableField.h"
+#include "CRecord.h"
+
 class CTable {
 public:
-  CTable();
-  CTable(const CTable &orig);
+  CTable(char *Signature, CRecord *Template);
   virtual ~CTable();
 
+  char *GetSignature();
+  char *GetShortName();
+
 private:
+  char *_Signature;
+  char *_ShortName;
+
+  int _NumberTableFields;
+  int _MaxTableFields;
+
+  CTableField **_TableFields;
+  CRecord *_Template;
 };
 
 #endif /* CTABLE_H */

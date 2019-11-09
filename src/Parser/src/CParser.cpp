@@ -25,7 +25,10 @@
 CParser::CParser(const char *DataFileToParse) {
   this->_DataFileToParse = new char[strlen(DataFileToParse) + 1];
   strcpy(_DataFileToParse, DataFileToParse);
+
   this->_RecordList = new CRecordList();
+  this->_TableList = new CTableList();
+
   this->_lastParseTime = 0;
 }
 
@@ -122,4 +125,32 @@ double CParser::GetLastParsingTime() { return this->_lastParseTime; }
 
 CRecord *CParser::GetRecord(int index) {
   return this->_RecordList->GetRecord(index);
+}
+
+int CParser::CalculateNecessaryTables() {
+  int NumberOfRecords = this->_RecordList->GetRecordCount();
+
+  for (int x = 0; x < NumberOfRecords; x++) {
+    char *Signature = this->_RecordList->GetRecord(x)->GetFieldSignature();
+
+    CTable *TableFound = this->_TableList->FindTable(Signature);
+    if (!TableFound) {
+      this->_TableList->AddTable(new CTable(Signature,this->_RecordList->GetRecord(x)));
+    }
+  }
+
+  return this->_TableList->GetNumberOfTables();
+}
+
+int CParser::GetNumberOfTables() {
+  return this->_TableList->GetNumberOfTables();
+}
+
+
+int CParser::CheckTableNameAssigned(char *ShortName){
+    return this->_TableList->CheckTableNameAssigned(ShortName);
+}
+
+void CParser::PrintTables(){
+    return this->_TableList->PrintTables();
 }

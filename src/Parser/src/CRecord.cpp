@@ -11,7 +11,6 @@
  * Created on November 9, 2019, 3:44 PM
  */
 
-#include "CRecord.h"
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,6 +18,8 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+
+#include "CRecord.h"
 
 CRecord::CRecord() {
 
@@ -52,11 +53,20 @@ char *CRecord::GetFieldSignature() {
     for (int x = 0; x < this->_NumberFields; x++) {
       totalSignatureSize += strlen(this->_Fields[x]->GetKey());
     }
-    this->_FieldSignature = new char[totalSignatureSize + 2];
+    this->_FieldSignature = new char[this->_NumberFields * 2 + totalSignatureSize + 2];
     for (int x = 0; x < this->_NumberFields; x++) {
       strcat(this->_FieldSignature, this->_Fields[x]->GetKey());
+      strcat(this->_FieldSignature, ".");
     }
   }
 
   return this->_FieldSignature;
+}
+
+int CRecord::GetNumberOfFields(){
+    return this->_NumberFields;
+}
+
+CRecordField *CRecord::GetRecordField(int x){
+    return this->_Fields[x];
 }

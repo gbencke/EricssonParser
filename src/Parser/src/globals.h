@@ -14,7 +14,6 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-#include "CParser.h"
-CParser *Parser;
+extern CParser *Parser;
 
 #endif /* GLOBALS_H */

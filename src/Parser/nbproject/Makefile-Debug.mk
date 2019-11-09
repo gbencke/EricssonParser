@@ -40,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/CRecordField.o \
 	${OBJECTDIR}/src/CRecordList.o \
 	${OBJECTDIR}/src/CTable.o \
+	${OBJECTDIR}/src/CTableField.o \
 	${OBJECTDIR}/src/CTableList.o \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/utils.o
@@ -93,6 +94,11 @@ ${OBJECTDIR}/src/CTable.o: src/CTable.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++98 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTable.o src/CTable.cpp
+
+${OBJECTDIR}/src/CTableField.o: src/CTableField.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++98 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableField.o src/CTableField.cpp
 
 ${OBJECTDIR}/src/CTableList.o: src/CTableList.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

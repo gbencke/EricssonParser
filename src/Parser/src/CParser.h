@@ -17,6 +17,7 @@
 #include "CRecord.h"
 #include "CRecordField.h"
 #include "CRecordList.h"
+#include "CTableList.h"
 #include "constants.h"
 
 class CParser {
@@ -30,6 +31,12 @@ public:
   CRecord *GetRecord(int index);
   int GetNumberOfRecords();
 
+  int CalculateNecessaryTables();
+  int GetNumberOfTables();
+  int CheckTableNameAssigned(char *);
+
+  void PrintTables();
+
 private:
   char *_DataFileToParse;
   int _DataFileSize;
@@ -37,6 +44,7 @@ private:
   char *_addr;
 
   CRecordList *_RecordList;
+  CTableList *_TableList;
 
   int MMapFile();
   int ReadParseFile();

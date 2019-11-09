@@ -19,10 +19,10 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#include "CParser.h"
 #include "globals.h"
-/*
- *
- */
+
+CParser *Parser;
 
 int main(int argc, char **argv) {
 
@@ -39,4 +39,10 @@ int main(int argc, char **argv) {
 
   testRecord->PrintRecord();
   printf("%s\n", testRecord->GetFieldSignature());
+
+  Parser->CalculateNecessaryTables();
+  printf("NumberOfTables:%d", Parser->GetNumberOfTables());
+
+  Parser->PrintTables();
+      
 }

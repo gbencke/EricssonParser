@@ -23,6 +23,7 @@ public:
 
   int AddRecord(CRecord *toAdd);
   CRecord *GetRecord(int index);
+  int GetRecordCount();
 
 private:
   int _NumberRecords;

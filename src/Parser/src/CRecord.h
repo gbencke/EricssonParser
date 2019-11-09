@@ -26,6 +26,9 @@ public:
   void PrintRecord();
   char *GetFieldSignature();
 
+  int GetNumberOfFields();
+  CRecordField *GetRecordField(int x);
+
 private:
   int _NumberFields;
   int _MaxFields;

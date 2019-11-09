@@ -14,13 +14,25 @@
 #ifndef CTABLELIST_H
 #define CTABLELIST_H
 
+#include "CTable.h"
+
 class CTableList {
 public:
   CTableList();
-  CTableList(const CTableList &orig);
   virtual ~CTableList();
 
+  CTable *FindTable(char *Signature);
+  int AddTable(CTable *toAdd);
+  int GetNumberOfTables();
+  int CheckTableNameAssigned(char *);
+
+  void PrintTables();
+
 private:
+  int _NumberTables;
+  int _MaxTables;
+
+  CTable **_Tables;
 };
 
 #endif /* CTABLELIST_H */

@@ -40,3 +40,5 @@ int CRecordList::AddRecord(CRecord *toAdd) {
 }
 
 CRecord *CRecordList::GetRecord(int index) { return this->_Records[index]; }
+
+int CRecordList::GetRecordCount() { return this->_NumberRecords; }
