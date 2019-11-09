@@ -27,6 +27,9 @@ public:
   int Parse();
   double GetLastParsingTime();
 
+  CRecord *GetRecord(int index);
+  int GetNumberOfRecords();
+
 private:
   char *_DataFileToParse;
   int _DataFileSize;

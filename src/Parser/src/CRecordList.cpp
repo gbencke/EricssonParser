@@ -38,3 +38,5 @@ int CRecordList::AddRecord(CRecord *toAdd) {
 
   return this->_NumberRecords;
 }
+
+CRecord *CRecordList::GetRecord(int index) { return this->_Records[index]; }

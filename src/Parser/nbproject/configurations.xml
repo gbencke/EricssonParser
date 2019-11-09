@@ -8,8 +8,11 @@
       <itemPath>src/CRecord.h</itemPath>
       <itemPath>src/CRecordField.h</itemPath>
       <itemPath>src/CRecordList.h</itemPath>
+      <itemPath>src/CTable.h</itemPath>
+      <itemPath>src/CTableList.h</itemPath>
       <itemPath>src/constants.h</itemPath>
       <itemPath>src/globals.h</itemPath>
+      <itemPath>src/utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -22,7 +25,10 @@
       <itemPath>src/CRecord.cpp</itemPath>
       <itemPath>src/CRecordField.cpp</itemPath>
       <itemPath>src/CRecordList.cpp</itemPath>
+      <itemPath>src/CTable.cpp</itemPath>
+      <itemPath>src/CTableList.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
+      <itemPath>src/utils.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -74,11 +80,23 @@
       </item>
       <item path="src/CRecordList.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/CTable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CTable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/CTableList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CTableList.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/constants.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/globals.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utils.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -118,11 +136,23 @@
       </item>
       <item path="src/CRecordList.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/CTable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CTable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/CTableList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CTableList.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/constants.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/globals.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utils.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -29,3 +29,7 @@ CRecordField::CRecordField(const char *Key, const char *Value) {
 }
 
 CRecordField::~CRecordField() {}
+
+char *CRecordField::GetValue() { return this->_Value; }
+
+char *CRecordField::GetKey() { return this->_Key; }

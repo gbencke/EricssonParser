@@ -39,7 +39,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/CRecord.o \
 	${OBJECTDIR}/src/CRecordField.o \
 	${OBJECTDIR}/src/CRecordList.o \
-	${OBJECTDIR}/src/main.o
+	${OBJECTDIR}/src/CTable.o \
+	${OBJECTDIR}/src/CTableList.o \
+	${OBJECTDIR}/src/main.o \
+	${OBJECTDIR}/src/utils.o
 
 
 # C Compiler Flags
@@ -86,10 +89,25 @@ ${OBJECTDIR}/src/CRecordList.o: src/CRecordList.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordList.o src/CRecordList.cpp
 
+${OBJECTDIR}/src/CTable.o: src/CTable.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTable.o src/CTable.cpp
+
+${OBJECTDIR}/src/CTableList.o: src/CTableList.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableList.o src/CTableList.cpp
+
 ${OBJECTDIR}/src/main.o: src/main.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
+
+${OBJECTDIR}/src/utils.o: src/utils.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/utils.o src/utils.cpp
 
 # Subprojects
 .build-subprojects:

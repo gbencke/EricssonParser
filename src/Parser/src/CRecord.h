@@ -23,10 +23,14 @@ public:
   virtual ~CRecord();
 
   int AddField(CRecordField *toAdd);
+  void PrintRecord();
+  char *GetFieldSignature();
 
 private:
   int _NumberFields;
   int _MaxFields;
+
+  char *_FieldSignature;
 
   CRecordField **_Fields;
 };

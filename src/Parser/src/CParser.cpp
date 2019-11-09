@@ -20,6 +20,7 @@
 #include <time.h>
 
 #include "CParser.h"
+#include "utils.h"
 
 CParser::CParser(const char *DataFileToParse) {
   this->_DataFileToParse = new char[strlen(DataFileToParse) + 1];
@@ -74,9 +75,9 @@ int CParser::ReadParseFile() {
     line_buffer[(end_of_line - (char *)start) + 1] = 0;
 
     if (char *token = strstr(line_buffer, ":")) {
-	if(!CurrentRecord){
-	    CurrentRecord = new CRecord();
-	}
+      if (!CurrentRecord) {
+        CurrentRecord = new CRecord();
+      }
       char Key[strlen(line_buffer) + 1];
       char Value[strlen(line_buffer) + 1];
 
@@ -84,19 +85,18 @@ int CParser::ReadParseFile() {
       Key[token - line_buffer] = 0;
       strcpy(Value, token + 1);
 
-      CurrentRecord->AddField(new CRecordField(Key, Value));
+      CurrentRecord->AddField(new CRecordField(trim(Key), trim(Value)));
     } else {
-	if(CurrentRecord){
-	      int numberRecords = this->_RecordList->AddRecord(CurrentRecord);
-	      //printf("CurrentNumberRecords:%d\n", numberRecords);
-	      //fflush(stdout);
-	      CurrentRecord = NULL;
-	}
+      if (CurrentRecord) {
+        int numberRecords = this->_RecordList->AddRecord(CurrentRecord);
+        // printf("CurrentNumberRecords:%d\n", numberRecords);
+        // fflush(stdout);
+        CurrentRecord = NULL;
+      }
     }
 
     start = end_of_line + 1;
   }
-  printf("Number of FDNs:%d \n", count);
 
   return PARSER_SUCCESS;
 }
@@ -119,3 +119,7 @@ int CParser::Parse() {
 }
 
 double CParser::GetLastParsingTime() { return this->_lastParseTime; }
+
+CRecord *CParser::GetRecord(int index) {
+  return this->_RecordList->GetRecord(index);
+}

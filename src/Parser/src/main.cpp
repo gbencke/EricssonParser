@@ -34,5 +34,9 @@ int main(int argc, char **argv) {
 
   Parser = new CParser(_DataFile);
   Parser->Parse();
-  printf("Execution time:%.2f", Parser->GetLastParsingTime());
+  printf("Execution time:%.2f\n", Parser->GetLastParsingTime());
+  CRecord *testRecord = Parser->GetRecord(1000);
+
+  testRecord->PrintRecord();
+  printf("%s\n", testRecord->GetFieldSignature());
 }

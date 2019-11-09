@@ -24,6 +24,7 @@ CRecord::CRecord() {
 
   this->_NumberFields = 0;
   this->_MaxFields = MAX_FIELDS;
+  this->_FieldSignature = NULL;
 
   this->_Fields =
       (CRecordField **)malloc(sizeof(CRecordField *) * this->_MaxFields);
@@ -36,4 +37,26 @@ int CRecord::AddField(CRecordField *toAdd) {
   this->_Fields[this->_NumberFields] = toAdd;
   this->_NumberFields++;
   return this->_NumberFields;
+}
+
+void CRecord::PrintRecord() {
+  for (int x = 0; x < this->_NumberFields; x++) {
+    printf("Key:|%s| Value:|%s|\n", this->_Fields[x]->GetKey(),
+           this->_Fields[x]->GetValue());
+  }
+}
+
+char *CRecord::GetFieldSignature() {
+  if (!this->_FieldSignature) {
+    int totalSignatureSize = 0;
+    for (int x = 0; x < this->_NumberFields; x++) {
+      totalSignatureSize += strlen(this->_Fields[x]->GetKey());
+    }
+    this->_FieldSignature = new char[totalSignatureSize + 2];
+    for (int x = 0; x < this->_NumberFields; x++) {
+      strcat(this->_FieldSignature, this->_Fields[x]->GetKey());
+    }
+  }
+
+  return this->_FieldSignature;
 }

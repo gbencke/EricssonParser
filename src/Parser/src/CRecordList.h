@@ -22,6 +22,7 @@ public:
   virtual ~CRecordList();
 
   int AddRecord(CRecord *toAdd);
+  CRecord *GetRecord(int index);
 
 private:
   int _NumberRecords;
