@@ -43,6 +43,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>run.sh</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>src</Elem>
@@ -68,6 +69,8 @@
           <output>bin/parser</output>
         </linkerTool>
       </compileType>
+      <item path="run.sh" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/CParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/CParser.h" ex="false" tool="3" flavor2="0">
@@ -128,6 +131,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="run.sh" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/CParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/CParser.h" ex="false" tool="3" flavor2="0">

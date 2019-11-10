@@ -21,10 +21,10 @@
 #include <sys/types.h>
 
 CRecordField::CRecordField(const char *Key, const char *Value) {
-  _Key = new char[strlen(Key) + 1];
+  _Key = new char[strlen(Key) + 2];
   strcpy(_Key, Key);
 
-  _Value = new char[strlen(Value) + 1];
+  _Value = new char[strlen(Value) + 2];
   strcpy(_Value, Value);
 }
 

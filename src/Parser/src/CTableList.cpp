@@ -66,3 +66,4 @@ void CTableList::PrintTables() {
     printf("Short:%s (%s)\n", table->GetShortName(), table->GetSignature());
   }
 }
+CTable *CTableList::GetTable(int index) { return this->_Tables[index]; }

@@ -19,14 +19,19 @@
 
 class CTable {
 public:
-  CTable(int TableId, char *Signature, CRecord *Template);
+  CTable(int TableId, char *Signature, CRecord *Template, char *TableNamePrefix,
+         char *FieldNamePrefix);
   virtual ~CTable();
 
   char *GetSignature();
   char *GetShortName();
   void AddRecord(CRecord *toAdd);
+  char *GetDDLCreateSQL();
 
 private:
+  char *_TableNamePrefix;
+  char *_FieldNamePrefix;
+  char *_TableName;
   char *_Signature;
   char *_ShortName;
 
@@ -41,6 +46,8 @@ private:
   CRecord **_Records;
 
   int _TableId;
+
+  char *_DDLCreateSQL;
 
   void RecreateInternalTable();
 };

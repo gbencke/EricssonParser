@@ -22,6 +22,8 @@ public:
   virtual ~CTableList();
 
   CTable *FindTable(char *Signature);
+  CTable *GetTable(int index);
+
   int AddTable(CTable *toAdd);
   int GetNumberOfTables();
   int CheckTableNameAssigned(char *);

@@ -19,6 +19,9 @@ public:
   CTableField(char *FieldName, char *FieldType);
   virtual ~CTableField();
 
+  char *GetFieldName();
+  char *GetFieldType();
+
 private:
   char *_FieldName;
   char *_FieldType;

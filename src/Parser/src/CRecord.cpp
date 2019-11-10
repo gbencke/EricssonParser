@@ -29,12 +29,29 @@ CRecord::CRecord() {
 
   this->_Fields =
       (CRecordField **)malloc(sizeof(CRecordField *) * this->_MaxFields);
-  memset(this->_Fields, 0, sizeof(CRecord *) * this->_MaxFields);
+  memset(this->_Fields, 0, sizeof(CRecordField *) * this->_MaxFields);
+}
+
+void CRecord::ResizeFieldTable() {
+  this->_MaxFields = this->_MaxFields * 0xF;
+
+  CRecordField **newInternalTable =
+      (CRecordField **)malloc(sizeof(CRecordField *) * this->_MaxFields);
+  memset(newInternalTable, 0, sizeof(CRecordField *) * this->_MaxFields);
+
+  memcpy(newInternalTable, this->_Fields,
+         this->_NumberFields * sizeof(CRecordField *));
+
+  free(this->_Fields);
+  this->_Fields = newInternalTable;
 }
 
 CRecord::~CRecord() {}
 
 int CRecord::AddField(CRecordField *toAdd) {
+  if (this->_NumberFields > (this->_MaxFields - 10)) {
+    this->ResizeFieldTable();
+  }
   this->_Fields[this->_NumberFields] = toAdd;
   this->_NumberFields++;
   return this->_NumberFields;
@@ -54,10 +71,10 @@ char *CRecord::GetFieldSignature() {
       totalSignatureSize += strlen(this->_Fields[x]->GetKey());
     }
     this->_FieldSignature =
-        new char[this->_NumberFields * 2 + totalSignatureSize + 2];
+        new char[this->_NumberFields * 20 + totalSignatureSize + 2];
     for (int x = 0; x < this->_NumberFields; x++) {
       strcat(this->_FieldSignature, this->_Fields[x]->GetKey());
-      strcat(this->_FieldSignature, ".");
+      strcat(this->_FieldSignature, "_");
     }
   }
 

@@ -25,10 +25,27 @@
 #include "CTable.h"
 #include "globals.h"
 
-CTable::CTable(int TableId, char *Signature, CRecord *Template) {
+CTable::CTable(int TableId, char *Signature, CRecord *Template,
+               char *TableNamePrefix, char *FieldNamePrefix) {
   this->_TableId = TableId;
+
   this->_Signature = new char[strlen(Signature) + 1];
   strcpy(this->_Signature, Signature);
+
+  this->_TableNamePrefix = new char[strlen(TableNamePrefix) + 2];
+  strcpy(this->_TableNamePrefix, TableNamePrefix);
+
+  this->_FieldNamePrefix = new char[strlen(FieldNamePrefix) + 2];
+  strcpy(this->_FieldNamePrefix, FieldNamePrefix);
+
+  this->_TableName =
+      new char[strlen(this->_Signature) + strlen(this->_TableNamePrefix) + 10];
+  sprintf(this->_TableName, "%04d_%s%s", this->_TableId, this->_TableNamePrefix,
+          this->_Signature);
+
+  if (strlen(this->_TableName) > 40) {
+    this->_TableName[40] = 0;
+  }
 
   this->_NumberRecords = 0;
   this->_MaxNumberOfRecords = MAX_RECORDS_PER_TABLE;
@@ -47,7 +64,7 @@ CTable::CTable(int TableId, char *Signature, CRecord *Template) {
   char *defaultFieldType = new char[10];
   strcpy(defaultFieldType, "text");
 
-  for (int x; x < this->_Template->GetNumberOfFields(); x++) {
+  for (int x = 0; x < this->_Template->GetNumberOfFields(); x++) {
     CRecordField *FieldToCheck = this->_Template->GetRecordField(x);
 
     if (!Parser->CheckTableNameAssigned(FieldToCheck->GetKey())) {
@@ -58,6 +75,8 @@ CTable::CTable(int TableId, char *Signature, CRecord *Template) {
         new CTableField(FieldToCheck->GetKey(), defaultFieldType);
     this->_NumberTableFields++;
   }
+
+  this->_DDLCreateSQL = NULL;
 }
 
 CTable::~CTable() {}
@@ -72,6 +91,9 @@ void CTable::RecreateInternalTable() {
       (CRecord **)malloc(sizeof(CRecord *) * this->_MaxNumberOfRecords);
   memset(newInternalTable, 0, sizeof(CRecord *) * this->_MaxNumberOfRecords);
 
+  memcpy(newInternalTable, this->_Records,
+         this->_NumberRecords * sizeof(CRecord *));
+
   free(this->_Records);
   this->_Records = newInternalTable;
 }
@@ -82,4 +104,28 @@ void CTable::AddRecord(CRecord *toAdd) {
   }
   this->_Records[this->_NumberRecords] = toAdd;
   this->_NumberRecords++;
+}
+
+char *CTable::GetDDLCreateSQL() {
+  if (!_DDLCreateSQL) {
+    _DDLCreateSQL = new char[200 * (this->_NumberTableFields + 1)];
+    _DDLCreateSQL[0] = 0;
+
+    sprintf(_DDLCreateSQL, "DROP TABLE IF EXISTS %s ; CREATE TABLE %s (",
+            this->_TableName, this->_TableName);
+    for (int x = 0; x < this->_NumberTableFields; x++) {
+      if (x > 50) {
+        break;
+      }
+      char tmpField[1000];
+      sprintf(tmpField, "%s%s %s,", this->_FieldNamePrefix,
+              this->_TableFields[x]->GetFieldName(),
+              this->_TableFields[x]->GetFieldType());
+      strcat(_DDLCreateSQL, tmpField);
+    }
+    _DDLCreateSQL[strlen(_DDLCreateSQL) - 1] = 0;
+    strcat(_DDLCreateSQL, ");\n");
+  }
+
+  return _DDLCreateSQL;
 }

@@ -30,3 +30,7 @@ CTableField::CTableField(char *FieldName, char *FieldType) {
 }
 
 CTableField::~CTableField() {}
+
+char *CTableField::GetFieldName() { return this->_FieldName; }
+
+char *CTableField::GetFieldType() { return this->_FieldType; }

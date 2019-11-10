@@ -90,15 +90,16 @@ int CParser::ReadParseFile() {
       break;
     if ((end_of_line - this->_addr) > (this->_DataFileSize - 1000))
       break;
+
     memcpy(line_buffer, start, (end_of_line - (char *)start) + 1);
     line_buffer[(end_of_line - (char *)start) + 1] = 0;
 
-    if (char *token = strstr(line_buffer, ":")) {
+    if (char *token = strstr(line_buffer, " : ")) {
       if (!CurrentRecord) {
         CurrentRecord = new CRecord();
       }
-      char Key[strlen(line_buffer) + 1];
-      char Value[strlen(line_buffer) + 1];
+      char Key[strlen(line_buffer) + 10];
+      char Value[strlen(line_buffer) + 10];
 
       strcpy(Key, line_buffer);
       Key[token - line_buffer] = 0;
@@ -151,7 +152,8 @@ int CParser::CalculateNecessaryTables() {
     if (!TableFound) {
       this->_TableList->AddTable(
           new CTable(this->_TableList->GetNumberOfTables() + 1, Signature,
-                     this->_RecordList->GetRecord(x)));
+                     this->_RecordList->GetRecord(x), this->_TablePrefix,
+                     this->_FieldPrefix));
     }
   }
 
@@ -182,5 +184,28 @@ void CParser::AssignRecordsToTables() {
   }
 }
 
-void CParser::GenerateDDL() {}
+void CParser::GenerateDDL() {
+  if (this->_SQLSchema) {
+
+  } else {
+    char *DDLFileName;
+    FILE *output;
+
+    DDLFileName = new char[strlen(this->_OutputFolder) + 30];
+    sprintf(DDLFileName, "%s/%s", this->_OutputFolder, "000.DDL.CREATE.SQL");
+
+    output = fopen(DDLFileName, "w");
+    if (!output) {
+      printf("Error in opening DDL file for write...");
+      exit(3);
+    }
+
+    int NumberOfTables = this->_TableList->GetNumberOfTables();
+    for (int x = 0; x < NumberOfTables; x++) {
+      CTable *CurrentTable = this->_TableList->GetTable(x);
+      fprintf(output, "%s\n", CurrentTable->GetDDLCreateSQL());
+    }
+    fclose(output);
+  }
+}
 void CParser::GenerateDML() {}

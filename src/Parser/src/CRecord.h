@@ -36,6 +36,7 @@ private:
   char *_FieldSignature;
 
   CRecordField **_Fields;
+  void ResizeFieldTable();
 };
 
 #endif /* CRECORD_H */
