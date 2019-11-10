@@ -15,5 +15,6 @@
 #define GLOBALS_H
 
 extern CParser *Parser;
+extern FILE *current_log;
 
 #endif /* GLOBALS_H */

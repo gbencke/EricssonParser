@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   CTableField.h
  * Author: gbencke
  *
@@ -16,17 +16,12 @@
 
 class CTableField {
 public:
-    CTableField(char *FieldName, int FieldType);
-    virtual ~CTableField();
-
+  CTableField(char *FieldName, char *FieldType);
+  virtual ~CTableField();
 
 private:
-
-    char *_FieldName;
-    int   _FieldType;
-    
-
+  char *_FieldName;
+  char *_FieldType;
 };
 
 #endif /* CTABLEFIELD_H */
-

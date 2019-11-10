@@ -58,9 +58,11 @@
       <compileType>
         <cTool>
           <standard>10</standard>
+          <commandLine>-Wall</commandLine>
         </cTool>
         <ccTool>
           <standard>4</standard>
+          <commandLine>-Wall</commandLine>
         </ccTool>
         <linkerTool>
           <output>bin/parser</output>

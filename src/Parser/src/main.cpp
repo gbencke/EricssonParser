@@ -23,6 +23,7 @@
 #include "globals.h"
 
 CParser *Parser;
+FILE *current_log;
 
 int main(int argc, char **argv) {
 
@@ -32,17 +33,38 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  Parser = new CParser(_DataFile);
+  char *_OutputFolder = getenv("PARSER_OUTPUT_FOLDER");
+  if (!_OutputFolder) {
+    printf("Output Folder was not set..");
+    return 2;
+  }
+
+  char *_FieldPrefix = getenv("PARSER_FIELD_PREFIX");
+  if (!_FieldPrefix) {
+    printf("Output Folder was not set..");
+    return 2;
+  }
+
+  char *_TablePrefix = getenv("PARSER_TABLE_PREFIX");
+  if (!_TablePrefix) {
+    printf("Output Folder was not set..");
+    return 2;
+  }
+
+  char *_SQLSchema = getenv("PARSER_SQL_SCHEMA");
+
+  Parser = new CParser(_DataFile, _OutputFolder, _FieldPrefix, _TablePrefix,
+                       _SQLSchema);
+
   Parser->Parse();
   printf("Execution time:%.2f\n", Parser->GetLastParsingTime());
-  CRecord *testRecord = Parser->GetRecord(1000);
-
-  testRecord->PrintRecord();
-  printf("%s\n", testRecord->GetFieldSignature());
 
   Parser->CalculateNecessaryTables();
   printf("NumberOfTables:%d", Parser->GetNumberOfTables());
 
-  Parser->PrintTables();
-      
+  Parser->AssignRecordsToTables();
+
+  Parser->GenerateDDL();
+
+  Parser->GenerateDML();
 }

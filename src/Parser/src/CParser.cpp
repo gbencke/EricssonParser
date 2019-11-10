@@ -22,9 +22,26 @@
 #include "CParser.h"
 #include "utils.h"
 
-CParser::CParser(const char *DataFileToParse) {
+CParser::CParser(const char *DataFileToParse, const char *OutputFolder,
+                 const char *FieldPrefix, const char *TablePrefix,
+                 const char *SQLSchema) {
+
   this->_DataFileToParse = new char[strlen(DataFileToParse) + 1];
   strcpy(_DataFileToParse, DataFileToParse);
+
+  this->_OutputFolder = new char[strlen(OutputFolder) + 1];
+  strcpy(this->_OutputFolder, OutputFolder);
+
+  this->_FieldPrefix = new char[strlen(FieldPrefix) + 1];
+  strcpy(this->_FieldPrefix, FieldPrefix);
+
+  this->_TablePrefix = new char[strlen(TablePrefix) + 1];
+  strcpy(this->_TablePrefix, TablePrefix);
+
+  if (_SQLSchema) {
+    this->_SQLSchema = new char[strlen(SQLSchema) + 1];
+    strcpy(this->_SQLSchema, SQLSchema);
+  }
 
   this->_RecordList = new CRecordList();
   this->_TableList = new CTableList();
@@ -65,7 +82,6 @@ int CParser::ReadParseFile() {
   char line_buffer[0xfffff];
   char *start = this->_addr;
   char *end_of_line;
-  int count = 0;
   CRecord *CurrentRecord = new CRecord();
 
   while (1) {
@@ -91,9 +107,7 @@ int CParser::ReadParseFile() {
       CurrentRecord->AddField(new CRecordField(trim(Key), trim(Value)));
     } else {
       if (CurrentRecord) {
-        int numberRecords = this->_RecordList->AddRecord(CurrentRecord);
-        // printf("CurrentNumberRecords:%d\n", numberRecords);
-        // fflush(stdout);
+        this->_RecordList->AddRecord(CurrentRecord);
         CurrentRecord = NULL;
       }
     }
@@ -135,7 +149,9 @@ int CParser::CalculateNecessaryTables() {
 
     CTable *TableFound = this->_TableList->FindTable(Signature);
     if (!TableFound) {
-      this->_TableList->AddTable(new CTable(Signature,this->_RecordList->GetRecord(x)));
+      this->_TableList->AddTable(
+          new CTable(this->_TableList->GetNumberOfTables() + 1, Signature,
+                     this->_RecordList->GetRecord(x)));
     }
   }
 
@@ -146,11 +162,25 @@ int CParser::GetNumberOfTables() {
   return this->_TableList->GetNumberOfTables();
 }
 
-
-int CParser::CheckTableNameAssigned(char *ShortName){
-    return this->_TableList->CheckTableNameAssigned(ShortName);
+int CParser::CheckTableNameAssigned(char *ShortName) {
+  return this->_TableList->CheckTableNameAssigned(ShortName);
 }
 
-void CParser::PrintTables(){
-    return this->_TableList->PrintTables();
+void CParser::PrintTables() { return this->_TableList->PrintTables(); }
+
+void CParser::AssignRecordsToTables() {
+  int NumberOfRecords = this->_RecordList->GetRecordCount();
+
+  for (int x = 0; x < NumberOfRecords; x++) {
+    CRecord *CurrentRecord = this->_RecordList->GetRecord(x);
+    char *Signature = CurrentRecord->GetFieldSignature();
+
+    CTable *TableFound = this->_TableList->FindTable(Signature);
+    if (TableFound) {
+      TableFound->AddRecord(CurrentRecord);
+    }
+  }
 }
+
+void CParser::GenerateDDL() {}
+void CParser::GenerateDML() {}

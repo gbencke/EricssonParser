@@ -22,7 +22,9 @@
 
 class CParser {
 public:
-  CParser(const char *DataFileToParse);
+  CParser(const char *DataFileToParse, const char *OutputFolder,
+          const char *FieldPrefix, const char *TablePrefix,
+          const char *_SQLSchema);
   virtual ~CParser();
 
   int Parse();
@@ -37,8 +39,17 @@ public:
 
   void PrintTables();
 
+  void AssignRecordsToTables();
+  void GenerateDDL();
+  void GenerateDML();
+
 private:
   char *_DataFileToParse;
+  char *_OutputFolder;
+  char *_FieldPrefix;
+  char *_TablePrefix;
+  char *_SQLSchema;
+
   int _DataFileSize;
   int _DataFileFd;
   char *_addr;

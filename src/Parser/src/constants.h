@@ -21,5 +21,6 @@
 #define MAX_RECORDS 0x4FFFFF
 #define MAX_TABLES 0xFFF
 #define MAX_TABLE_FIELDS 0xFFF
+#define MAX_RECORDS_PER_TABLE 0xFF;
 
 #endif /* CONSTANTS_H */

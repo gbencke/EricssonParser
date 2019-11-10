@@ -14,16 +14,17 @@
 #ifndef CTABLE_H
 #define CTABLE_H
 
-#include "CTableField.h"
 #include "CRecord.h"
+#include "CTableField.h"
 
 class CTable {
 public:
-  CTable(char *Signature, CRecord *Template);
+  CTable(int TableId, char *Signature, CRecord *Template);
   virtual ~CTable();
 
   char *GetSignature();
   char *GetShortName();
+  void AddRecord(CRecord *toAdd);
 
 private:
   char *_Signature;
@@ -34,6 +35,14 @@ private:
 
   CTableField **_TableFields;
   CRecord *_Template;
+
+  int _NumberRecords;
+  int _MaxNumberOfRecords;
+  CRecord **_Records;
+
+  int _TableId;
+
+  void RecreateInternalTable();
 };
 
 #endif /* CTABLE_H */

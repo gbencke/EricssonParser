@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   CTableField.cpp
  * Author: gbencke
- * 
+ *
  * Created on November 9, 2019, 6:00 PM
  */
 
@@ -21,13 +21,12 @@
 
 #include "CTableField.h"
 
-CTableField::CTableField(char *FieldName, int FieldType) {
-    this->_FieldType = FieldType;
-    this->_FieldName = new char[strlen(FieldName) + 1];
-    strcpy(this->_FieldName, FieldName);
+CTableField::CTableField(char *FieldName, char *FieldType) {
+  this->_FieldName = new char[strlen(FieldName) + 1];
+  strcpy(this->_FieldName, FieldName);
+
+  this->_FieldType = new char[strlen(FieldType) + 1];
+  strcpy(this->_FieldType, FieldType);
 }
 
-
-CTableField::~CTableField() {
-}
-
+CTableField::~CTableField() {}

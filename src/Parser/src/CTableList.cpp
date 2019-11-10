@@ -51,19 +51,18 @@ int CTableList::AddTable(CTable *toAdd) {
   return this->_NumberTables;
 }
 
-
-int CTableList::CheckTableNameAssigned(char *ShortName){
+int CTableList::CheckTableNameAssigned(char *ShortName) {
   for (int x = 0; x < this->_NumberTables; x++) {
-    if (strcmp(ShortName, this->_Tables[x]->GetShortName())==0){
-	return 1;
+    if (strcmp(ShortName, this->_Tables[x]->GetShortName()) == 0) {
+      return 1;
     }
   }
   return 0;
 }
 
-void CTableList::PrintTables(){
+void CTableList::PrintTables() {
   for (int x = 0; x < this->_NumberTables; x++) {
-      CTable *table = this->_Tables[x];
-      printf("Short:%s (%s)\n", table->GetShortName(), table->GetSignature());
+    CTable *table = this->_Tables[x];
+    printf("Short:%s (%s)\n", table->GetShortName(), table->GetSignature());
   }
 }
