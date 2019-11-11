@@ -28,7 +28,7 @@ public:
   char *GetTableName();
   void AddRecord(CRecord *toAdd);
   char *GetDDLCreateSQL();
-  void GenerateDML(FILE *output);
+  void GenerateDML(char *outputFolder, char *fileName);
 
 private:
   char *_TableNamePrefix;

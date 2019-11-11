@@ -217,20 +217,12 @@ void CParser::GenerateDML() {
     for (int x = 0; x < NumberOfTables; x++) {
       CTable *CurrentTable = this->_TableList->GetTable(x);
       char *DMLFileName;
-      FILE *output;
 
       DMLFileName = new char[strlen(this->_OutputFolder) +
                              strlen(CurrentTable->GetTableName()) + 30];
-      sprintf(DMLFileName, "%s/%s.DML.SQL", this->_OutputFolder,
-              CurrentTable->GetTableName());
+      sprintf(DMLFileName, "%s.DML.SQL", CurrentTable->GetTableName());
 
-      output = fopen(DMLFileName, "w");
-      if (!output) {
-        printf("Error in opening %s file for write...", DMLFileName);
-        exit(3);
-      }
-      CurrentTable->GenerateDML(output);
-      fclose(output);
+      CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
     }
   }
 }

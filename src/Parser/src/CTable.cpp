@@ -131,17 +131,28 @@ char *CTable::GetDDLCreateSQL() {
   return _DDLCreateSQL;
 }
 
-void CTable::GenerateDML(FILE *output) {
+void CTable::GenerateDML(char *outputFolder, char *fileName) {
   int RecordSize = 100000;
+  int split = 0;
+  FILE *output=NULL;
 
   for (int x = 0; x < this->_NumberRecords; x++) {
+    if (!output || ((x % 2000) == 0)) {
+      if (output) {
+        fclose(output);
+      }
+      char currentFileName[1000];
+      sprintf(currentFileName, "%s/%04d.%s", outputFolder, split, fileName);
+      output = fopen(currentFileName, "w");
+      split++;
+    }
     char RecordSQL[RecordSize];
     RecordSQL[0] = 0;
     sprintf(RecordSQL, "INSERT INTO %s VALUES (", this->GetTableName());
     for (int y = 0; y < this->_NumberTableFields; y++) {
-	if( y >50){
-	    break;
-	}
+      if (y > 50) {
+        break;
+      }
       strcat(RecordSQL, "\'");
       strcat(RecordSQL, this->_Records[x]->GetRecordField(y)->GetValue());
       strcat(RecordSQL, "\',");
