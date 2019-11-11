@@ -10,7 +10,7 @@ char *trim(char *toTrim) {
   char *current = toTrim;
 
   while (1) {
-    if (*current == 32 && current > 0) {
+    if ((*current == 32 || *current=='\"') && current > 0) {
       current++;
     } else {
       break;
@@ -24,7 +24,7 @@ char *trim(char *toTrim) {
 
   while (1) {
     char toCheck = toTrim[strlen(toTrim) - 1];
-    if (toCheck == 10 || toCheck == 32 || toCheck == 13) {
+    if (toCheck== '\"' || toCheck == 10 || toCheck == 32 || toCheck == 13) {
       toTrim[strlen(toTrim) - 1] = 0;
     } else {
       break;

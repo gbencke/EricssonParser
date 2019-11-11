@@ -94,7 +94,7 @@ int CParser::ReadParseFile() {
     memcpy(line_buffer, start, (end_of_line - (char *)start) + 1);
     line_buffer[(end_of_line - (char *)start) + 1] = 0;
 
-    if (char *token = strstr(line_buffer, " : ")) {
+    if (char *token = strstr(line_buffer, ":")) {
       if (!CurrentRecord) {
         CurrentRecord = new CRecord();
       }
@@ -208,4 +208,29 @@ void CParser::GenerateDDL() {
     fclose(output);
   }
 }
-void CParser::GenerateDML() {}
+void CParser::GenerateDML() {
+  if (this->_SQLSchema) {
+
+  } else {
+
+    int NumberOfTables = this->_TableList->GetNumberOfTables();
+    for (int x = 0; x < NumberOfTables; x++) {
+      CTable *CurrentTable = this->_TableList->GetTable(x);
+      char *DMLFileName;
+      FILE *output;
+
+      DMLFileName = new char[strlen(this->_OutputFolder) +
+                             strlen(CurrentTable->GetTableName()) + 30];
+      sprintf(DMLFileName, "%s/%s.DML.SQL", this->_OutputFolder,
+              CurrentTable->GetTableName());
+
+      output = fopen(DMLFileName, "w");
+      if (!output) {
+        printf("Error in opening %s file for write...", DMLFileName);
+        exit(3);
+      }
+      CurrentTable->GenerateDML(output);
+      fclose(output);
+    }
+  }
+}

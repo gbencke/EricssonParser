@@ -15,5 +15,6 @@
 #define UTILS_H
 
 char *trim(char *toTrim);
+char *clean(char *toClean);
 
 #endif /* UTILS_H */

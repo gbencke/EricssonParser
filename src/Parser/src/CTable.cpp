@@ -83,6 +83,7 @@ CTable::~CTable() {}
 
 char *CTable::GetSignature() { return this->_Signature; }
 char *CTable::GetShortName() { return this->_ShortName; }
+char *CTable::GetTableName() { return this->_TableName; }
 
 void CTable::RecreateInternalTable() {
   this->_MaxNumberOfRecords = this->_MaxNumberOfRecords * 0xF;
@@ -128,4 +129,25 @@ char *CTable::GetDDLCreateSQL() {
   }
 
   return _DDLCreateSQL;
+}
+
+void CTable::GenerateDML(FILE *output) {
+  int RecordSize = 100000;
+
+  for (int x = 0; x < this->_NumberRecords; x++) {
+    char RecordSQL[RecordSize];
+    RecordSQL[0] = 0;
+    sprintf(RecordSQL, "INSERT INTO %s VALUES (", this->GetTableName());
+    for (int y = 0; y < this->_NumberTableFields; y++) {
+	if( y >50){
+	    break;
+	}
+      strcat(RecordSQL, "\'");
+      strcat(RecordSQL, this->_Records[x]->GetRecordField(y)->GetValue());
+      strcat(RecordSQL, "\',");
+    }
+    RecordSQL[strlen(RecordSQL) - 1] = 0;
+    strcat(RecordSQL, ");\n");
+    fprintf(output, "%s", RecordSQL);
+  }
 }

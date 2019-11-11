@@ -25,8 +25,10 @@ public:
 
   char *GetSignature();
   char *GetShortName();
+  char *GetTableName();
   void AddRecord(CRecord *toAdd);
   char *GetDDLCreateSQL();
+  void GenerateDML(FILE *output);
 
 private:
   char *_TableNamePrefix;
