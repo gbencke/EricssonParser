@@ -116,13 +116,13 @@ char *CTable::GetDDLCreateSQL() {
             this->_TableName, this->_TableName);
     for (int x = 0; x < this->_NumberTableFields; x++) {
       char tmpField[1000];
-      sprintf(tmpField, "%s%s %s,", this->_FieldNamePrefix,
+      sprintf(tmpField, "\n    %s%s %s,", this->_FieldNamePrefix,
               this->_TableFields[x]->GetFieldName(),
               this->_TableFields[x]->GetFieldType());
       strcat(_DDLCreateSQL, tmpField);
     }
     _DDLCreateSQL[strlen(_DDLCreateSQL) - 1] = 0;
-    strcat(_DDLCreateSQL, ");\n");
+    strcat(_DDLCreateSQL, "\n);\n");
   }
 
   return _DDLCreateSQL;
@@ -130,20 +130,37 @@ char *CTable::GetDDLCreateSQL() {
 
 void CTable::GenerateDML(char *outputFolder, char *fileName) {
   int RecordSize = 100000;
-  int split = 0;
-  FILE *output=NULL;
+  char currentFileName[1000];
+
+  sprintf(currentFileName, "%s/%s", outputFolder, fileName);
+  FILE *output = fopen(currentFileName, "w");
+  if (!output) {
+    printf("Error in opening:%s", currentFileName);
+    return;
+  }
 
   for (int x = 0; x < this->_NumberRecords; x++) {
-    char RecordSQL[RecordSize];
+    char *RecordSQL = new char[RecordSize];
     RecordSQL[0] = 0;
     sprintf(RecordSQL, "INSERT INTO %s VALUES (", this->GetTableName());
     for (int y = 0; y < this->_NumberTableFields; y++) {
       strcat(RecordSQL, "\'");
       strcat(RecordSQL, this->_Records[x]->GetRecordField(y)->GetValue());
       strcat(RecordSQL, "\',");
+
+      if ((int)strlen(RecordSQL) > (RecordSize - 1000)) {
+        char *newRecord;
+
+        RecordSize *= 2;
+        newRecord = new char[RecordSize];
+        strcpy(newRecord, RecordSQL);
+        free(RecordSQL);
+        RecordSQL = newRecord;
+      }
     }
     RecordSQL[strlen(RecordSQL) - 1] = 0;
     strcat(RecordSQL, ");\n");
     fprintf(output, "%s", RecordSQL);
+    free(RecordSQL);
   }
 }
