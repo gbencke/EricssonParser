@@ -54,6 +54,9 @@ int CRecord::AddField(CRecordField *toAdd) {
   }
   this->_Fields[this->_NumberFields] = toAdd;
   this->_NumberFields++;
+  if (this->_NumberFields == 1) {
+    ParseFDNField();
+  }
   return this->_NumberFields;
 }
 
@@ -61,6 +64,32 @@ void CRecord::PrintRecord() {
   for (int x = 0; x < this->_NumberFields; x++) {
     printf("Key:|%s| Value:|%s|\n", this->_Fields[x]->GetKey(),
            this->_Fields[x]->GetValue());
+  }
+}
+
+void CRecord::ParseFDNField() {
+  char *currentFDNPointer = this->_Fields[0]->GetValue();
+
+  while (1) {
+    char buffer[strlen(currentFDNPointer) + 10];
+    char fieldName[strlen(currentFDNPointer) + 10];
+    char fieldValue[strlen(currentFDNPointer) + 10];
+
+    if (strstr(currentFDNPointer, ",")) {
+      strcpy(buffer, currentFDNPointer);
+      *strstr(buffer, ",") = 0;
+
+      strcpy(fieldName, buffer);
+      strcpy(fieldValue, strstr(fieldName, "=") + 1);
+
+      *strstr(fieldName, "=") = 0;
+      strcat(fieldName, "Id");
+
+      this->AddField(new CRecordField(fieldName, fieldValue));
+      currentFDNPointer = strstr(currentFDNPointer, ",") + 1;
+    } else {
+      break;
+    }
   }
 }
 

@@ -52,6 +52,7 @@ private:
   char *_DDLCreateSQL;
 
   void RecreateInternalTable();
+  int GetRecordNecessarySize(int fieldToUse);
 };
 
 #endif /* CTABLE_H */

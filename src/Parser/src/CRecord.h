@@ -37,6 +37,7 @@ private:
 
   CRecordField **_Fields;
   void ResizeFieldTable();
+  void ParseFDNField();
 };
 
 #endif /* CRECORD_H */

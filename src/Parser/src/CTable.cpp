@@ -40,8 +40,7 @@ CTable::CTable(int TableId, char *Signature, CRecord *Template,
 
   this->_TableName =
       new char[strlen(this->_Signature) + strlen(this->_TableNamePrefix) + 10];
-  sprintf(this->_TableName, "%04d_%s%s", this->_TableId, this->_TableNamePrefix,
-          this->_Signature);
+  sprintf(this->_TableName, "%s%s", this->_TableNamePrefix, this->_Signature);
 
   if (strlen(this->_TableName) > 40) {
     this->_TableName[40] = 0;
@@ -107,6 +106,23 @@ void CTable::AddRecord(CRecord *toAdd) {
   this->_NumberRecords++;
 }
 
+int CTable::GetRecordNecessarySize(int fieldToUse) {
+  int MaxSize = 0;
+
+  for (int x = 0; x < this->_NumberRecords; x++) {
+    CRecordField *currentField = this->_Records[x]->GetRecordField(fieldToUse);
+    if (!currentField) {
+      continue;
+    }
+
+    if ((int)strlen(currentField->GetValue()) > MaxSize) {
+      MaxSize = strlen(currentField->GetValue());
+    }
+  }
+
+  return MaxSize;
+}
+
 char *CTable::GetDDLCreateSQL() {
   if (!_DDLCreateSQL) {
     _DDLCreateSQL = new char[200 * (this->_NumberTableFields + 1)];
@@ -114,15 +130,33 @@ char *CTable::GetDDLCreateSQL() {
 
     sprintf(_DDLCreateSQL, "DROP TABLE IF EXISTS %s;\n\nCREATE TABLE %s (",
             this->_TableName, this->_TableName);
-    for (int x = 0; x < this->_NumberTableFields; x++) {
+    strcat(_DDLCreateSQL, "\n  `id` bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,");
+    for (int x = 1; x < this->_NumberTableFields; x++) {
       char tmpField[1000];
+      char tmpFieldType[100];
+
+      int RecordSize = this->GetRecordNecessarySize(x);
+      if (RecordSize < 100) {
+        RecordSize = 100;
+      } else if (RecordSize > 100 && RecordSize < 255) {
+        RecordSize = 255;
+      } else if (RecordSize > 255) {
+        RecordSize = 0;
+      }
+      if (RecordSize) {
+        sprintf(tmpFieldType, " varchar(%d) DEFAULT NULL ", RecordSize);
+      } else {
+        strcpy(tmpFieldType, " text DEFAULT NULL ");
+      }
+
       sprintf(tmpField, "\n    %s%s %s,", this->_FieldNamePrefix,
-              this->_TableFields[x]->GetFieldName(),
-              this->_TableFields[x]->GetFieldType());
+              this->_TableFields[x]->GetFieldName(), tmpFieldType);
+
       strcat(_DDLCreateSQL, tmpField);
     }
     _DDLCreateSQL[strlen(_DDLCreateSQL) - 1] = 0;
-    strcat(_DDLCreateSQL, "\n);\n");
+    strcat(_DDLCreateSQL,
+           "\n) ENGINE=MyISAM AUTO_INCREMENT=85434 CHARSET=latin1;\n");
   }
 
   return _DDLCreateSQL;
@@ -146,9 +180,9 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
     for (int y = 0; y < this->_NumberTableFields; y++) {
       CRecord *currentRecord = this->_Records[x];
       CRecordField *currentField = currentRecord->GetRecordField(y);
-      if(!currentField){
-	  //printf("Error in %s:\n", this->GetTableName());
-	  continue;
+      if (!currentField) {
+        // printf("Error in %s:\n", this->GetTableName());
+        continue;
       }
       char *currentFieldValue = currentField->GetValue();
 
