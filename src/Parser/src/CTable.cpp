@@ -115,9 +115,6 @@ char *CTable::GetDDLCreateSQL() {
     sprintf(_DDLCreateSQL, "DROP TABLE IF EXISTS %s ; CREATE TABLE %s (",
             this->_TableName, this->_TableName);
     for (int x = 0; x < this->_NumberTableFields; x++) {
-      if (x > 50) {
-        break;
-      }
       char tmpField[1000];
       sprintf(tmpField, "%s%s %s,", this->_FieldNamePrefix,
               this->_TableFields[x]->GetFieldName(),
@@ -137,22 +134,10 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
   FILE *output=NULL;
 
   for (int x = 0; x < this->_NumberRecords; x++) {
-    if (!output || ((x % 2000) == 0)) {
-      if (output) {
-        fclose(output);
-      }
-      char currentFileName[1000];
-      sprintf(currentFileName, "%s/%04d.%s", outputFolder, split, fileName);
-      output = fopen(currentFileName, "w");
-      split++;
-    }
     char RecordSQL[RecordSize];
     RecordSQL[0] = 0;
     sprintf(RecordSQL, "INSERT INTO %s VALUES (", this->GetTableName());
     for (int y = 0; y < this->_NumberTableFields; y++) {
-      if (y > 50) {
-        break;
-      }
       strcat(RecordSQL, "\'");
       strcat(RecordSQL, this->_Records[x]->GetRecordField(y)->GetValue());
       strcat(RecordSQL, "\',");
