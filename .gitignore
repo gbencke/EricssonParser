@@ -5,5 +5,9 @@ src/Parser/output/
 src/Parser/dist
 src/Parser/bin/parser
 src/Parser/src.backup
+report.txt
+*.out
+time.txt
+
 
 
