@@ -59,14 +59,15 @@
       <compileType>
         <cTool>
           <standard>10</standard>
-          <commandLine>-Wall</commandLine>
+          <commandLine>-Wall -pg</commandLine>
         </cTool>
         <ccTool>
           <standard>4</standard>
-          <commandLine>-Wall</commandLine>
+          <commandLine>-Wall -pg</commandLine>
         </ccTool>
         <linkerTool>
           <output>bin/parser</output>
+          <commandLine>-pg</commandLine>
         </linkerTool>
       </compileType>
       <item path="run.sh" ex="false" tool="3" flavor2="0">

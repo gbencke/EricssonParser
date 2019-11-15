@@ -47,11 +47,11 @@ OBJECTFILES= \
 
 
 # C Compiler Flags
-CFLAGS=-Wall
+CFLAGS=-Wall -pg
 
 # CC Compiler Flags
-CCFLAGS=-Wall
-CXXFLAGS=-Wall
+CCFLAGS=-Wall -pg
+CXXFLAGS=-Wall -pg
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -68,7 +68,7 @@ LDLIBSOPTIONS=
 
 bin/parser: ${OBJECTFILES}
 	${MKDIR} -p bin
-	${LINK.cc} -o bin/parser ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o bin/parser ${OBJECTFILES} ${LDLIBSOPTIONS} -pg
 
 ${OBJECTDIR}/src/CParser.o: src/CParser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
