@@ -66,16 +66,16 @@ void CRecord::PrintRecord() {
 
 char *CRecord::GetFieldSignature() {
   if (!this->_FieldSignature) {
-    int totalSignatureSize = 0;
-    for (int x = 0; x < this->_NumberFields; x++) {
-      totalSignatureSize += strlen(this->_Fields[x]->GetKey());
+    char *FieldValue = this->_Fields[0]->GetValue();
+    char *FieldValuePointer = &FieldValue[strlen(FieldValue) - 1];
+    while (*FieldValuePointer != ',' && FieldValuePointer > FieldValue) {
+      FieldValuePointer--;
     }
-    this->_FieldSignature =
-        new char[this->_NumberFields * 20 + totalSignatureSize + 2];
-    for (int x = 0; x < this->_NumberFields; x++) {
-      strcat(this->_FieldSignature, this->_Fields[x]->GetKey());
-      strcat(this->_FieldSignature, "_");
-    }
+    FieldValuePointer++;
+
+    this->_FieldSignature = new char[strlen(FieldValuePointer) + 10];
+    strcpy(this->_FieldSignature, FieldValuePointer);
+    *strstr(this->_FieldSignature, "=") = 0;
   }
 
   return this->_FieldSignature;

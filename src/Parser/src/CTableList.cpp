@@ -38,7 +38,7 @@ int CTableList::GetNumberOfTables() { return this->_NumberTables; }
 
 CTable *CTableList::FindTable(char *Signature) {
   for (int x = 0; x < this->_NumberTables; x++) {
-    if (strstr(Signature, this->_Tables[x]->GetSignature()) == Signature) {
+    if (strcmp(Signature, this->_Tables[x]->GetSignature()) == 0) {
       return this->_Tables[x];
     }
   }

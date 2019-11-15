@@ -112,7 +112,7 @@ char *CTable::GetDDLCreateSQL() {
     _DDLCreateSQL = new char[200 * (this->_NumberTableFields + 1)];
     _DDLCreateSQL[0] = 0;
 
-    sprintf(_DDLCreateSQL, "DROP TABLE IF EXISTS %s ; CREATE TABLE %s (",
+    sprintf(_DDLCreateSQL, "DROP TABLE IF EXISTS %s;\n\nCREATE TABLE %s (",
             this->_TableName, this->_TableName);
     for (int x = 0; x < this->_NumberTableFields; x++) {
       char tmpField[1000];
@@ -129,7 +129,7 @@ char *CTable::GetDDLCreateSQL() {
 }
 
 void CTable::GenerateDML(char *outputFolder, char *fileName) {
-  int RecordSize = 100000;
+  int RecordSize = 1000000;
   char currentFileName[1000];
 
   sprintf(currentFileName, "%s/%s", outputFolder, fileName);
@@ -144,8 +144,16 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
     RecordSQL[0] = 0;
     sprintf(RecordSQL, "INSERT INTO %s VALUES (", this->GetTableName());
     for (int y = 0; y < this->_NumberTableFields; y++) {
+      CRecord *currentRecord = this->_Records[x];
+      CRecordField *currentField = currentRecord->GetRecordField(y);
+      if(!currentField){
+	  //printf("Error in %s:\n", this->GetTableName());
+	  continue;
+      }
+      char *currentFieldValue = currentField->GetValue();
+
       strcat(RecordSQL, "\'");
-      strcat(RecordSQL, this->_Records[x]->GetRecordField(y)->GetValue());
+      strcat(RecordSQL, currentFieldValue);
       strcat(RecordSQL, "\',");
 
       if ((int)strlen(RecordSQL) > (RecordSize - 1000)) {
