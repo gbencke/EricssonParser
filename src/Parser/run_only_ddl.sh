@@ -21,5 +21,5 @@ cd $PARSER_OUTPUT_FOLDER
 
 ls -1 000.*.SQL | xargs -n1 -P 64 -I {} sudo docker cp {}  MYSQL_PARSER:/
 
-sudo docker exec MYSQL_PARSER /bin/sh -c "mysql -uPARSER -pPARSER PARSER < /000.DDL.CREATE.SQL" &
+sudo docker exec MYSQL_PARSER /bin/sh -c "mysql -uPARSER -pPARSER PARSER < /000.DDL.CREATE.SQL" 
 
