@@ -24,6 +24,7 @@
 #include "CRecordField.h"
 #include "CTable.h"
 #include "globals.h"
+#include "utils.h"
 
 CTable::CTable(int TableId, char *Signature, CRecord *Template,
                char *TableNamePrefix, char *FieldNamePrefix) {
@@ -150,7 +151,7 @@ char *CTable::GetDDLCreateSQL() {
       }
 
       sprintf(tmpField, "\n    %s%s %s,", this->_FieldNamePrefix,
-              this->_TableFields[x]->GetFieldName(), tmpFieldType);
+              camelCase(this->_TableFields[x]->GetFieldName()), tmpFieldType);
 
       strcat(_DDLCreateSQL, tmpField);
     }

@@ -16,5 +16,6 @@
 
 char *trim(char *toTrim);
 char *clean(char *toClean);
+char *camelCase(char *source);
 
 #endif /* UTILS_H */

@@ -24,12 +24,12 @@ DROP TABLE IF EXISTS `t_AddressIPv4`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AddressIPv4` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
-  `f_InterfaceIPv4Id` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
+  `f_interfaceIPv4Id` varchar(100) DEFAULT NULL,
   `f_address` varchar(100) DEFAULT NULL,
   `f_addressIPv4Id` varchar(100) DEFAULT NULL,
   `f_configurationMode` varchar(100) DEFAULT NULL,
@@ -60,10 +60,10 @@ DROP TABLE IF EXISTS `t_AdmissionControl`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AdmissionControl` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_admNrRbDifferentiationThr` varchar(100) DEFAULT NULL,
   `f_admNrRrcDifferentiationThr` varchar(100) DEFAULT NULL,
   `f_admResourceMinQciPrio` varchar(100) DEFAULT NULL,
@@ -144,10 +144,10 @@ DROP TABLE IF EXISTS `t_AmoFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AmoFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_allowInterVendorX2Signal` varchar(100) DEFAULT NULL,
   `f_amoAllowedInterVendor` varchar(100) DEFAULT NULL,
   `f_amoFunctionId` varchar(100) DEFAULT NULL,
@@ -173,10 +173,10 @@ DROP TABLE IF EXISTS `t_AnrFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AnrFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_anrFunctionId` varchar(100) DEFAULT NULL,
   `f_cellRelHoAttRateThreshold` varchar(100) DEFAULT NULL,
   `f_maxNoPciReportsEvent` varchar(100) DEFAULT NULL,
@@ -234,11 +234,11 @@ DROP TABLE IF EXISTS `t_AnrFunctionEUtran`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AnrFunctionEUtran` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_AnrFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_anrFunctionId` varchar(100) DEFAULT NULL,
   `f_acquirePlmnIdListEnabled` varchar(100) DEFAULT NULL,
   `f_anrEutranInterFMeasReportDecr` varchar(100) DEFAULT NULL,
   `f_anrEutranInterFMeasReportIncr` varchar(100) DEFAULT NULL,
@@ -284,11 +284,11 @@ DROP TABLE IF EXISTS `t_AnrFunctionGeran`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AnrFunctionGeran` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_AnrFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_anrFunctionId` varchar(100) DEFAULT NULL,
   `f_anrFunctionGeranId` varchar(100) DEFAULT NULL,
   `f_anrGeranMeasReportDecr` varchar(100) DEFAULT NULL,
   `f_anrGeranMeasReportIncr` varchar(100) DEFAULT NULL,
@@ -320,11 +320,11 @@ DROP TABLE IF EXISTS `t_AnrFunctionUtran`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AnrFunctionUtran` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_AnrFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_anrFunctionId` varchar(100) DEFAULT NULL,
   `f_anrFunctionUtranId` varchar(100) DEFAULT NULL,
   `f_anrStateUtran` varchar(100) DEFAULT NULL,
   `f_anrUtranAcMeasOn` varchar(100) DEFAULT NULL,
@@ -360,10 +360,10 @@ DROP TABLE IF EXISTS `t_AnrPciConflictDrxProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AnrPciConflictDrxProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_anrPciConflictDrxInactivityTimer` varchar(100) DEFAULT NULL,
   `f_anrPciConflictDrxProfileId` varchar(100) DEFAULT NULL,
   `f_anrPciConflictLongDrxCycle` varchar(100) DEFAULT NULL,
@@ -390,11 +390,11 @@ DROP TABLE IF EXISTS `t_AntennaNearUnit`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AntennaNearUnit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitGroupId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_antennaNearUnitId` varchar(100) DEFAULT NULL,
   `f_hardwareVersion` varchar(100) DEFAULT NULL,
@@ -428,12 +428,12 @@ DROP TABLE IF EXISTS `t_AntennaSubunit`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AntennaSubunit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitGroupId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitId` varchar(100) DEFAULT NULL,
   `f_antennaSubunitId` varchar(100) DEFAULT NULL,
   `f_azimuthHalfPowerBeamwidth` varchar(100) DEFAULT NULL,
   `f_commonChBeamfrmPortMap` varchar(100) DEFAULT NULL,
@@ -465,11 +465,11 @@ DROP TABLE IF EXISTS `t_AntennaUnit`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AntennaUnit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitGroupId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
   `f_antennaUnitId` varchar(100) DEFAULT NULL,
   `f_mechanicalAntennaTilt` varchar(100) DEFAULT NULL,
   `f_raeSubunitRef` varchar(100) DEFAULT NULL,
@@ -495,10 +495,10 @@ DROP TABLE IF EXISTS `t_AntennaUnitGroup`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AntennaUnitGroup` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
   `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -522,13 +522,13 @@ DROP TABLE IF EXISTS `t_AuPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AuPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitGroupId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitId` varchar(100) DEFAULT NULL,
-  `f_AntennaSubunitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitId` varchar(100) DEFAULT NULL,
+  `f_antennaSubunitId` varchar(100) DEFAULT NULL,
   `f_auPortId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -553,12 +553,12 @@ DROP TABLE IF EXISTS `t_AuthenticationOrder`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AuthenticationOrder` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
   `f_authenticationMethodOrder` varchar(255) DEFAULT NULL,
   `f_authenticationOrderId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -584,12 +584,12 @@ DROP TABLE IF EXISTS `t_AuthorizationOrder`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AuthorizationOrder` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
   `f_authorizationMethodOrder` varchar(255) DEFAULT NULL,
   `f_authorizationOrderId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -615,10 +615,10 @@ DROP TABLE IF EXISTS `t_AutoCellCapEstFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AutoCellCapEstFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_autoCellCapEstFunctionId` varchar(100) DEFAULT NULL,
   `f_useEstimatedCellCap` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -643,10 +643,10 @@ DROP TABLE IF EXISTS `t_AutoProvisioning`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AutoProvisioning` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_autoProvisioningId` varchar(100) DEFAULT NULL,
   `f_rbsConfigLevel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -671,11 +671,11 @@ DROP TABLE IF EXISTS `t_AutonomousMode`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_AutonomousMode` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_activationState` varchar(100) DEFAULT NULL,
   `f_autonomousModeId` varchar(100) DEFAULT NULL,
   `f_expiration` varchar(100) DEFAULT NULL,
@@ -701,11 +701,11 @@ DROP TABLE IF EXISTS `t_BandCombCompression`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BandCombCompression` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_CarrierAggregationFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_carrierAggregationFunctionId` varchar(100) DEFAULT NULL,
   `f_bandCombCompressionId` varchar(100) DEFAULT NULL,
   `f_requestMaxCCsDL` varchar(100) DEFAULT NULL,
   `f_requestMaxCCsUL` varchar(100) DEFAULT NULL,
@@ -736,11 +736,11 @@ DROP TABLE IF EXISTS `t_BbProcessingResource`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BbProcessingResource` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_bbProcessingResourceId` varchar(100) DEFAULT NULL,
   `f_dlBbCapacityMaxLimit` varchar(100) DEFAULT NULL,
   `f_dlBbCapacityNet` varchar(100) DEFAULT NULL,
@@ -770,11 +770,11 @@ DROP TABLE IF EXISTS `t_BoundaryOrdinaryClock`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BoundaryOrdinaryClock` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_PtpId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_ptpId` varchar(100) DEFAULT NULL,
   `f_boundaryOrdinaryClockId` varchar(100) DEFAULT NULL,
   `f_clockStatus` varchar(100) DEFAULT NULL,
   `f_clockType` varchar(100) DEFAULT NULL,
@@ -805,10 +805,10 @@ DROP TABLE IF EXISTS `t_BrM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_brMId` varchar(100) DEFAULT NULL,
   `f_exportPackageLabelPrefix` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -833,12 +833,12 @@ DROP TABLE IF EXISTS `t_BrmBackup`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmBackup` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
-  `f_BrmBackupManagerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
+  `f_brmBackupManagerId` varchar(100) DEFAULT NULL,
   `f_backupName` varchar(100) DEFAULT NULL,
   `f_brmBackupId` varchar(100) DEFAULT NULL,
   `f_creationTime` varchar(100) DEFAULT NULL,
@@ -868,12 +868,12 @@ DROP TABLE IF EXISTS `t_BrmBackupHousekeeping`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmBackupHousekeeping` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
-  `f_BrmBackupManagerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
+  `f_brmBackupManagerId` varchar(100) DEFAULT NULL,
   `f_autoDelete` varchar(100) DEFAULT NULL,
   `f_brmBackupHousekeepingId` varchar(100) DEFAULT NULL,
   `f_maxStoredManualBackups` varchar(100) DEFAULT NULL,
@@ -899,12 +899,12 @@ DROP TABLE IF EXISTS `t_BrmBackupLabelStore`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmBackupLabelStore` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
-  `f_BrmBackupManagerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
+  `f_brmBackupManagerId` varchar(100) DEFAULT NULL,
   `f_brmBackupLabelStoreId` varchar(100) DEFAULT NULL,
   `f_lastCreatedBackup` varchar(100) DEFAULT NULL,
   `f_lastExportedBackup` varchar(100) DEFAULT NULL,
@@ -933,11 +933,11 @@ DROP TABLE IF EXISTS `t_BrmBackupManager`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmBackupManager` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
   `f_autoExport` varchar(100) DEFAULT NULL,
   `f_autoExportPassword` varchar(100) DEFAULT NULL,
   `f_autoExportUri` varchar(100) DEFAULT NULL,
@@ -968,12 +968,12 @@ DROP TABLE IF EXISTS `t_BrmBackupScheduler`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmBackupScheduler` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
-  `f_BrmBackupManagerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
+  `f_brmBackupManagerId` varchar(100) DEFAULT NULL,
   `f_adminState` varchar(100) DEFAULT NULL,
   `f_autoExport` varchar(100) DEFAULT NULL,
   `f_autoExportPassword` varchar(100) DEFAULT NULL,
@@ -1006,13 +1006,13 @@ DROP TABLE IF EXISTS `t_BrmCalendarBasedPeriodicEvent`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmCalendarBasedPeriodicEvent` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
-  `f_BrmBackupManagerId` varchar(100) DEFAULT NULL,
-  `f_BrmBackupSchedulerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
+  `f_brmBackupManagerId` varchar(100) DEFAULT NULL,
+  `f_brmBackupSchedulerId` varchar(100) DEFAULT NULL,
   `f_brmCalendarBasedPeriodicEventId` varchar(100) DEFAULT NULL,
   `f_dayOfMonth` varchar(100) DEFAULT NULL,
   `f_dayOfWeek` varchar(100) DEFAULT NULL,
@@ -1043,12 +1043,12 @@ DROP TABLE IF EXISTS `t_BrmFailsafeBackup`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmFailsafeBackup` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
-  `f_BrmBackupManagerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
+  `f_brmBackupManagerId` varchar(100) DEFAULT NULL,
   `f_backupName` varchar(100) DEFAULT NULL,
   `f_brmFailsafeBackupId` varchar(100) DEFAULT NULL,
   `f_progressReport` text,
@@ -1076,11 +1076,11 @@ DROP TABLE IF EXISTS `t_BrmRollbackAtRestore`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_BrmRollbackAtRestore` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_BrMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_brMId` varchar(100) DEFAULT NULL,
   `f_brmRollbackAtRestoreId` varchar(100) DEFAULT NULL,
   `f_timeAllowedBeforeRollback` varchar(100) DEFAULT NULL,
   `f_timeRemainingBeforeRollback` varchar(100) DEFAULT NULL,
@@ -1106,10 +1106,10 @@ DROP TABLE IF EXISTS `t_Cabinet`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Cabinet` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
   `f_alarmInExternalMe` varchar(100) DEFAULT NULL,
   `f_cabinetId` varchar(100) DEFAULT NULL,
   `f_cabinetIdentifier` varchar(100) DEFAULT NULL,
@@ -1142,11 +1142,11 @@ DROP TABLE IF EXISTS `t_CapacityKey`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CapacityKey` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_capacityKeyId` varchar(100) DEFAULT NULL,
   `f_expiration` varchar(100) DEFAULT NULL,
   `f_grantedCapacityLevel` varchar(100) DEFAULT NULL,
@@ -1180,11 +1180,11 @@ DROP TABLE IF EXISTS `t_CapacityState`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CapacityState` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_capacityKey` varchar(255) DEFAULT NULL,
   `f_capacityStateId` varchar(100) DEFAULT NULL,
   `f_currentCapacityLimit` varchar(100) DEFAULT NULL,
@@ -1216,10 +1216,10 @@ DROP TABLE IF EXISTS `t_CarrierAggregationFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CarrierAggregationFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_a6TriggerSCellDeconfig` varchar(100) DEFAULT NULL,
   `f_caPreemptionThreshold` varchar(100) DEFAULT NULL,
   `f_caPreference` varchar(100) DEFAULT NULL,
@@ -1281,11 +1281,11 @@ DROP TABLE IF EXISTS `t_CellPerformance`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CellPerformance` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_cellPerformanceId` varchar(100) DEFAULT NULL,
   `f_zzzTemporary1` varchar(100) DEFAULT NULL,
   `f_zzzTemporary2` varchar(100) DEFAULT NULL,
@@ -1317,10 +1317,10 @@ DROP TABLE IF EXISTS `t_CellResources`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CellResources` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_cellResourcesId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -1344,11 +1344,11 @@ DROP TABLE IF EXISTS `t_CellSleepFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CellSleepFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_capCellDlPrbSleepThreshold` varchar(100) DEFAULT NULL,
   `f_capCellMobReasNotSleepThr` varchar(100) DEFAULT NULL,
   `f_capCellRrcConnSleepThreshold` varchar(100) DEFAULT NULL,
@@ -1395,10 +1395,10 @@ DROP TABLE IF EXISTS `t_CellSleepNodeFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CellSleepNodeFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_cellSleepNodeFunctionId` varchar(100) DEFAULT NULL,
   `f_csmEutranInterFMeasReportDecr` varchar(100) DEFAULT NULL,
   `f_csmEutranInterFMeasReportIncr` varchar(100) DEFAULT NULL,
@@ -1427,11 +1427,11 @@ DROP TABLE IF EXISTS `t_CertM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CertM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
   `f_activeVendorCredential` varchar(255) DEFAULT NULL,
   `f_certMId` varchar(100) DEFAULT NULL,
   `f_localFileStorePath` varchar(100) DEFAULT NULL,
@@ -1459,12 +1459,12 @@ DROP TABLE IF EXISTS `t_CertMCapabilities`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CertMCapabilities` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
   `f_certMCapabilitiesId` varchar(100) DEFAULT NULL,
   `f_keySupport` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1489,13 +1489,13 @@ DROP TABLE IF EXISTS `t_ChainCertificate`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ChainCertificate` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
-  `f_VendorCredentialId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
+  `f_vendorCredentialId` varchar(100) DEFAULT NULL,
   `f_certificateContent` text,
   `f_certificateState` varchar(100) DEFAULT NULL,
   `f_chainCertificateId` varchar(100) DEFAULT NULL,
@@ -1521,11 +1521,11 @@ DROP TABLE IF EXISTS `t_Cli`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Cli` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_cliId` varchar(100) DEFAULT NULL,
   `f_idleTimer` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1550,11 +1550,11 @@ DROP TABLE IF EXISTS `t_CliSsh`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CliSsh` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_cliSshId` varchar(100) DEFAULT NULL,
   `f_port` varchar(100) DEFAULT NULL,
@@ -1580,11 +1580,11 @@ DROP TABLE IF EXISTS `t_CliTls`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CliTls` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_cliTlsId` varchar(100) DEFAULT NULL,
   `f_nodeCredential` varchar(255) DEFAULT NULL,
@@ -1612,8 +1612,8 @@ DROP TABLE IF EXISTS `t_CmFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CmFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_CmFunctionId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_cmFunctionId` varchar(100) DEFAULT NULL,
   `f_failedSyncsCount` varchar(100) DEFAULT NULL,
   `f_iposCopyConfigFrequency` varchar(100) DEFAULT NULL,
   `f_lastFailedSync` varchar(100) DEFAULT NULL,
@@ -1641,8 +1641,8 @@ DROP TABLE IF EXISTS `t_CmNodeHeartbeatSupervision`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CmNodeHeartbeatSupervision` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_CmNodeHeartbeatSupervisionId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_cmNodeHeartbeatSupervisionId` varchar(100) DEFAULT NULL,
   `f_active` varchar(100) DEFAULT NULL,
   `f_heartbeatInterval` varchar(100) DEFAULT NULL,
   `f_heartbeatTimeout` varchar(100) DEFAULT NULL,
@@ -1670,8 +1670,8 @@ DROP TABLE IF EXISTS `t_ComConnectivityInformation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ComConnectivityInformation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_ComConnectivityInformationId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_comConnectivityInformationId` varchar(100) DEFAULT NULL,
   `f_fileTransferProtocol` varchar(100) DEFAULT NULL,
   `f_ftpTlsServerPort` varchar(100) DEFAULT NULL,
   `f_ipAddress` varchar(100) DEFAULT NULL,
@@ -1705,10 +1705,10 @@ DROP TABLE IF EXISTS `t_ConsumedEnergyMeasurement`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ConsumedEnergyMeasurement` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_consumedEnergyMeasurementId` varchar(100) DEFAULT NULL,
   `f_noOfContributingUnits` varchar(100) DEFAULT NULL,
   `f_reservedBy` text,
@@ -1735,10 +1735,10 @@ DROP TABLE IF EXISTS `t_CpriLinkSupervision`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_CpriLinkSupervision` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_cpriLinkFilterTime` varchar(100) DEFAULT NULL,
   `f_cpriLinkSupervisionId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1763,11 +1763,11 @@ DROP TABLE IF EXISTS `t_DataRadioBearer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_DataRadioBearer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_RadioBearerTableId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_radioBearerTableId` varchar(100) DEFAULT NULL,
   `f_dataRadioBearerId` varchar(100) DEFAULT NULL,
   `f_dlMaxRetxThreshold` varchar(100) DEFAULT NULL,
   `f_tPollRetransmitDl` varchar(100) DEFAULT NULL,
@@ -1795,12 +1795,12 @@ DROP TABLE IF EXISTS `t_DateAndTime`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_DateAndTime` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_TimeMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_timeMId` varchar(100) DEFAULT NULL,
   `f_dateAndTimeId` varchar(100) DEFAULT NULL,
   `f_dateTimeOffset` varchar(100) DEFAULT NULL,
   `f_timeZone` varchar(100) DEFAULT NULL,
@@ -1827,10 +1827,10 @@ DROP TABLE IF EXISTS `t_DlComp`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_DlComp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_dlCompId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -1854,10 +1854,10 @@ DROP TABLE IF EXISTS `t_DrxProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_DrxProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_drxInactivityTimer` varchar(100) DEFAULT NULL,
   `f_drxProfileId` varchar(100) DEFAULT NULL,
   `f_drxRetransmissionTimer` varchar(100) DEFAULT NULL,
@@ -1889,11 +1889,11 @@ DROP TABLE IF EXISTS `t_DscpPcpMap`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_DscpPcpMap` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_QosProfilesId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_qosProfilesId` varchar(100) DEFAULT NULL,
   `f_defaultPcp` varchar(100) DEFAULT NULL,
   `f_dscpPcpMapId` varchar(100) DEFAULT NULL,
   `f_pcp0` varchar(100) DEFAULT NULL,
@@ -1928,12 +1928,12 @@ DROP TABLE IF EXISTS `t_Dst`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Dst` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
-  `f_RouteTableIPv4StaticId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
+  `f_routeTableIPv4StaticId` varchar(100) DEFAULT NULL,
   `f_dst` varchar(100) DEFAULT NULL,
   `f_dstId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1958,9 +1958,9 @@ DROP TABLE IF EXISTS `t_ENodeBFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ENodeBFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
   `f_alignTtiBundWUlTrigSinr` varchar(100) DEFAULT NULL,
   `f_altNasBackTo` varchar(100) DEFAULT NULL,
   `f_biasThpWifiMobility` varchar(100) DEFAULT NULL,
@@ -2145,10 +2145,10 @@ DROP TABLE IF EXISTS `t_EUtraNetwork`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EUtraNetwork` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_eUtraNetworkId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -2173,10 +2173,10 @@ DROP TABLE IF EXISTS `t_EUtranCellFDD`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EUtranCellFDD` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_acBarringForCsfb` varchar(100) DEFAULT NULL,
   `f_acBarringForEmergency` varchar(100) DEFAULT NULL,
   `f_acBarringForMoData` varchar(100) DEFAULT NULL,
@@ -2577,12 +2577,12 @@ DROP TABLE IF EXISTS `t_EUtranCellRelation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EUtranCellRelation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_EUtranFreqRelationId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_eUtranFreqRelationId` varchar(100) DEFAULT NULL,
   `f_amoAllowed` varchar(100) DEFAULT NULL,
   `f_amoState` varchar(100) DEFAULT NULL,
   `f_cellIndividualOffsetEUtran` varchar(100) DEFAULT NULL,
@@ -2640,11 +2640,11 @@ DROP TABLE IF EXISTS `t_EUtranFreqRelation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EUtranFreqRelation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_a3RsrpFreqOffsetAdjustment` varchar(100) DEFAULT NULL,
   `f_a3RsrqFreqOffsetAdjustment` varchar(100) DEFAULT NULL,
   `f_a5OffsetPerPC` varchar(100) DEFAULT NULL,
@@ -2739,11 +2739,11 @@ DROP TABLE IF EXISTS `t_EUtranFrequency`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EUtranFrequency` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtraNetworkId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtraNetworkId` varchar(100) DEFAULT NULL,
   `f_additionalFreqBandList` varchar(100) DEFAULT NULL,
   `f_arfcnValueEUtranDl` varchar(100) DEFAULT NULL,
   `f_eUtranFrequencyId` varchar(100) DEFAULT NULL,
@@ -2779,10 +2779,10 @@ DROP TABLE IF EXISTS `t_EcBus`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EcBus` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
   `f_ecBusConnectionType` varchar(100) DEFAULT NULL,
   `f_ecBusConnectorRef` varchar(255) DEFAULT NULL,
   `f_ecBusId` varchar(100) DEFAULT NULL,
@@ -2809,11 +2809,11 @@ DROP TABLE IF EXISTS `t_EcPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EcPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_cascadingOrder` varchar(100) DEFAULT NULL,
   `f_ecBusRef` varchar(100) DEFAULT NULL,
@@ -2842,11 +2842,11 @@ DROP TABLE IF EXISTS `t_EmergencyUnlock`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EmergencyUnlock` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_activationState` varchar(100) DEFAULT NULL,
   `f_activationsLeft` varchar(100) DEFAULT NULL,
   `f_emergencyUnlockId` varchar(100) DEFAULT NULL,
@@ -2873,10 +2873,10 @@ DROP TABLE IF EXISTS `t_EndcProfilePredefined`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EndcProfilePredefined` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_endcProfilePredefinedId` varchar(100) DEFAULT NULL,
   `f_meNbS1TermReqArpLev` varchar(100) DEFAULT NULL,
   `f_reservedBy` text,
@@ -2904,11 +2904,11 @@ DROP TABLE IF EXISTS `t_EnergyMeter`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EnergyMeter` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_consumedEnergyMeasurementRef` varchar(100) DEFAULT NULL,
   `f_energyMeterEnabled` varchar(100) DEFAULT NULL,
   `f_energyMeterId` varchar(100) DEFAULT NULL,
@@ -2935,12 +2935,12 @@ DROP TABLE IF EXISTS `t_EnrollmentAuthority`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EnrollmentAuthority` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
   `f_enrollmentAuthorityId` varchar(100) DEFAULT NULL,
   `f_enrollmentAuthorityName` varchar(100) DEFAULT NULL,
   `f_enrollmentCaCertificate` varchar(100) DEFAULT NULL,
@@ -2969,13 +2969,13 @@ DROP TABLE IF EXISTS `t_EnrollmentServer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EnrollmentServer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
-  `f_EnrollmentServerGroupId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
+  `f_enrollmentServerGroupId` varchar(100) DEFAULT NULL,
   `f_enrollmentInterface` varchar(100) DEFAULT NULL,
   `f_enrollmentServerId` varchar(100) DEFAULT NULL,
   `f_protocol` varchar(100) DEFAULT NULL,
@@ -3003,12 +3003,12 @@ DROP TABLE IF EXISTS `t_EnrollmentServerGroup`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EnrollmentServerGroup` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
   `f_enrollmentServerGroupId` varchar(100) DEFAULT NULL,
   `f_reservedBy` varchar(255) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -3034,9 +3034,9 @@ DROP TABLE IF EXISTS `t_Equipment`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Equipment` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
   `f_equipmentId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -3061,10 +3061,10 @@ DROP TABLE IF EXISTS `t_EquipmentDiscovery`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EquipmentDiscovery` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_antennaDeviceScanInBackground` varchar(100) DEFAULT NULL,
   `f_antennaDeviceScanStatus` varchar(100) DEFAULT NULL,
   `f_dataRate` varchar(100) DEFAULT NULL,
@@ -3097,9 +3097,9 @@ DROP TABLE IF EXISTS `t_EquipmentSupportFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EquipmentSupportFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
   `f_autoCreateExternalNodes` varchar(100) DEFAULT NULL,
   `f_autoCreateUnits` varchar(100) DEFAULT NULL,
   `f_equipmentSupportFunctionId` varchar(100) DEFAULT NULL,
@@ -3129,14 +3129,14 @@ DROP TABLE IF EXISTS `t_EricssonFilter`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EricssonFilter` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
-  `f_LdapAuthenticationMethodId` varchar(100) DEFAULT NULL,
-  `f_LdapId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
+  `f_ldapAuthenticationMethodId` varchar(100) DEFAULT NULL,
+  `f_ldapId` varchar(100) DEFAULT NULL,
   `f_ericssonFilterId` varchar(100) DEFAULT NULL,
   `f_roleAliasesBaseDn` varchar(100) DEFAULT NULL,
   `f_targetBasedAccessControl` varchar(100) DEFAULT NULL,
@@ -3163,10 +3163,10 @@ DROP TABLE IF EXISTS `t_EricssonLeanCarrierFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EricssonLeanCarrierFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_disableElcOnVolte` varchar(100) DEFAULT NULL,
   `f_elcDrxOnDurationPostHeating` varchar(100) DEFAULT NULL,
   `f_elcDrxOnDurationPreHeating` varchar(100) DEFAULT NULL,
@@ -3194,10 +3194,10 @@ DROP TABLE IF EXISTS `t_EthernetPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EthernetPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_admOperatingMode` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_autoNegEnable` varchar(100) DEFAULT NULL,
@@ -3238,11 +3238,11 @@ DROP TABLE IF EXISTS `t_Etws`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Etws` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_etwsId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3266,12 +3266,12 @@ DROP TABLE IF EXISTS `t_EventCapabilities`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EventCapabilities` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
-  `f_EventProducerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
+  `f_eventProducerId` varchar(100) DEFAULT NULL,
   `f_eventCapabilitiesId` varchar(100) DEFAULT NULL,
   `f_maxNoOfJobs` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -3296,12 +3296,12 @@ DROP TABLE IF EXISTS `t_EventFilterType`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EventFilterType` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
-  `f_EventProducerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
+  `f_eventProducerId` varchar(100) DEFAULT NULL,
   `f_eventFilterTypeId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3325,12 +3325,12 @@ DROP TABLE IF EXISTS `t_EventGroup`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EventGroup` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
-  `f_EventProducerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
+  `f_eventProducerId` varchar(100) DEFAULT NULL,
   `f_eventGroupId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3354,12 +3354,12 @@ DROP TABLE IF EXISTS `t_EventJob`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EventJob` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
-  `f_EventProducerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
+  `f_eventProducerId` varchar(100) DEFAULT NULL,
   `f_currentJobState` varchar(100) DEFAULT NULL,
   `f_description` varchar(100) DEFAULT NULL,
   `f_eventFilter` varchar(100) DEFAULT NULL,
@@ -3397,11 +3397,11 @@ DROP TABLE IF EXISTS `t_EventProducer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EventProducer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
   `f_eventProducerId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3425,13 +3425,13 @@ DROP TABLE IF EXISTS `t_EventType`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_EventType` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
-  `f_EventProducerId` varchar(100) DEFAULT NULL,
-  `f_EventGroupId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
+  `f_eventProducerId` varchar(100) DEFAULT NULL,
+  `f_eventGroupId` varchar(100) DEFAULT NULL,
   `f_eventTypeId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3455,11 +3455,11 @@ DROP TABLE IF EXISTS `t_ExternalENodeBFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ExternalENodeBFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtraNetworkId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtraNetworkId` varchar(100) DEFAULT NULL,
   `f_createdBy` varchar(100) DEFAULT NULL,
   `f_eNBId` varchar(100) DEFAULT NULL,
   `f_eNodeBPlmnId` varchar(100) DEFAULT NULL,
@@ -3501,12 +3501,12 @@ DROP TABLE IF EXISTS `t_ExternalEUtranCellFDD`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ExternalEUtranCellFDD` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtraNetworkId` varchar(100) DEFAULT NULL,
-  `f_ExternalENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtraNetworkId` varchar(100) DEFAULT NULL,
+  `f_externalENodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_activePlmnList` varchar(100) DEFAULT NULL,
   `f_activeServiceAreaId` varchar(100) DEFAULT NULL,
   `f_additionalFreqBandList` varchar(100) DEFAULT NULL,
@@ -3562,10 +3562,10 @@ DROP TABLE IF EXISTS `t_ExternalPower`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ExternalPower` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentSupportFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentSupportFunctionId` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_externalPowerId` varchar(100) DEFAULT NULL,
   `f_operationalState` varchar(100) DEFAULT NULL,
@@ -3591,12 +3591,12 @@ DROP TABLE IF EXISTS `t_ExternalUtranCellFDD`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ExternalUtranCellFDD` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_UtraNetworkId` varchar(100) DEFAULT NULL,
-  `f_UtranFrequencyId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_utraNetworkId` varchar(100) DEFAULT NULL,
+  `f_utranFrequencyId` varchar(100) DEFAULT NULL,
   `f_cellIdentity` varchar(100) DEFAULT NULL,
   `f_externalUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_isRemoveAllowed` varchar(100) DEFAULT NULL,
@@ -3646,11 +3646,11 @@ DROP TABLE IF EXISTS `t_FanGroup`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FanGroup` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_CabinetId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_cabinetId` varchar(100) DEFAULT NULL,
   `f_fanGroupId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3674,11 +3674,11 @@ DROP TABLE IF EXISTS `t_FeatureKey`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FeatureKey` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_expiration` varchar(100) DEFAULT NULL,
   `f_featureKeyId` varchar(100) DEFAULT NULL,
   `f_keyId` varchar(100) DEFAULT NULL,
@@ -3709,11 +3709,11 @@ DROP TABLE IF EXISTS `t_FeatureState`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FeatureState` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_description` varchar(100) DEFAULT NULL,
   `f_featureKey` varchar(255) DEFAULT NULL,
   `f_featureState` varchar(100) DEFAULT NULL,
@@ -3743,10 +3743,10 @@ DROP TABLE IF EXISTS `t_FieldReplaceableUnit`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FieldReplaceableUnit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_hwTestResult` varchar(100) DEFAULT NULL,
@@ -3780,12 +3780,12 @@ DROP TABLE IF EXISTS `t_FilePullCapabilities`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FilePullCapabilities` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
-  `f_EventProducerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
+  `f_eventProducerId` varchar(100) DEFAULT NULL,
   `f_alignedReportingPeriod` varchar(100) DEFAULT NULL,
   `f_filePullCapabilitiesId` varchar(100) DEFAULT NULL,
   `f_finalROP` varchar(100) DEFAULT NULL,
@@ -3814,11 +3814,11 @@ DROP TABLE IF EXISTS `t_FileTPM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FileTPM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_fileTPMId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3842,14 +3842,14 @@ DROP TABLE IF EXISTS `t_Filter`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Filter` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
-  `f_LdapAuthenticationMethodId` varchar(100) DEFAULT NULL,
-  `f_LdapId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
+  `f_ldapAuthenticationMethodId` varchar(100) DEFAULT NULL,
+  `f_ldapId` varchar(100) DEFAULT NULL,
   `f_filter` varchar(100) DEFAULT NULL,
   `f_filterId` varchar(100) DEFAULT NULL,
   `f_type` varchar(100) DEFAULT NULL,
@@ -3876,10 +3876,10 @@ DROP TABLE IF EXISTS `t_FlexibleQoSFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FlexibleQoSFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_flexibleQoSFunctionId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3903,10 +3903,10 @@ DROP TABLE IF EXISTS `t_Fm`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Fm` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_fmId` varchar(100) DEFAULT NULL,
   `f_heartbeatInterval` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -3931,11 +3931,11 @@ DROP TABLE IF EXISTS `t_FmAlarm`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FmAlarm` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_FmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_fmId` varchar(100) DEFAULT NULL,
   `f_fmAlarmId` varchar(100) DEFAULT NULL,
   `f_originalAdditionalText` varchar(255) DEFAULT NULL,
   `f_originalEventTime` varchar(100) DEFAULT NULL,
@@ -3962,11 +3962,11 @@ DROP TABLE IF EXISTS `t_FmAlarmModel`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FmAlarmModel` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_FmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_fmId` varchar(100) DEFAULT NULL,
   `f_fmAlarmModelId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -3990,8 +3990,8 @@ DROP TABLE IF EXISTS `t_FmAlarmSupervision`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FmAlarmSupervision` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_FmAlarmSupervisionId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_fmAlarmSupervisionId` varchar(100) DEFAULT NULL,
   `f_active` varchar(100) DEFAULT NULL,
   `f_automaticSynchronization` varchar(100) DEFAULT NULL,
   `f_failoverCount` varchar(100) DEFAULT NULL,
@@ -4019,12 +4019,12 @@ DROP TABLE IF EXISTS `t_FmAlarmType`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FmAlarmType` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_FmId` varchar(100) DEFAULT NULL,
-  `f_FmAlarmModelId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_fmId` varchar(100) DEFAULT NULL,
+  `f_fmAlarmModelId` varchar(100) DEFAULT NULL,
   `f_configuredSeverity` varchar(100) DEFAULT NULL,
   `f_fmAlarmTypeId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -4049,8 +4049,8 @@ DROP TABLE IF EXISTS `t_FmFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FmFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_FmFunctionId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_fmFunctionId` varchar(100) DEFAULT NULL,
   `f_alarmSuppressedState` varchar(100) DEFAULT NULL,
   `f_currentServiceState` varchar(100) DEFAULT NULL,
   `f_lastUpdated` varchar(100) DEFAULT NULL,
@@ -4079,12 +4079,12 @@ DROP TABLE IF EXISTS `t_FreqBandData`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FreqBandData` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
-  `f_RfPortId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_rfPortId` varchar(100) DEFAULT NULL,
   `f_freqBandDataId` varchar(100) DEFAULT NULL,
   `f_vswrSupervisionActive` varchar(100) DEFAULT NULL,
   `f_vswrSupervisionSensitivity` varchar(100) DEFAULT NULL,
@@ -4110,12 +4110,12 @@ DROP TABLE IF EXISTS `t_FtpServer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FtpServer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_FileTPMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_fileTPMId` varchar(100) DEFAULT NULL,
   `f_ftpServerId` varchar(100) DEFAULT NULL,
   `f_idleTimer` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -4140,12 +4140,12 @@ DROP TABLE IF EXISTS `t_FtpTls`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FtpTls` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_FileTPMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_fileTPMId` varchar(100) DEFAULT NULL,
   `f_ftpTlsId` varchar(100) DEFAULT NULL,
   `f_nodeCredential` varchar(100) DEFAULT NULL,
   `f_trustCategory` varchar(100) DEFAULT NULL,
@@ -4171,13 +4171,13 @@ DROP TABLE IF EXISTS `t_FtpTlsServer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_FtpTlsServer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_FileTPMId` varchar(100) DEFAULT NULL,
-  `f_FtpServerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_fileTPMId` varchar(100) DEFAULT NULL,
+  `f_ftpServerId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_ftpTlsServerId` varchar(100) DEFAULT NULL,
   `f_maxDataPort` varchar(100) DEFAULT NULL,
@@ -4207,7 +4207,7 @@ DROP TABLE IF EXISTS `t_GeographicLocation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_GeographicLocation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
   `f_geographicLocationId` varchar(100) DEFAULT NULL,
   `f_ufLocation` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -4232,8 +4232,8 @@ DROP TABLE IF EXISTS `t_GeometricPoint`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_GeometricPoint` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_GeographicLocationId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_geographicLocationId` varchar(100) DEFAULT NULL,
   `f_elevation` varchar(100) DEFAULT NULL,
   `f_geometricPointId` varchar(100) DEFAULT NULL,
   `f_latitude` varchar(100) DEFAULT NULL,
@@ -4260,12 +4260,12 @@ DROP TABLE IF EXISTS `t_GracePeriod`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_GracePeriod` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
-  `f_CapacityStateId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
+  `f_capacityStateId` varchar(100) DEFAULT NULL,
   `f_gracePeriodExpiration` varchar(100) DEFAULT NULL,
   `f_gracePeriodId` varchar(100) DEFAULT NULL,
   `f_gracePeriodState` varchar(100) DEFAULT NULL,
@@ -4291,11 +4291,11 @@ DROP TABLE IF EXISTS `t_HcJob`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_HcJob` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_HealthCheckMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_healthCheckMId` varchar(100) DEFAULT NULL,
   `f_failedRules` text,
   `f_hcJobId` varchar(100) DEFAULT NULL,
   `f_inputParameters` varchar(100) DEFAULT NULL,
@@ -4326,11 +4326,11 @@ DROP TABLE IF EXISTS `t_HcRule`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_HcRule` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_HealthCheckMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_healthCheckMId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_categories` varchar(100) DEFAULT NULL,
   `f_hcRuleId` varchar(100) DEFAULT NULL,
@@ -4358,10 +4358,10 @@ DROP TABLE IF EXISTS `t_HealthCheckM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_HealthCheckM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_healthCheckMId` varchar(100) DEFAULT NULL,
   `f_lastExecutedJob` varchar(255) DEFAULT NULL,
   `f_lastStatus` varchar(100) DEFAULT NULL,
@@ -4389,11 +4389,11 @@ DROP TABLE IF EXISTS `t_HttpM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_HttpM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_httpMId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -4417,12 +4417,12 @@ DROP TABLE IF EXISTS `t_Https`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Https` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_HttpMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_httpMId` varchar(100) DEFAULT NULL,
   `f_httpsId` varchar(100) DEFAULT NULL,
   `f_nodeCredential` varchar(255) DEFAULT NULL,
   `f_trustCategory` varchar(255) DEFAULT NULL,
@@ -4448,10 +4448,10 @@ DROP TABLE IF EXISTS `t_HwInventory`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_HwInventory` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_hwInventoryId` varchar(100) DEFAULT NULL,
   `f_timeOfLatestInvChange` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -4476,11 +4476,11 @@ DROP TABLE IF EXISTS `t_HwItem`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_HwItem` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_HwInventoryId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_hwInventoryId` varchar(100) DEFAULT NULL,
   `f_additionalInformation` varchar(100) DEFAULT NULL,
   `f_dateOfLastService` varchar(100) DEFAULT NULL,
   `f_equipmentMoRef` varchar(255) DEFAULT NULL,
@@ -4518,10 +4518,10 @@ DROP TABLE IF EXISTS `t_Ikev2PolicyProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Ikev2PolicyProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_credential` varchar(100) DEFAULT NULL,
   `f_dpdTime` varchar(100) DEFAULT NULL,
   `f_ikeDscp` varchar(100) DEFAULT NULL,
@@ -4553,12 +4553,12 @@ DROP TABLE IF EXISTS `t_Ikev2Session`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Ikev2Session` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
-  `f_IpsecTunnelId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
+  `f_ipsecTunnelId` varchar(100) DEFAULT NULL,
   `f_ikev2PolicyProfile` varchar(255) DEFAULT NULL,
   `f_ikev2SessionId` varchar(100) DEFAULT NULL,
   `f_localIdentityOrigin` varchar(100) DEFAULT NULL,
@@ -4586,10 +4586,10 @@ DROP TABLE IF EXISTS `t_ImeisvTable`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ImeisvTable` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_imeisvTableId` varchar(100) DEFAULT NULL,
   `f_listOfFeaturesDefaultOff` varchar(100) DEFAULT NULL,
   `f_listOfFeaturesDefaultOn` varchar(100) DEFAULT NULL,
@@ -4615,11 +4615,11 @@ DROP TABLE IF EXISTS `t_InstantUplinkAccess`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_InstantUplinkAccess` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_instantUplinkAccessId` varchar(100) DEFAULT NULL,
   `f_iuaCellResourceLimit` varchar(100) DEFAULT NULL,
   `f_iuaCoscheduleDynamic` varchar(100) DEFAULT NULL,
@@ -4658,11 +4658,11 @@ DROP TABLE IF EXISTS `t_IntegrationUnlock`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_IntegrationUnlock` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_activationState` varchar(100) DEFAULT NULL,
   `f_activationsLeft` varchar(100) DEFAULT NULL,
   `f_expiration` varchar(100) DEFAULT NULL,
@@ -4689,11 +4689,11 @@ DROP TABLE IF EXISTS `t_InterfaceIPv4`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_InterfaceIPv4` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
   `f_aclEgress` varchar(100) DEFAULT NULL,
   `f_aclIngress` varchar(100) DEFAULT NULL,
   `f_arpTimeout` varchar(100) DEFAULT NULL,
@@ -4734,8 +4734,8 @@ DROP TABLE IF EXISTS `t_InventoryFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_InventoryFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_SHMFunctionId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_sHMFunctionId` varchar(100) DEFAULT NULL,
   `f_inventoryFunctionId` varchar(100) DEFAULT NULL,
   `f_lastSuccessfulSync` varchar(100) DEFAULT NULL,
   `f_syncStatus` varchar(100) DEFAULT NULL,
@@ -4761,7 +4761,7 @@ DROP TABLE IF EXISTS `t_InventorySupervision`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_InventorySupervision` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
   `f_active` varchar(100) DEFAULT NULL,
   `f_doInventorySync` varchar(100) DEFAULT NULL,
   `f_inventorySupervisionId` varchar(100) DEFAULT NULL,
@@ -4788,12 +4788,12 @@ DROP TABLE IF EXISTS `t_IpsecPolicy`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_IpsecPolicy` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
-  `f_IpsecTunnelId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
+  `f_ipsecTunnelId` varchar(100) DEFAULT NULL,
   `f_antiReplayProtection` varchar(100) DEFAULT NULL,
   `f_ipsecPolicyId` varchar(100) DEFAULT NULL,
   `f_ipsecProposalProfile` varchar(255) DEFAULT NULL,
@@ -4822,10 +4822,10 @@ DROP TABLE IF EXISTS `t_IpsecProposalProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_IpsecProposalProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_childSaLifetime` varchar(100) DEFAULT NULL,
   `f_ipsecProposal` varchar(100) DEFAULT NULL,
   `f_ipsecProposalProfileId` varchar(100) DEFAULT NULL,
@@ -4854,11 +4854,11 @@ DROP TABLE IF EXISTS `t_IpsecTunnel`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_IpsecTunnel` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
   `f_ipsecTunnelId` varchar(100) DEFAULT NULL,
   `f_localAddress` varchar(255) DEFAULT NULL,
   `f_remoteAddress` varchar(255) DEFAULT NULL,
@@ -4887,10 +4887,10 @@ DROP TABLE IF EXISTS `t_IuaProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_IuaProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_iuaDeactTimer` varchar(100) DEFAULT NULL,
   `f_iuaDuration` varchar(100) DEFAULT NULL,
   `f_iuaInactivityTimer` varchar(100) DEFAULT NULL,
@@ -4925,12 +4925,12 @@ DROP TABLE IF EXISTS `t_KeyFileInformation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_KeyFileInformation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
-  `f_KeyFileManagementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
+  `f_keyFileManagementId` varchar(100) DEFAULT NULL,
   `f_installationTime` varchar(100) DEFAULT NULL,
   `f_keyFileInformationId` varchar(100) DEFAULT NULL,
   `f_locatable` varchar(100) DEFAULT NULL,
@@ -4958,11 +4958,11 @@ DROP TABLE IF EXISTS `t_KeyFileManagement`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_KeyFileManagement` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_lmId` varchar(100) DEFAULT NULL,
   `f_keyFileManagementId` varchar(100) DEFAULT NULL,
   `f_reportProgress` text,
   PRIMARY KEY (`id`)
@@ -4987,13 +4987,13 @@ DROP TABLE IF EXISTS `t_Ldap`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Ldap` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
-  `f_LdapAuthenticationMethodId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
+  `f_ldapAuthenticationMethodId` varchar(100) DEFAULT NULL,
   `f_baseDn` varchar(100) DEFAULT NULL,
   `f_bindDn` varchar(100) DEFAULT NULL,
   `f_bindPassword` varchar(100) DEFAULT NULL,
@@ -5030,12 +5030,12 @@ DROP TABLE IF EXISTS `t_LdapAuthenticationMethod`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_LdapAuthenticationMethod` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_ldapAuthenticationMethodId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -5061,10 +5061,10 @@ DROP TABLE IF EXISTS `t_LicenseSupport`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_LicenseSupport` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_licenseAreaId` varchar(100) DEFAULT NULL,
   `f_licenseSupportId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -5089,10 +5089,10 @@ DROP TABLE IF EXISTS `t_Lm`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Lm` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_fingerprint` varchar(100) DEFAULT NULL,
   `f_fingerprintUpdateable` varchar(100) DEFAULT NULL,
   `f_lastInventoryChange` varchar(100) DEFAULT NULL,
@@ -5122,10 +5122,10 @@ DROP TABLE IF EXISTS `t_LoadBalancingFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_LoadBalancingFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_isUlEvalAllowedAtCaTrHo` varchar(100) DEFAULT NULL,
   `f_isUlEvalAllowedAtTpLbHo` varchar(100) DEFAULT NULL,
   `f_lbAllowedForEndcUe` varchar(100) DEFAULT NULL,
@@ -5178,12 +5178,12 @@ DROP TABLE IF EXISTS `t_LocalAuthorizationMethod`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_LocalAuthorizationMethod` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_localAuthorizationMethodId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -5209,11 +5209,11 @@ DROP TABLE IF EXISTS `t_Log`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_LogMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_logMId` varchar(100) DEFAULT NULL,
   `f_logId` varchar(100) DEFAULT NULL,
   `f_progressReport` text,
   `f_severityFilter` varchar(100) DEFAULT NULL,
@@ -5239,10 +5239,10 @@ DROP TABLE IF EXISTS `t_LogM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_LogM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_logMId` varchar(100) DEFAULT NULL,
   `f_nodeCredential` varchar(100) DEFAULT NULL,
   `f_progressReport` text,
@@ -5269,11 +5269,11 @@ DROP TABLE IF EXISTS `t_LoggedMdt`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_LoggedMdt` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_MdtConfigurationId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_mdtConfigurationId` varchar(100) DEFAULT NULL,
   `f_areaScopeCgiList` varchar(100) DEFAULT NULL,
   `f_areaScopeTacList` varchar(100) DEFAULT NULL,
   `f_areaScopeType` varchar(100) DEFAULT NULL,
@@ -5310,11 +5310,11 @@ DROP TABLE IF EXISTS `t_LogicalChannelGroup`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_LogicalChannelGroup` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_QciTableId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_qciTableId` varchar(100) DEFAULT NULL,
   `f_logicalChannelGroupId` varchar(100) DEFAULT NULL,
   `f_reservedBy` text,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -5340,11 +5340,11 @@ DROP TABLE IF EXISTS `t_MACConfiguration`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MACConfiguration` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_RadioBearerTableId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_radioBearerTableId` varchar(100) DEFAULT NULL,
   `f_dlMaxHARQTx` varchar(100) DEFAULT NULL,
   `f_mACConfigurationId` varchar(100) DEFAULT NULL,
   `f_ulMaxHARQTx` varchar(100) DEFAULT NULL,
@@ -5371,13 +5371,13 @@ DROP TABLE IF EXISTS `t_MaintenanceUser`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MaintenanceUser` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
-  `f_UserIdentityId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
+  `f_userIdentityId` varchar(100) DEFAULT NULL,
   `f_maintenanceUserId` varchar(100) DEFAULT NULL,
   `f_password` varchar(100) DEFAULT NULL,
   `f_subjectName` varchar(100) DEFAULT NULL,
@@ -5404,13 +5404,13 @@ DROP TABLE IF EXISTS `t_MaintenanceUserSecurity`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MaintenanceUserSecurity` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
-  `f_UserIdentityId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
+  `f_userIdentityId` varchar(100) DEFAULT NULL,
   `f_maintenanceUserSecurityId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -5434,8 +5434,8 @@ DROP TABLE IF EXISTS `t_ManagedElement`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ManagedElement` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
   `f_dnPrefix` varchar(100) DEFAULT NULL,
   `f_managedElementId` varchar(100) DEFAULT NULL,
   `f_managedElementType` varchar(100) DEFAULT NULL,
@@ -5467,10 +5467,10 @@ DROP TABLE IF EXISTS `t_MdtConfiguration`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MdtConfiguration` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_a2ThresholdRsrpMdt` varchar(100) DEFAULT NULL,
   `f_a2ThresholdRsrqMdt` varchar(100) DEFAULT NULL,
   `f_hysteresisA2Mdt` varchar(100) DEFAULT NULL,
@@ -5508,8 +5508,8 @@ DROP TABLE IF EXISTS `t_MeContext`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MeContext` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
   `f_neType` varchar(100) DEFAULT NULL,
   `f_platformType` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -5534,11 +5534,11 @@ DROP TABLE IF EXISTS `t_MimoSleepFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MimoSleepFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_mimoSleepFunctionId` varchar(100) DEFAULT NULL,
   `f_portMergingEnabled` varchar(100) DEFAULT NULL,
   `f_sleepEndTime` varchar(100) DEFAULT NULL,
@@ -5574,10 +5574,10 @@ DROP TABLE IF EXISTS `t_MpClusterHandling`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MpClusterHandling` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_mpClusterHandlingId` varchar(100) DEFAULT NULL,
   `f_primaryCoreRef` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -5602,11 +5602,11 @@ DROP TABLE IF EXISTS `t_MpProcessingResource`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_MpProcessingResource` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_mpProcessingResourceId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -5630,11 +5630,11 @@ DROP TABLE IF EXISTS `t_NetconfSsh`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NetconfSsh` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_netconfSshId` varchar(100) DEFAULT NULL,
   `f_port` varchar(100) DEFAULT NULL,
@@ -5660,11 +5660,11 @@ DROP TABLE IF EXISTS `t_NetconfTls`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NetconfTls` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_netconfTlsId` varchar(100) DEFAULT NULL,
   `f_nodeCredential` varchar(255) DEFAULT NULL,
@@ -5692,11 +5692,11 @@ DROP TABLE IF EXISTS `t_NetconfYangSsh`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NetconfYangSsh` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
-  `f_OnapSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
+  `f_onapSupportId` varchar(100) DEFAULT NULL,
   `f_netconfYangSshId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -5720,11 +5720,11 @@ DROP TABLE IF EXISTS `t_NetconfYangTls`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NetconfYangTls` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
-  `f_OnapSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
+  `f_onapSupportId` varchar(100) DEFAULT NULL,
   `f_netconfYangTlsId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -5748,9 +5748,9 @@ DROP TABLE IF EXISTS `t_NetworkElementSecurity`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NetworkElementSecurity` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_SecurityFunctionId` varchar(100) DEFAULT NULL,
-  `f_NetworkElementSecurityId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_securityFunctionId` varchar(100) DEFAULT NULL,
+  `f_networkElementSecurityId` varchar(100) DEFAULT NULL,
   `f_algorithmAndKeySize` varchar(100) DEFAULT NULL,
   `f_enmSshPrivateKey` varchar(100) DEFAULT NULL,
   `f_enmSshPublicKey` varchar(100) DEFAULT NULL,
@@ -5792,13 +5792,13 @@ DROP TABLE IF EXISTS `t_NextHop`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NextHop` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
-  `f_RouteTableIPv4StaticId` varchar(100) DEFAULT NULL,
-  `f_DstId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
+  `f_routeTableIPv4StaticId` varchar(100) DEFAULT NULL,
+  `f_dstId` varchar(100) DEFAULT NULL,
   `f_address` varchar(100) DEFAULT NULL,
   `f_adminDistance` varchar(100) DEFAULT NULL,
   `f_bfdMonitoring` varchar(100) DEFAULT NULL,
@@ -5827,12 +5827,12 @@ DROP TABLE IF EXISTS `t_NodeCredential`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NodeCredential` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
   `f_certificateContent` text,
   `f_certificateState` varchar(100) DEFAULT NULL,
   `f_enrollmentAuthority` varchar(255) DEFAULT NULL,
@@ -5868,12 +5868,12 @@ DROP TABLE IF EXISTS `t_NodeGroupSyncMember`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NodeGroupSyncMember` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_SynchronizationId` varchar(100) DEFAULT NULL,
-  `f_RadioEquipmentClockId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_synchronizationId` varchar(100) DEFAULT NULL,
+  `f_radioEquipmentClockId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_nodeGroupSyncMemberId` varchar(100) DEFAULT NULL,
   `f_selectionMode` varchar(100) DEFAULT NULL,
@@ -5902,10 +5902,10 @@ DROP TABLE IF EXISTS `t_NodePerformance`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NodePerformance` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_nodePerformanceId` varchar(100) DEFAULT NULL,
   `f_zzzTemporary1` varchar(100) DEFAULT NULL,
   `f_zzzTemporary2` varchar(100) DEFAULT NULL,
@@ -5937,9 +5937,9 @@ DROP TABLE IF EXISTS `t_NodeSupport`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NodeSupport` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
   `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_release` varchar(100) DEFAULT NULL,
   `f_supportFunction` varchar(100) DEFAULT NULL,
@@ -5966,10 +5966,10 @@ DROP TABLE IF EXISTS `t_NonPlannedPciDrxProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NonPlannedPciDrxProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_nonPlannedPciDrxInactivityTimer` varchar(100) DEFAULT NULL,
   `f_nonPlannedPciDrxProfileId` varchar(100) DEFAULT NULL,
   `f_nonPlannedPciLongDrxCycle` varchar(100) DEFAULT NULL,
@@ -5996,12 +5996,12 @@ DROP TABLE IF EXISTS `t_Ntp`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Ntp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_TimeMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_timeMId` varchar(100) DEFAULT NULL,
   `f_ntpId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6025,11 +6025,11 @@ DROP TABLE IF EXISTS `t_NtpServer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_NtpServer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_ntpServerId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6053,11 +6053,11 @@ DROP TABLE IF EXISTS `t_OamAccessPoint`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_OamAccessPoint` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_accessPoint` varchar(255) DEFAULT NULL,
   `f_oamAccessPointId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6082,10 +6082,10 @@ DROP TABLE IF EXISTS `t_OamIpSupport`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_OamIpSupport` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_ipAddressChangeStatus` varchar(100) DEFAULT NULL,
   `f_oamIpSupportId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6110,11 +6110,11 @@ DROP TABLE IF EXISTS `t_OamTrafficClass`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_OamTrafficClass` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_dscp` varchar(100) DEFAULT NULL,
   `f_name` varchar(100) DEFAULT NULL,
   `f_oamTrafficClassId` varchar(100) DEFAULT NULL,
@@ -6140,10 +6140,10 @@ DROP TABLE IF EXISTS `t_OnSiteActivities`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_OnSiteActivities` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_onSiteActivitiesId` varchar(100) DEFAULT NULL,
   `f_technicianPresent` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6168,10 +6168,10 @@ DROP TABLE IF EXISTS `t_OnapSupport`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_OnapSupport` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_onapSupportId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6195,8 +6195,8 @@ DROP TABLE IF EXISTS `t_PMICScannerInfo`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PMICScannerInfo` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_PMICScannerInfoId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_pMICScannerInfoId` varchar(100) DEFAULT NULL,
   `f_errorCode` varchar(100) DEFAULT NULL,
   `f_fileCollectionEnabled` varchar(100) DEFAULT NULL,
   `f_id` varchar(100) DEFAULT NULL,
@@ -6228,10 +6228,10 @@ DROP TABLE IF EXISTS `t_PacketCapture`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PacketCapture` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_packetCaptureId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6256,10 +6256,10 @@ DROP TABLE IF EXISTS `t_Paging`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Paging` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_defaultPagingCycle` varchar(100) DEFAULT NULL,
   `f_defaultPagingCycleNbIot` varchar(100) DEFAULT NULL,
   `f_maxNoOfPagingRecords` varchar(100) DEFAULT NULL,
@@ -6295,10 +6295,10 @@ DROP TABLE IF EXISTS `t_ParameterChangeRequests`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ParameterChangeRequests` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_latestUpdate` varchar(100) DEFAULT NULL,
   `f_parameterChangeRequestList` varchar(100) DEFAULT NULL,
   `f_parameterChangeRequestsId` varchar(100) DEFAULT NULL,
@@ -6324,11 +6324,11 @@ DROP TABLE IF EXISTS `t_PeerIPv4`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PeerIPv4` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
   `f_address` varchar(100) DEFAULT NULL,
   `f_bfdProfile` varchar(100) DEFAULT NULL,
   `f_bfdStaticRoutes` varchar(100) DEFAULT NULL,
@@ -6356,10 +6356,10 @@ DROP TABLE IF EXISTS `t_PlmnInfo`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PlmnInfo` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_actualPlmn` varchar(100) DEFAULT NULL,
   `f_plmnInfoId` varchar(100) DEFAULT NULL,
   `f_plmnWhiteList` varchar(100) DEFAULT NULL,
@@ -6385,10 +6385,10 @@ DROP TABLE IF EXISTS `t_Pm`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Pm` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_pmId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6412,10 +6412,10 @@ DROP TABLE IF EXISTS `t_PmEventM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PmEventM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_pmEventMId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6439,10 +6439,10 @@ DROP TABLE IF EXISTS `t_PmEventService`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PmEventService` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_cellTraceFileSize` varchar(100) DEFAULT NULL,
   `f_cellTraceHighPrioReserve` varchar(100) DEFAULT NULL,
   `f_cellTracePeriodicReport` varchar(100) DEFAULT NULL,
@@ -6479,8 +6479,8 @@ DROP TABLE IF EXISTS `t_PmFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PmFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
-  `f_PmFunctionId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
+  `f_pmFunctionId` varchar(100) DEFAULT NULL,
   `f_fileCollectionState` varchar(100) DEFAULT NULL,
   `f_neConfigurationManagerState` varchar(100) DEFAULT NULL,
   `f_pmEnabled` varchar(100) DEFAULT NULL,
@@ -6508,11 +6508,11 @@ DROP TABLE IF EXISTS `t_PmMeasurementCapabilities`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PmMeasurementCapabilities` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmId` varchar(100) DEFAULT NULL,
   `f_alignedReportingPeriod` varchar(100) DEFAULT NULL,
   `f_fileLocation` varchar(100) DEFAULT NULL,
   `f_fileRPSupported` varchar(100) DEFAULT NULL,
@@ -6555,10 +6555,10 @@ DROP TABLE IF EXISTS `t_PmSupport`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PmSupport` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_pmSupportId` varchar(100) DEFAULT NULL,
   `f_ropFileHandling` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6583,11 +6583,11 @@ DROP TABLE IF EXISTS `t_PmUlInterferenceReport`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PmUlInterferenceReport` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_SectorCarrierId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_sectorCarrierId` varchar(100) DEFAULT NULL,
   `f_pmUlInterferenceReportId` varchar(100) DEFAULT NULL,
   `f_rfBranchRxRef` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6612,10 +6612,10 @@ DROP TABLE IF EXISTS `t_PreschedProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PreschedProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_preschedProfileId` varchar(100) DEFAULT NULL,
   `f_preschedulingDataSize` varchar(100) DEFAULT NULL,
   `f_preschedulingDuration` varchar(100) DEFAULT NULL,
@@ -6643,10 +6643,10 @@ DROP TABLE IF EXISTS `t_PreschedulingProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PreschedulingProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_preschedulingDataSize` varchar(100) DEFAULT NULL,
   `f_preschedulingDuration` varchar(100) DEFAULT NULL,
   `f_preschedulingPeriod` varchar(100) DEFAULT NULL,
@@ -6673,10 +6673,10 @@ DROP TABLE IF EXISTS `t_PtmFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PtmFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_ptmEnabled` varchar(100) DEFAULT NULL,
   `f_ptmFunctionId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6701,10 +6701,10 @@ DROP TABLE IF EXISTS `t_Ptp`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Ptp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_ptpId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6728,12 +6728,12 @@ DROP TABLE IF EXISTS `t_PtpBcOcPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_PtpBcOcPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_PtpId` varchar(100) DEFAULT NULL,
-  `f_BoundaryOrdinaryClockId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_ptpId` varchar(100) DEFAULT NULL,
+  `f_boundaryOrdinaryClockId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_announceMessageInterval` varchar(100) DEFAULT NULL,
   `f_associatedGrandmaster` varchar(100) DEFAULT NULL,
@@ -6775,11 +6775,11 @@ DROP TABLE IF EXISTS `t_QciProfilePredefined`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_QciProfilePredefined` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_QciTableId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_qciTableId` varchar(100) DEFAULT NULL,
   `f_absPrioOverride` varchar(100) DEFAULT NULL,
   `f_aqmMode` varchar(100) DEFAULT NULL,
   `f_bitRateRecommendationEnabled` varchar(100) DEFAULT NULL,
@@ -6848,10 +6848,10 @@ DROP TABLE IF EXISTS `t_QciTable`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_QciTable` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_qciTableId` varchar(100) DEFAULT NULL,
   `f_reservedBy` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -6876,10 +6876,10 @@ DROP TABLE IF EXISTS `t_QosProfiles`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_QosProfiles` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_qosProfilesId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6903,10 +6903,10 @@ DROP TABLE IF EXISTS `t_RadioBearerTable`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RadioBearerTable` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_radioBearerTableId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -6930,11 +6930,11 @@ DROP TABLE IF EXISTS `t_RadioEquipmentClock`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RadioEquipmentClock` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_SynchronizationId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_synchronizationId` varchar(100) DEFAULT NULL,
   `f_bfnOffset` varchar(100) DEFAULT NULL,
   `f_freqDeviationThreshold` varchar(100) DEFAULT NULL,
   `f_minQualityLevel` varchar(100) DEFAULT NULL,
@@ -6964,12 +6964,12 @@ DROP TABLE IF EXISTS `t_RadioEquipmentClockReference`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RadioEquipmentClockReference` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_SynchronizationId` varchar(100) DEFAULT NULL,
-  `f_RadioEquipmentClockId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_synchronizationId` varchar(100) DEFAULT NULL,
+  `f_radioEquipmentClockId` varchar(100) DEFAULT NULL,
   `f_adminQualityLevel` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
@@ -7005,10 +7005,10 @@ DROP TABLE IF EXISTS `t_Rcs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Rcs` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_rcsId` varchar(100) DEFAULT NULL,
   `f_rlcDlDeliveryFailureAction` varchar(100) DEFAULT NULL,
   `f_tInactivityTimer` varchar(100) DEFAULT NULL,
@@ -7035,12 +7035,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA1A2Br`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA1A2Br` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a1a2UlIntraSearchIntraFThr` varchar(100) DEFAULT NULL,
   `f_hysteresisA1A2UlIntraFSearch` varchar(100) DEFAULT NULL,
   `f_reportConfigA1A2BrId` varchar(100) DEFAULT NULL,
@@ -7068,12 +7068,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA1Prim`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA1Prim` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a1ThrRsrpPrimOffsetCeABr` varchar(100) DEFAULT NULL,
   `f_a1ThresholdRsrpPrim` varchar(100) DEFAULT NULL,
   `f_a1ThresholdRsrqPrim` varchar(100) DEFAULT NULL,
@@ -7102,12 +7102,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA1Sec`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA1Sec` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a1ThrRsrpSecOffsetCeABr` varchar(100) DEFAULT NULL,
   `f_a1ThresholdRsrpSec` varchar(100) DEFAULT NULL,
   `f_a1ThresholdRsrqSec` varchar(100) DEFAULT NULL,
@@ -7136,12 +7136,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA4`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA4` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a4ThresholdRsrp` varchar(100) DEFAULT NULL,
   `f_a4ThresholdRsrq` varchar(100) DEFAULT NULL,
   `f_hysteresisA4` varchar(100) DEFAULT NULL,
@@ -7170,12 +7170,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA5`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA5` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a5Threshold1Rsrp` varchar(100) DEFAULT NULL,
   `f_a5Threshold1Rsrq` varchar(100) DEFAULT NULL,
   `f_a5Threshold2Rsrp` varchar(100) DEFAULT NULL,
@@ -7208,13 +7208,13 @@ DROP TABLE IF EXISTS `t_ReportConfigA5Anr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA5Anr` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
-  `f_ReportConfigA5Id` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
+  `f_reportConfigA5Id` varchar(100) DEFAULT NULL,
   `f_a5Threshold1RsrpAnrDelta` varchar(100) DEFAULT NULL,
   `f_a5Threshold1RsrqAnrDelta` varchar(100) DEFAULT NULL,
   `f_a5Threshold2RsrpAnrDelta` varchar(100) DEFAULT NULL,
@@ -7244,12 +7244,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA5DlComp`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA5DlComp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_reportConfigA5DlCompId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -7273,12 +7273,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA5SoftLock`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA5SoftLock` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a5Threshold2Rsrp` varchar(100) DEFAULT NULL,
   `f_reportConfigA5SoftLockId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -7303,12 +7303,12 @@ DROP TABLE IF EXISTS `t_ReportConfigA5UlTrig`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigA5UlTrig` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a5Threshold1Rsrp` varchar(100) DEFAULT NULL,
   `f_a5Threshold1Rsrq` varchar(100) DEFAULT NULL,
   `f_a5Threshold2Rsrp` varchar(100) DEFAULT NULL,
@@ -7339,12 +7339,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB1GUtra`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB1GUtra` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b1Threshold` varchar(100) DEFAULT NULL,
   `f_hysteresisB1` varchar(100) DEFAULT NULL,
   `f_reportConfigB1GUtraId` varchar(100) DEFAULT NULL,
@@ -7372,12 +7372,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB1Geran`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB1Geran` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b1ThresholdGeran` varchar(100) DEFAULT NULL,
   `f_hysteresisB1` varchar(100) DEFAULT NULL,
   `f_reportConfigB1GeranId` varchar(100) DEFAULT NULL,
@@ -7404,12 +7404,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB1NR`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB1NR` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b1Threshold` varchar(100) DEFAULT NULL,
   `f_hysteresisB1` varchar(100) DEFAULT NULL,
   `f_reportConfigB1NRId` varchar(100) DEFAULT NULL,
@@ -7437,12 +7437,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB1Utra`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB1Utra` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b1ThresholdEcNoUtra` varchar(100) DEFAULT NULL,
   `f_b1ThresholdRscpUtra` varchar(100) DEFAULT NULL,
   `f_hysteresisB1` varchar(100) DEFAULT NULL,
@@ -7470,12 +7470,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2Cdma2000`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2Cdma2000` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrp` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrq` varchar(100) DEFAULT NULL,
   `f_b2Threshold2Cdma2000` varchar(100) DEFAULT NULL,
@@ -7507,12 +7507,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2Cdma20001xRtt`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2Cdma20001xRtt` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrp` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrq` varchar(100) DEFAULT NULL,
   `f_b2Threshold2Cdma20001xRtt` varchar(100) DEFAULT NULL,
@@ -7544,12 +7544,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2CdmaRttUlTrig`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2CdmaRttUlTrig` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_reportConfigB2CdmaRttUlTrigId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -7573,12 +7573,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2CdmaUlTrig`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2CdmaUlTrig` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_reportConfigB2CdmaUlTrigId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -7602,12 +7602,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2Geran`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2Geran` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrp` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrq` varchar(100) DEFAULT NULL,
   `f_b2Threshold2Geran` varchar(100) DEFAULT NULL,
@@ -7639,12 +7639,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2GeranUlTrig`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2GeranUlTrig` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b2Threshold2Geran` varchar(100) DEFAULT NULL,
   `f_hysteresisB2` varchar(100) DEFAULT NULL,
   `f_reportConfigB2GeranUlTrigId` varchar(100) DEFAULT NULL,
@@ -7672,12 +7672,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2Utra`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2Utra` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrp` varchar(100) DEFAULT NULL,
   `f_b2Threshold1Rsrq` varchar(100) DEFAULT NULL,
   `f_b2Threshold2EcNoUtra` varchar(100) DEFAULT NULL,
@@ -7710,12 +7710,12 @@ DROP TABLE IF EXISTS `t_ReportConfigB2UtraUlTrig`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigB2UtraUlTrig` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_b2Threshold2EcNoUtra` varchar(100) DEFAULT NULL,
   `f_b2Threshold2RscpUtra` varchar(100) DEFAULT NULL,
   `f_hysteresisB2` varchar(100) DEFAULT NULL,
@@ -7744,12 +7744,12 @@ DROP TABLE IF EXISTS `t_ReportConfigCsfbCdma2000`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigCsfbCdma2000` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_hysteresis` varchar(100) DEFAULT NULL,
   `f_reportConfigCsfbCdma2000Id` varchar(100) DEFAULT NULL,
   `f_thresholdCdma20001xRtt` varchar(100) DEFAULT NULL,
@@ -7776,12 +7776,12 @@ DROP TABLE IF EXISTS `t_ReportConfigCsfbGeran`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigCsfbGeran` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_hysteresis` varchar(100) DEFAULT NULL,
   `f_reportConfigCsfbGeranId` varchar(100) DEFAULT NULL,
   `f_thresholdGeran` varchar(100) DEFAULT NULL,
@@ -7808,12 +7808,12 @@ DROP TABLE IF EXISTS `t_ReportConfigCsfbUtra`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigCsfbUtra` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_hysteresis` varchar(100) DEFAULT NULL,
   `f_reportConfigCsfbUtraId` varchar(100) DEFAULT NULL,
   `f_thresholdEcNo` varchar(100) DEFAULT NULL,
@@ -7841,12 +7841,12 @@ DROP TABLE IF EXISTS `t_ReportConfigCsg`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigCsg` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a5Thr1RsrpAltCsgOffset` varchar(100) DEFAULT NULL,
   `f_a5Thr2RsrpAltCsgOffset` varchar(100) DEFAULT NULL,
   `f_hysteresisA5AltCsg` varchar(100) DEFAULT NULL,
@@ -7874,12 +7874,12 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraBadCovPrim`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraBadCovPrim` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a2ThrRsrpPrimOffsetCeABr` varchar(100) DEFAULT NULL,
   `f_a2ThresholdRsrpPrim` varchar(100) DEFAULT NULL,
   `f_a2ThresholdRsrqPrim` varchar(100) DEFAULT NULL,
@@ -7909,12 +7909,12 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraBadCovSec`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraBadCovSec` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a2ThrRsrpSecOffsetCeABr` varchar(100) DEFAULT NULL,
   `f_a2ThresholdRsrpSec` varchar(100) DEFAULT NULL,
   `f_a2ThresholdRsrqSec` varchar(100) DEFAULT NULL,
@@ -7944,12 +7944,12 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraBestCell`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraBestCell` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a3offset` varchar(100) DEFAULT NULL,
   `f_hysteresisA3` varchar(100) DEFAULT NULL,
   `f_reportConfigEUtraBestCellId` varchar(100) DEFAULT NULL,
@@ -7977,13 +7977,13 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraBestCellAnr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraBestCellAnr` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
-  `f_ReportConfigEUtraBestCellId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
+  `f_reportConfigEUtraBestCellId` varchar(100) DEFAULT NULL,
   `f_a3offsetAnrDelta` varchar(100) DEFAULT NULL,
   `f_hysteresisA3` varchar(100) DEFAULT NULL,
   `f_reportConfigEUtraBestCellAnrId` varchar(100) DEFAULT NULL,
@@ -8010,12 +8010,12 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraIFA3UlTrig`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraIFA3UlTrig` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a3Offset` varchar(100) DEFAULT NULL,
   `f_hysteresisA3` varchar(100) DEFAULT NULL,
   `f_reportConfigEUtraIFA3UlTrigId` varchar(100) DEFAULT NULL,
@@ -8043,12 +8043,12 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraIFBestCell`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraIFBestCell` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a3RsrqOffset` varchar(100) DEFAULT NULL,
   `f_a3offset` varchar(100) DEFAULT NULL,
   `f_hysteresisA3` varchar(100) DEFAULT NULL,
@@ -8079,12 +8079,12 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraInterFreqLb`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraInterFreqLb` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a5Threshold1Rsrp` varchar(100) DEFAULT NULL,
   `f_a5Threshold2Rsrp` varchar(100) DEFAULT NULL,
   `f_a5Threshold2Rsrq` varchar(100) DEFAULT NULL,
@@ -8112,12 +8112,12 @@ DROP TABLE IF EXISTS `t_ReportConfigEUtraInterFreqMbms`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigEUtraInterFreqMbms` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a5ThresholdRsrp` varchar(100) DEFAULT NULL,
   `f_hysteresisA5` varchar(100) DEFAULT NULL,
   `f_reportConfigEUtraInterFreqMbmsId` varchar(100) DEFAULT NULL,
@@ -8143,12 +8143,12 @@ DROP TABLE IF EXISTS `t_ReportConfigElcA1A2`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigElcA1A2` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a1a2ThresholdRsrp` varchar(100) DEFAULT NULL,
   `f_hysteresisA1A2Rsrp` varchar(100) DEFAULT NULL,
   `f_reportConfigElcA1A2Id` varchar(100) DEFAULT NULL,
@@ -8176,12 +8176,12 @@ DROP TABLE IF EXISTS `t_ReportConfigInterEnbUlComp`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigInterEnbUlComp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a3Offset` varchar(100) DEFAULT NULL,
   `f_hysteresisA3` varchar(100) DEFAULT NULL,
   `f_reportConfigInterEnbUlCompId` varchar(100) DEFAULT NULL,
@@ -8209,12 +8209,12 @@ DROP TABLE IF EXISTS `t_ReportConfigInterRatLb`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigInterRatLb` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_reportConfigInterRatLbId` varchar(100) DEFAULT NULL,
   `f_utranB1ThresholdEcNo` varchar(100) DEFAULT NULL,
   `f_utranB1ThresholdRscp` varchar(100) DEFAULT NULL,
@@ -8241,12 +8241,12 @@ DROP TABLE IF EXISTS `t_ReportConfigSCellA1A2`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigSCellA1A2` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a1a2ThresholdRsrp` varchar(100) DEFAULT NULL,
   `f_a1a2ThresholdRsrpBidir` varchar(100) DEFAULT NULL,
   `f_a1a2ThresholdRsrq` varchar(100) DEFAULT NULL,
@@ -8279,12 +8279,12 @@ DROP TABLE IF EXISTS `t_ReportConfigSCellA4`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigSCellA4` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a4ThresholdRsrp` varchar(100) DEFAULT NULL,
   `f_a4ThresholdRsrq` varchar(100) DEFAULT NULL,
   `f_hysteresisA4` varchar(100) DEFAULT NULL,
@@ -8313,12 +8313,12 @@ DROP TABLE IF EXISTS `t_ReportConfigSCellA6`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigSCellA6` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a6offset` varchar(100) DEFAULT NULL,
   `f_hysteresisA6` varchar(100) DEFAULT NULL,
   `f_reportConfigSCellA6Id` varchar(100) DEFAULT NULL,
@@ -8346,12 +8346,12 @@ DROP TABLE IF EXISTS `t_ReportConfigSearch`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ReportConfigSearch` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UeMeasControlId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_ueMeasControlId` varchar(100) DEFAULT NULL,
   `f_a1a2SearchThresholdRsrp` varchar(100) DEFAULT NULL,
   `f_a1a2SearchThresholdRsrq` varchar(100) DEFAULT NULL,
   `f_a1a2UlSearchThreshold` varchar(100) DEFAULT NULL,
@@ -8408,10 +8408,10 @@ DROP TABLE IF EXISTS `t_ResourcePartitions`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_ResourcePartitions` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_resourcePartitionsId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -8435,12 +8435,12 @@ DROP TABLE IF EXISTS `t_RetSubUnit`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RetSubUnit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitGroupId` varchar(100) DEFAULT NULL,
-  `f_AntennaNearUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
+  `f_antennaNearUnitId` varchar(100) DEFAULT NULL,
   `f_calibrationStatus` varchar(100) DEFAULT NULL,
   `f_electricalAntennaTilt` varchar(100) DEFAULT NULL,
   `f_iuantAntennaBearing` varchar(100) DEFAULT NULL,
@@ -8481,11 +8481,11 @@ DROP TABLE IF EXISTS `t_RfBranch`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RfBranch` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitGroupId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
   `f_auPortRef` varchar(255) DEFAULT NULL,
   `f_bandList` varchar(100) DEFAULT NULL,
   `f_dlAttenuation` varchar(100) DEFAULT NULL,
@@ -8522,11 +8522,11 @@ DROP TABLE IF EXISTS `t_RfPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RfPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_antennaSupervisionActive` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
@@ -8564,10 +8564,10 @@ DROP TABLE IF EXISTS `t_RiLink`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RiLink` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_fronthaulDeviceLineRate` varchar(100) DEFAULT NULL,
   `f_linkTag` varchar(100) DEFAULT NULL,
@@ -8598,11 +8598,11 @@ DROP TABLE IF EXISTS `t_RiPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RiPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_channelRef` varchar(255) DEFAULT NULL,
   `f_preferredSfpProductNumber` varchar(100) DEFAULT NULL,
@@ -8631,10 +8631,10 @@ DROP TABLE IF EXISTS `t_RlfProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RlfProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_n310` varchar(100) DEFAULT NULL,
   `f_n311` varchar(100) DEFAULT NULL,
   `f_reservedBy` text,
@@ -8664,13 +8664,13 @@ DROP TABLE IF EXISTS `t_Role`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Role` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
-  `f_LocalAuthorizationMethodId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
+  `f_localAuthorizationMethodId` varchar(100) DEFAULT NULL,
   `f_roleId` varchar(100) DEFAULT NULL,
   `f_roleName` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(255) DEFAULT NULL,
@@ -8696,11 +8696,11 @@ DROP TABLE IF EXISTS `t_RouteTableIPv4Static`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_RouteTableIPv4Static` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_RouterId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_routerId` varchar(100) DEFAULT NULL,
   `f_routeTableIPv4StaticId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -8724,10 +8724,10 @@ DROP TABLE IF EXISTS `t_Router`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Router` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_hopLimit` varchar(100) DEFAULT NULL,
   `f_pathMtuExpiresIPv6` varchar(100) DEFAULT NULL,
   `f_routerId` varchar(100) DEFAULT NULL,
@@ -8756,10 +8756,10 @@ DROP TABLE IF EXISTS `t_Rrc`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Rrc` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_rrcId` varchar(100) DEFAULT NULL,
   `f_t300` varchar(100) DEFAULT NULL,
   `f_t300Br` varchar(100) DEFAULT NULL,
@@ -8797,14 +8797,14 @@ DROP TABLE IF EXISTS `t_Rule`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Rule` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
-  `f_LocalAuthorizationMethodId` varchar(100) DEFAULT NULL,
-  `f_RoleId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
+  `f_localAuthorizationMethodId` varchar(100) DEFAULT NULL,
+  `f_roleId` varchar(100) DEFAULT NULL,
   `f_ruleId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -8829,7 +8829,7 @@ DROP TABLE IF EXISTS `t_SHMFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SHMFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
   `f_shmFunctionId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -8853,11 +8853,11 @@ DROP TABLE IF EXISTS `t_Schema`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Schema` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_baseModelIdentifier` varchar(100) DEFAULT NULL,
   `f_baseModelVersion` varchar(100) DEFAULT NULL,
   `f_identifier` varchar(100) DEFAULT NULL,
@@ -8886,11 +8886,11 @@ DROP TABLE IF EXISTS `t_SciProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SciProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_QciTableId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_qciTableId` varchar(100) DEFAULT NULL,
   `f_absPrioOverride` varchar(100) DEFAULT NULL,
   `f_dlMaxWaitingTime` varchar(100) DEFAULT NULL,
   `f_dlMinBitRate` varchar(100) DEFAULT NULL,
@@ -8931,10 +8931,10 @@ DROP TABLE IF EXISTS `t_Sctp`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Sctp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_sctpId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -8958,11 +8958,11 @@ DROP TABLE IF EXISTS `t_SctpAssociation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SctpAssociation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
-  `f_SctpEndpointId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
+  `f_sctpEndpointId` varchar(100) DEFAULT NULL,
   `f_pmtudSctpPduSize` varchar(100) DEFAULT NULL,
   `f_sctpAssociationId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -8987,10 +8987,10 @@ DROP TABLE IF EXISTS `t_SctpEndpoint`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SctpEndpoint` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_localIpAddress` varchar(255) DEFAULT NULL,
   `f_operationalState` varchar(100) DEFAULT NULL,
@@ -9021,10 +9021,10 @@ DROP TABLE IF EXISTS `t_SctpProfile`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SctpProfile` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_alphaIndex` varchar(100) DEFAULT NULL,
   `f_assocMaxRtx` varchar(100) DEFAULT NULL,
   `f_betaIndex` varchar(100) DEFAULT NULL,
@@ -9083,10 +9083,10 @@ DROP TABLE IF EXISTS `t_SecM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SecM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_secMId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -9110,10 +9110,10 @@ DROP TABLE IF EXISTS `t_SectorCarrier`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SectorCarrier` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_antCalModeTddAasDl` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_configuredMaxTxPower` varchar(100) DEFAULT NULL,
@@ -9170,10 +9170,10 @@ DROP TABLE IF EXISTS `t_SectorEquipmentFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SectorEquipmentFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_eUtranFqBands` text,
@@ -9208,7 +9208,7 @@ DROP TABLE IF EXISTS `t_SecurityFunction`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SecurityFunction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_NetworkElementId` varchar(100) DEFAULT NULL,
+  `f_networkElementId` varchar(100) DEFAULT NULL,
   `f_securityFunctionId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -9232,10 +9232,10 @@ DROP TABLE IF EXISTS `t_SecurityHandling`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SecurityHandling` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_cipheringAlgoPrio` varchar(100) DEFAULT NULL,
   `f_countWrapSupervisionActive` varchar(100) DEFAULT NULL,
   `f_integrityProtectAlgoPrio` varchar(100) DEFAULT NULL,
@@ -9263,12 +9263,12 @@ DROP TABLE IF EXISTS `t_SfpChannel`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SfpChannel` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
-  `f_SfpModuleId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_sfpModuleId` varchar(100) DEFAULT NULL,
   `f_reservedBy` varchar(255) DEFAULT NULL,
   `f_sfpChannelId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -9293,11 +9293,11 @@ DROP TABLE IF EXISTS `t_SfpModule`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SfpModule` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_sfpModuleId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -9322,11 +9322,11 @@ DROP TABLE IF EXISTS `t_SignalingRadioBearer`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SignalingRadioBearer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_RadioBearerTableId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_radioBearerTableId` varchar(100) DEFAULT NULL,
   `f_dlMaxRetxThreshold` varchar(100) DEFAULT NULL,
   `f_signalingRadioBearerId` varchar(100) DEFAULT NULL,
   `f_tPollRetransmitDl` varchar(100) DEFAULT NULL,
@@ -9356,11 +9356,11 @@ DROP TABLE IF EXISTS `t_Snmp`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Snmp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_agentAddress` varchar(100) DEFAULT NULL,
   `f_agentAddressDtls` varchar(100) DEFAULT NULL,
@@ -9393,12 +9393,12 @@ DROP TABLE IF EXISTS `t_SnmpTargetV2C`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SnmpTargetV2C` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_SnmpId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_snmpId` varchar(100) DEFAULT NULL,
   `f_address` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_community` varchar(100) DEFAULT NULL,
@@ -9431,12 +9431,12 @@ DROP TABLE IF EXISTS `t_SnmpTargetV3`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SnmpTargetV3` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
-  `f_SnmpId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
+  `f_snmpId` varchar(100) DEFAULT NULL,
   `f_address` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_authKey` varchar(100) DEFAULT NULL,
@@ -9473,11 +9473,11 @@ DROP TABLE IF EXISTS `t_Ssh`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Ssh` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
   `f_selectedCiphers` varchar(255) DEFAULT NULL,
   `f_selectedKeyExchanges` text,
   `f_selectedMacs` varchar(100) DEFAULT NULL,
@@ -9507,12 +9507,12 @@ DROP TABLE IF EXISTS `t_StreamingCapabilities`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_StreamingCapabilities` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_PmEventMId` varchar(100) DEFAULT NULL,
-  `f_EventProducerId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_pmEventMId` varchar(100) DEFAULT NULL,
+  `f_eventProducerId` varchar(100) DEFAULT NULL,
   `f_streamCapabilitiesId` varchar(100) DEFAULT NULL,
   `f_supportedCompressionTypes` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -9537,10 +9537,10 @@ DROP TABLE IF EXISTS `t_SupportUnit`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SupportUnit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_operationalState` varchar(100) DEFAULT NULL,
   `f_productData` varchar(255) DEFAULT NULL,
@@ -9569,10 +9569,10 @@ DROP TABLE IF EXISTS `t_SwInventory`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SwInventory` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_active` varchar(255) DEFAULT NULL,
   `f_swInventoryId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -9598,11 +9598,11 @@ DROP TABLE IF EXISTS `t_SwItem`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SwItem` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SwInventoryId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_swInventoryId` varchar(100) DEFAULT NULL,
   `f_additionalInfo` varchar(100) DEFAULT NULL,
   `f_administrativeData` text,
   `f_consistsOf` varchar(100) DEFAULT NULL,
@@ -9630,10 +9630,10 @@ DROP TABLE IF EXISTS `t_SwM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SwM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_actionCapable` varchar(100) DEFAULT NULL,
   `f_actionCapableInfo` varchar(100) DEFAULT NULL,
   `f_defaultPassword` varchar(100) DEFAULT NULL,
@@ -9665,11 +9665,11 @@ DROP TABLE IF EXISTS `t_SwVersion`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SwVersion` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SwInventoryId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_swInventoryId` varchar(100) DEFAULT NULL,
   `f_administrativeData` varchar(255) DEFAULT NULL,
   `f_consistsOf` text,
   `f_swVersionId` varchar(100) DEFAULT NULL,
@@ -9699,11 +9699,11 @@ DROP TABLE IF EXISTS `t_SyncPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SyncPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_operationalState` varchar(100) DEFAULT NULL,
   `f_reservedBy` varchar(100) DEFAULT NULL,
@@ -9731,10 +9731,10 @@ DROP TABLE IF EXISTS `t_Synchronization`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Synchronization` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_fixedPosition` varchar(100) DEFAULT NULL,
   `f_synchronizationId` varchar(100) DEFAULT NULL,
   `f_telecomStandard` varchar(100) DEFAULT NULL,
@@ -9760,10 +9760,10 @@ DROP TABLE IF EXISTS `t_SysM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SysM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   `f_sysMId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -9788,9 +9788,9 @@ DROP TABLE IF EXISTS `t_SystemFunctions`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_SystemFunctions` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
   `f_systemFunctionsId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -9814,12 +9814,12 @@ DROP TABLE IF EXISTS `t_TermPointToENB`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TermPointToENB` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtraNetworkId` varchar(100) DEFAULT NULL,
-  `f_ExternalENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtraNetworkId` varchar(100) DEFAULT NULL,
+  `f_externalENodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
   `f_createdBy` varchar(100) DEFAULT NULL,
@@ -9855,10 +9855,10 @@ DROP TABLE IF EXISTS `t_TermPointToMme`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TermPointToMme` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_additionalCnRef` varchar(100) DEFAULT NULL,
   `f_administrativeState` varchar(100) DEFAULT NULL,
   `f_availabilityStatus` varchar(100) DEFAULT NULL,
@@ -9902,10 +9902,10 @@ DROP TABLE IF EXISTS `t_TermPointToSGW`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TermPointToSGW` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_termPointToSGWId` varchar(100) DEFAULT NULL,
   `f_timeOfCreation` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -9930,11 +9930,11 @@ DROP TABLE IF EXISTS `t_TimeM`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TimeM` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_timeMId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -9958,10 +9958,10 @@ DROP TABLE IF EXISTS `t_TimeSettings`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TimeSettings` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_NodeSupportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_nodeSupportId` varchar(100) DEFAULT NULL,
   `f_daylightSavingTimeEndDate` varchar(100) DEFAULT NULL,
   `f_daylightSavingTimeOffset` varchar(100) DEFAULT NULL,
   `f_daylightSavingTimeStartDate` varchar(100) DEFAULT NULL,
@@ -9991,11 +9991,11 @@ DROP TABLE IF EXISTS `t_Tls`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Tls` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
   `f_cipherFilter` varchar(100) DEFAULT NULL,
   `f_enabledCiphers` text,
   `f_supportedCiphers` text,
@@ -10022,12 +10022,12 @@ DROP TABLE IF EXISTS `t_TmaSubUnit`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TmaSubUnit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_AntennaUnitGroupId` varchar(100) DEFAULT NULL,
-  `f_AntennaNearUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_antennaUnitGroupId` varchar(100) DEFAULT NULL,
+  `f_antennaNearUnitId` varchar(100) DEFAULT NULL,
   `f_dlAttenuation` varchar(100) DEFAULT NULL,
   `f_dlTrafficDelay` varchar(100) DEFAULT NULL,
   `f_iuantAntennaBearing` varchar(100) DEFAULT NULL,
@@ -10074,11 +10074,11 @@ DROP TABLE IF EXISTS `t_TnPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TnPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_EquipmentId` varchar(100) DEFAULT NULL,
-  `f_FieldReplaceableUnitId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_equipmentId` varchar(100) DEFAULT NULL,
+  `f_fieldReplaceableUnitId` varchar(100) DEFAULT NULL,
   `f_reservedBy` varchar(255) DEFAULT NULL,
   `f_sfpModuleRef` varchar(255) DEFAULT NULL,
   `f_tnPortId` varchar(100) DEFAULT NULL,
@@ -10105,11 +10105,11 @@ DROP TABLE IF EXISTS `t_TopologySchema`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TopologySchema` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SysMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_sysMId` varchar(100) DEFAULT NULL,
   `f_name` varchar(100) DEFAULT NULL,
   `f_topologySchemaId` varchar(100) DEFAULT NULL,
   `f_version` varchar(100) DEFAULT NULL,
@@ -10135,9 +10135,9 @@ DROP TABLE IF EXISTS `t_Transport`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_Transport` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
   `f_transportId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
@@ -10161,12 +10161,12 @@ DROP TABLE IF EXISTS `t_TrustCategory`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TrustCategory` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
   `f_crlCheck` varchar(100) DEFAULT NULL,
   `f_crlInterface` varchar(100) DEFAULT NULL,
   `f_trustCategoryId` varchar(100) DEFAULT NULL,
@@ -10194,12 +10194,12 @@ DROP TABLE IF EXISTS `t_TrustedCertificate`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_TrustedCertificate` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
   `f_certificateContent` text,
   `f_certificateState` varchar(100) DEFAULT NULL,
   `f_managedState` varchar(100) DEFAULT NULL,
@@ -10227,11 +10227,11 @@ DROP TABLE IF EXISTS `t_UeMeasControl`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UeMeasControl` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_a3MobilityTimerBr` varchar(100) DEFAULT NULL,
   `f_a3SuspendCsgTimer` varchar(100) DEFAULT NULL,
   `f_a5B2MobilityTimer` varchar(100) DEFAULT NULL,
@@ -10330,11 +10330,11 @@ DROP TABLE IF EXISTS `t_UpgradePackage`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UpgradePackage` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SwMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_swMId` varchar(100) DEFAULT NULL,
   `f_activationStep` varchar(100) DEFAULT NULL,
   `f_administrativeData` varchar(255) DEFAULT NULL,
   `f_created` varchar(100) DEFAULT NULL,
@@ -10367,12 +10367,12 @@ DROP TABLE IF EXISTS `t_UserIdentity`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UserIdentity` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_UserManagementId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_userManagementId` varchar(100) DEFAULT NULL,
   `f_userIdentityId` varchar(100) DEFAULT NULL,
   `f_userName` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -10397,11 +10397,11 @@ DROP TABLE IF EXISTS `t_UserManagement`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UserManagement` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
   `f_legalNotice` varchar(100) DEFAULT NULL,
   `f_loginFailureDelay` varchar(100) DEFAULT NULL,
   `f_targetType` varchar(100) DEFAULT NULL,
@@ -10429,10 +10429,10 @@ DROP TABLE IF EXISTS `t_UtraNetwork`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UtraNetwork` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
   `f_userLabel` varchar(100) DEFAULT NULL,
   `f_utraNetworkId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -10457,12 +10457,12 @@ DROP TABLE IF EXISTS `t_UtranCellRelation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UtranCellRelation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
-  `f_UtranFreqRelationId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_utranFreqRelationId` varchar(100) DEFAULT NULL,
   `f_coverageIndicator` varchar(100) DEFAULT NULL,
   `f_createdBy` varchar(100) DEFAULT NULL,
   `f_externalUtranCellFDDRef` varchar(255) DEFAULT NULL,
@@ -10498,11 +10498,11 @@ DROP TABLE IF EXISTS `t_UtranFreqRelation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UtranFreqRelation` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_EUtranCellFDDId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_eUtranCellFDDId` varchar(100) DEFAULT NULL,
   `f_allowedPlmnList` varchar(100) DEFAULT NULL,
   `f_altCsfbTargetPrio` varchar(100) DEFAULT NULL,
   `f_altCsfbTargetPrioEc` varchar(100) DEFAULT NULL,
@@ -10556,11 +10556,11 @@ DROP TABLE IF EXISTS `t_UtranFrequency`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_UtranFrequency` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_ENodeBFunctionId` varchar(100) DEFAULT NULL,
-  `f_UtraNetworkId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_eNodeBFunctionId` varchar(100) DEFAULT NULL,
+  `f_utraNetworkId` varchar(100) DEFAULT NULL,
   `f_arfcnValueUtranDl` varchar(100) DEFAULT NULL,
   `f_reservedBy` text,
   `f_userLabel` varchar(100) DEFAULT NULL,
@@ -10587,12 +10587,12 @@ DROP TABLE IF EXISTS `t_VendorCredential`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_VendorCredential` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_SystemFunctionsId` varchar(100) DEFAULT NULL,
-  `f_SecMId` varchar(100) DEFAULT NULL,
-  `f_CertMId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_systemFunctionsId` varchar(100) DEFAULT NULL,
+  `f_secMId` varchar(100) DEFAULT NULL,
+  `f_certMId` varchar(100) DEFAULT NULL,
   `f_certificateContent` text,
   `f_certificateState` varchar(100) DEFAULT NULL,
   `f_vendorCredentialId` varchar(100) DEFAULT NULL,
@@ -10618,10 +10618,10 @@ DROP TABLE IF EXISTS `t_VlanPort`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_VlanPort` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `f_SubNetworkId` varchar(100) DEFAULT NULL,
-  `f_MeContextId` varchar(100) DEFAULT NULL,
-  `f_ManagedElementId` varchar(100) DEFAULT NULL,
-  `f_TransportId` varchar(100) DEFAULT NULL,
+  `f_subNetworkId` varchar(100) DEFAULT NULL,
+  `f_meContextId` varchar(100) DEFAULT NULL,
+  `f_managedElementId` varchar(100) DEFAULT NULL,
+  `f_transportId` varchar(100) DEFAULT NULL,
   `f_egressQosClassification` varchar(100) DEFAULT NULL,
   `f_egressQosMarking` varchar(100) DEFAULT NULL,
   `f_egressQosQueueMap` varchar(100) DEFAULT NULL,
@@ -10696,4 +10696,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-15 22:18:35
+-- Dump completed on 2019-11-16  0:20:03
