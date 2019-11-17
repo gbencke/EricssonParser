@@ -167,7 +167,7 @@ char *CTable::GetDDLCreateSQL() {
 
 void CTable::AddIndex(char *Record) {
   int fieldsInIndex = 0;
-  strcat(Record, "CREATE UNIQUE INDEX idx_");
+  strcat(Record, "CREATE INDEX idx_");
   for (int x = 0; x < this->_NumberTableFields; x++) {
     char *TableFieldName =
         new char[strlen(this->_TableFields[x]->GetFieldName()) + 3];
