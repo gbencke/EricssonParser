@@ -43,15 +43,6 @@ CREATE TABLE `t_AddressIPv4` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AddressIPv4`
---
-
-LOCK TABLES `t_AddressIPv4` WRITE;
-/*!40000 ALTER TABLE `t_AddressIPv4` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AddressIPv4` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AdmissionControl`
 --
 
@@ -124,15 +115,6 @@ CREATE TABLE `t_AdmissionControl` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AdmissionControl`
---
-
-LOCK TABLES `t_AdmissionControl` WRITE;
-/*!40000 ALTER TABLE `t_AdmissionControl` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AdmissionControl` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AmoFunction`
 --
 
@@ -152,15 +134,6 @@ CREATE TABLE `t_AmoFunction` (
   KEY `idx_su_me_ma_en_am` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_amoFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44509 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AmoFunction`
---
-
-LOCK TABLES `t_AmoFunction` WRITE;
-/*!40000 ALTER TABLE `t_AmoFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AmoFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_AnrFunction`
@@ -212,15 +185,6 @@ CREATE TABLE `t_AnrFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AnrFunction`
---
-
-LOCK TABLES `t_AnrFunction` WRITE;
-/*!40000 ALTER TABLE `t_AnrFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AnrFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AnrFunctionEUtran`
 --
 
@@ -263,15 +227,6 @@ CREATE TABLE `t_AnrFunctionEUtran` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AnrFunctionEUtran`
---
-
-LOCK TABLES `t_AnrFunctionEUtran` WRITE;
-/*!40000 ALTER TABLE `t_AnrFunctionEUtran` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AnrFunctionEUtran` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AnrFunctionGeran`
 --
 
@@ -298,15 +253,6 @@ CREATE TABLE `t_AnrFunctionGeran` (
   KEY `idx_su_me_ma_en_an_an` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_anrFunctionId`,`f_managedElementId`,`f_anrFunctionGeranId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44509 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AnrFunctionGeran`
---
-
-LOCK TABLES `t_AnrFunctionGeran` WRITE;
-/*!40000 ALTER TABLE `t_AnrFunctionGeran` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AnrFunctionGeran` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_AnrFunctionUtran`
@@ -341,15 +287,6 @@ CREATE TABLE `t_AnrFunctionUtran` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AnrFunctionUtran`
---
-
-LOCK TABLES `t_AnrFunctionUtran` WRITE;
-/*!40000 ALTER TABLE `t_AnrFunctionUtran` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AnrFunctionUtran` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AnrPciConflictDrxProfile`
 --
 
@@ -370,15 +307,6 @@ CREATE TABLE `t_AnrPciConflictDrxProfile` (
   KEY `idx_su_me_ma_en_an` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_anrPciConflictDrxProfileId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44509 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AnrPciConflictDrxProfile`
---
-
-LOCK TABLES `t_AnrPciConflictDrxProfile` WRITE;
-/*!40000 ALTER TABLE `t_AnrPciConflictDrxProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AnrPciConflictDrxProfile` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_AntennaNearUnit`
@@ -411,15 +339,6 @@ CREATE TABLE `t_AntennaNearUnit` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AntennaNearUnit`
---
-
-LOCK TABLES `t_AntennaNearUnit` WRITE;
-/*!40000 ALTER TABLE `t_AntennaNearUnit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AntennaNearUnit` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AntennaSubunit`
 --
 
@@ -449,15 +368,6 @@ CREATE TABLE `t_AntennaSubunit` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AntennaSubunit`
---
-
-LOCK TABLES `t_AntennaSubunit` WRITE;
-/*!40000 ALTER TABLE `t_AntennaSubunit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AntennaSubunit` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AntennaUnit`
 --
 
@@ -479,15 +389,6 @@ CREATE TABLE `t_AntennaUnit` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AntennaUnit`
---
-
-LOCK TABLES `t_AntennaUnit` WRITE;
-/*!40000 ALTER TABLE `t_AntennaUnit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AntennaUnit` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AntennaUnitGroup`
 --
 
@@ -505,15 +406,6 @@ CREATE TABLE `t_AntennaUnitGroup` (
   KEY `idx_su_me_ma_eq_an` (`f_meContextId`,`f_subNetworkId`,`f_antennaUnitGroupId`,`f_managedElementId`,`f_equipmentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=516914 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AntennaUnitGroup`
---
-
-LOCK TABLES `t_AntennaUnitGroup` WRITE;
-/*!40000 ALTER TABLE `t_AntennaUnitGroup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AntennaUnitGroup` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_AuPort`
@@ -539,15 +431,6 @@ CREATE TABLE `t_AuPort` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AuPort`
---
-
-LOCK TABLES `t_AuPort` WRITE;
-/*!40000 ALTER TABLE `t_AuPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AuPort` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AuthenticationOrder`
 --
 
@@ -567,15 +450,6 @@ CREATE TABLE `t_AuthenticationOrder` (
   KEY `idx_su_me_ma_sy_se_us_au` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_authenticationOrderId`,`f_secMId`,`f_managedElementId`,`f_userManagementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84576 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AuthenticationOrder`
---
-
-LOCK TABLES `t_AuthenticationOrder` WRITE;
-/*!40000 ALTER TABLE `t_AuthenticationOrder` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AuthenticationOrder` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_AuthenticationOrder_authenticationMethodOrder`
@@ -601,15 +475,6 @@ CREATE TABLE `t_AuthenticationOrder_authenticationMethodOrder` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AuthenticationOrder_authenticationMethodOrder`
---
-
-LOCK TABLES `t_AuthenticationOrder_authenticationMethodOrder` WRITE;
-/*!40000 ALTER TABLE `t_AuthenticationOrder_authenticationMethodOrder` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AuthenticationOrder_authenticationMethodOrder` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AuthorizationOrder`
 --
 
@@ -629,15 +494,6 @@ CREATE TABLE `t_AuthorizationOrder` (
   KEY `idx_su_me_ma_sy_se_us_au` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_secMId`,`f_authorizationOrderId`,`f_managedElementId`,`f_userManagementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84576 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AuthorizationOrder`
---
-
-LOCK TABLES `t_AuthorizationOrder` WRITE;
-/*!40000 ALTER TABLE `t_AuthorizationOrder` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AuthorizationOrder` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_AuthorizationOrder_authorizationMethodOrder`
@@ -663,15 +519,6 @@ CREATE TABLE `t_AuthorizationOrder_authorizationMethodOrder` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AuthorizationOrder_authorizationMethodOrder`
---
-
-LOCK TABLES `t_AuthorizationOrder_authorizationMethodOrder` WRITE;
-/*!40000 ALTER TABLE `t_AuthorizationOrder_authorizationMethodOrder` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AuthorizationOrder_authorizationMethodOrder` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AutoCellCapEstFunction`
 --
 
@@ -690,15 +537,6 @@ CREATE TABLE `t_AutoCellCapEstFunction` (
   KEY `idx_su_me_ma_en_au` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_autoCellCapEstFunctionId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44509 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AutoCellCapEstFunction`
---
-
-LOCK TABLES `t_AutoCellCapEstFunction` WRITE;
-/*!40000 ALTER TABLE `t_AutoCellCapEstFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AutoCellCapEstFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_AutoProvisioning`
@@ -721,15 +559,6 @@ CREATE TABLE `t_AutoProvisioning` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_AutoProvisioning`
---
-
-LOCK TABLES `t_AutoProvisioning` WRITE;
-/*!40000 ALTER TABLE `t_AutoProvisioning` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AutoProvisioning` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_AutonomousMode`
 --
 
@@ -749,15 +578,6 @@ CREATE TABLE `t_AutonomousMode` (
   KEY `idx_su_me_ma_sy_lm_au` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_lmId`,`f_autonomousModeId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84576 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_AutonomousMode`
---
-
-LOCK TABLES `t_AutonomousMode` WRITE;
-/*!40000 ALTER TABLE `t_AutonomousMode` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_AutonomousMode` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BandCombCompression`
@@ -786,15 +606,6 @@ CREATE TABLE `t_BandCombCompression` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BandCombCompression`
---
-
-LOCK TABLES `t_BandCombCompression` WRITE;
-/*!40000 ALTER TABLE `t_BandCombCompression` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BandCombCompression` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BbProcessingResource`
 --
 
@@ -819,15 +630,6 @@ CREATE TABLE `t_BbProcessingResource` (
   KEY `idx_su_me_ma_eq_fi_bb` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_bbProcessingResourceId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44117 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BbProcessingResource`
---
-
-LOCK TABLES `t_BbProcessingResource` WRITE;
-/*!40000 ALTER TABLE `t_BbProcessingResource` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BbProcessingResource` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BoundaryOrdinaryClock`
@@ -857,15 +659,6 @@ CREATE TABLE `t_BoundaryOrdinaryClock` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BoundaryOrdinaryClock`
---
-
-LOCK TABLES `t_BoundaryOrdinaryClock` WRITE;
-/*!40000 ALTER TABLE `t_BoundaryOrdinaryClock` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BoundaryOrdinaryClock` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrM`
 --
 
@@ -883,15 +676,6 @@ CREATE TABLE `t_BrM` (
   KEY `idx_su_me_ma_sy_br` (`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_brMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84576 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BrM`
---
-
-LOCK TABLES `t_BrM` WRITE;
-/*!40000 ALTER TABLE `t_BrM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BrmBackup`
@@ -919,15 +703,6 @@ CREATE TABLE `t_BrmBackup` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BrmBackup`
---
-
-LOCK TABLES `t_BrmBackup` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackup` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrmBackupHousekeeping`
 --
 
@@ -949,15 +724,6 @@ CREATE TABLE `t_BrmBackupHousekeeping` (
   KEY `idx_su_me_ma_sy_br_br_br` (`f_brmBackupHousekeepingId`,`f_subNetworkId`,`f_managedElementId`,`f_brmBackupManagerId`,`f_systemFunctionsId`,`f_brMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84576 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BrmBackupHousekeeping`
---
-
-LOCK TABLES `t_BrmBackupHousekeeping` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackupHousekeeping` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackupHousekeeping` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BrmBackupLabelStore`
@@ -985,15 +751,6 @@ CREATE TABLE `t_BrmBackupLabelStore` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BrmBackupLabelStore`
---
-
-LOCK TABLES `t_BrmBackupLabelStore` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackupLabelStore` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackupLabelStore` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrmBackupManager`
 --
 
@@ -1015,15 +772,6 @@ CREATE TABLE `t_BrmBackupManager` (
   KEY `idx_su_me_ma_sy_br_br` (`f_subNetworkId`,`f_managedElementId`,`f_brmBackupManagerId`,`f_systemFunctionsId`,`f_brMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84576 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BrmBackupManager`
---
-
-LOCK TABLES `t_BrmBackupManager` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackupManager` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackupManager` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BrmBackupManager_progressReport`
@@ -1057,15 +805,6 @@ CREATE TABLE `t_BrmBackupManager_progressReport` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BrmBackupManager_progressReport`
---
-
-LOCK TABLES `t_BrmBackupManager_progressReport` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackupManager_progressReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackupManager_progressReport` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrmBackupScheduler`
 --
 
@@ -1091,15 +830,6 @@ CREATE TABLE `t_BrmBackupScheduler` (
   KEY `idx_su_me_ma_sy_br_br_br` (`f_subNetworkId`,`f_systemFunctionsId`,`f_brmBackupManagerId`,`f_brMId`,`f_meContextId`,`f_brmBackupSchedulerId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84576 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BrmBackupScheduler`
---
-
-LOCK TABLES `t_BrmBackupScheduler` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackupScheduler` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackupScheduler` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BrmBackupScheduler_progressReport`
@@ -1134,15 +864,6 @@ CREATE TABLE `t_BrmBackupScheduler_progressReport` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BrmBackupScheduler_progressReport`
---
-
-LOCK TABLES `t_BrmBackupScheduler_progressReport` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackupScheduler_progressReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackupScheduler_progressReport` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrmBackup_progressReport`
 --
 
@@ -1175,15 +896,6 @@ CREATE TABLE `t_BrmBackup_progressReport` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BrmBackup_progressReport`
---
-
-LOCK TABLES `t_BrmBackup_progressReport` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackup_progressReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackup_progressReport` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrmBackup_swVersion`
 --
 
@@ -1209,15 +921,6 @@ CREATE TABLE `t_BrmBackup_swVersion` (
   KEY `idx_su_me_ma_sy_br_br_br` (`f_subNetworkId`,`f_managedElementId`,`f_brmBackupManagerId`,`f_systemFunctionsId`,`f_brmBackupId`,`f_brMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1327363 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BrmBackup_swVersion`
---
-
-LOCK TABLES `t_BrmBackup_swVersion` WRITE;
-/*!40000 ALTER TABLE `t_BrmBackup_swVersion` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmBackup_swVersion` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BrmCalendarBasedPeriodicEvent`
@@ -1248,15 +951,6 @@ CREATE TABLE `t_BrmCalendarBasedPeriodicEvent` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BrmCalendarBasedPeriodicEvent`
---
-
-LOCK TABLES `t_BrmCalendarBasedPeriodicEvent` WRITE;
-/*!40000 ALTER TABLE `t_BrmCalendarBasedPeriodicEvent` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmCalendarBasedPeriodicEvent` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrmFailsafeBackup`
 --
 
@@ -1278,15 +972,6 @@ CREATE TABLE `t_BrmFailsafeBackup` (
   KEY `idx_su_me_ma_sy_br_br_br` (`f_subNetworkId`,`f_managedElementId`,`f_brmFailsafeBackupId`,`f_brmBackupManagerId`,`f_systemFunctionsId`,`f_brMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BrmFailsafeBackup`
---
-
-LOCK TABLES `t_BrmFailsafeBackup` WRITE;
-/*!40000 ALTER TABLE `t_BrmFailsafeBackup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmFailsafeBackup` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_BrmFailsafeBackup_progressReport`
@@ -1321,15 +1006,6 @@ CREATE TABLE `t_BrmFailsafeBackup_progressReport` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_BrmFailsafeBackup_progressReport`
---
-
-LOCK TABLES `t_BrmFailsafeBackup_progressReport` WRITE;
-/*!40000 ALTER TABLE `t_BrmFailsafeBackup_progressReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmFailsafeBackup_progressReport` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_BrmRollbackAtRestore`
 --
 
@@ -1348,15 +1024,6 @@ CREATE TABLE `t_BrmRollbackAtRestore` (
   KEY `idx_su_me_ma_sy_br_br` (`f_subNetworkId`,`f_managedElementId`,`f_brmRollbackAtRestoreId`,`f_systemFunctionsId`,`f_brMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_BrmRollbackAtRestore`
---
-
-LOCK TABLES `t_BrmRollbackAtRestore` WRITE;
-/*!40000 ALTER TABLE `t_BrmRollbackAtRestore` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_BrmRollbackAtRestore` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Cabinet`
@@ -1380,15 +1047,6 @@ CREATE TABLE `t_Cabinet` (
   KEY `idx_su_me_ma_eq_ca` (`f_cabinetId`,`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_equipmentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84913 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Cabinet`
---
-
-LOCK TABLES `t_Cabinet` WRITE;
-/*!40000 ALTER TABLE `t_Cabinet` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Cabinet` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_CapacityKey`
@@ -1419,15 +1077,6 @@ CREATE TABLE `t_CapacityKey` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CapacityKey`
---
-
-LOCK TABLES `t_CapacityKey` WRITE;
-/*!40000 ALTER TABLE `t_CapacityKey` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CapacityKey` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CapacityKey_licensedCapacityLimit`
 --
 
@@ -1448,15 +1097,6 @@ CREATE TABLE `t_CapacityKey_licensedCapacityLimit` (
   KEY `idx_su_me_ma_sy_lm_ca` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_capacityKeyId`,`f_lmId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2395080 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_CapacityKey_licensedCapacityLimit`
---
-
-LOCK TABLES `t_CapacityKey_licensedCapacityLimit` WRITE;
-/*!40000 ALTER TABLE `t_CapacityKey_licensedCapacityLimit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CapacityKey_licensedCapacityLimit` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_CapacityState`
@@ -1486,15 +1126,6 @@ CREATE TABLE `t_CapacityState` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CapacityState`
---
-
-LOCK TABLES `t_CapacityState` WRITE;
-/*!40000 ALTER TABLE `t_CapacityState` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CapacityState` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CapacityState_currentCapacityLimit`
 --
 
@@ -1515,15 +1146,6 @@ CREATE TABLE `t_CapacityState_currentCapacityLimit` (
   KEY `idx_su_me_ma_sy_lm_ca` (`f_meContextId`,`f_subNetworkId`,`f_capacityStateId`,`f_systemFunctionsId`,`f_lmId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3075070 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_CapacityState_currentCapacityLimit`
---
-
-LOCK TABLES `t_CapacityState_currentCapacityLimit` WRITE;
-/*!40000 ALTER TABLE `t_CapacityState_currentCapacityLimit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CapacityState_currentCapacityLimit` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_CarrierAggregationFunction`
@@ -1583,15 +1205,6 @@ CREATE TABLE `t_CarrierAggregationFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CarrierAggregationFunction`
---
-
-LOCK TABLES `t_CarrierAggregationFunction` WRITE;
-/*!40000 ALTER TABLE `t_CarrierAggregationFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CarrierAggregationFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CellPerformance`
 --
 
@@ -1620,15 +1233,6 @@ CREATE TABLE `t_CellPerformance` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CellPerformance`
---
-
-LOCK TABLES `t_CellPerformance` WRITE;
-/*!40000 ALTER TABLE `t_CellPerformance` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CellPerformance` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CellResources`
 --
 
@@ -1646,15 +1250,6 @@ CREATE TABLE `t_CellResources` (
   KEY `idx_su_me_ma_en_ce` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_cellResourcesId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44994 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_CellResources`
---
-
-LOCK TABLES `t_CellResources` WRITE;
-/*!40000 ALTER TABLE `t_CellResources` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CellResources` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_CellSleepFunction`
@@ -1699,15 +1294,6 @@ CREATE TABLE `t_CellSleepFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CellSleepFunction`
---
-
-LOCK TABLES `t_CellSleepFunction` WRITE;
-/*!40000 ALTER TABLE `t_CellSleepFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CellSleepFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CellSleepNodeFunction`
 --
 
@@ -1732,15 +1318,6 @@ CREATE TABLE `t_CellSleepNodeFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CellSleepNodeFunction`
---
-
-LOCK TABLES `t_CellSleepNodeFunction` WRITE;
-/*!40000 ALTER TABLE `t_CellSleepNodeFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CellSleepNodeFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CertM`
 --
 
@@ -1760,15 +1337,6 @@ CREATE TABLE `t_CertM` (
   KEY `idx_su_me_ma_sy_se_ce` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_certMId`,`f_secMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_CertM`
---
-
-LOCK TABLES `t_CertM` WRITE;
-/*!40000 ALTER TABLE `t_CertM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CertM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_CertMCapabilities`
@@ -1793,15 +1361,6 @@ CREATE TABLE `t_CertMCapabilities` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CertMCapabilities`
---
-
-LOCK TABLES `t_CertMCapabilities` WRITE;
-/*!40000 ALTER TABLE `t_CertMCapabilities` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CertMCapabilities` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ChainCertificate`
 --
 
@@ -1824,15 +1383,6 @@ CREATE TABLE `t_ChainCertificate` (
   KEY `idx_su_me_ma_sy_se_ce_no_ch` (`f_secMId`,`f_subNetworkId`,`f_managedElementId`,`f_nodeCredentialId`,`f_systemFunctionsId`,`f_certMId`,`f_chainCertificateId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=341686 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ChainCertificate`
---
-
-LOCK TABLES `t_ChainCertificate` WRITE;
-/*!40000 ALTER TABLE `t_ChainCertificate` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ChainCertificate` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ChainCertificate_certificateContent`
@@ -1869,15 +1419,6 @@ CREATE TABLE `t_ChainCertificate_certificateContent` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ChainCertificate_certificateContent`
---
-
-LOCK TABLES `t_ChainCertificate_certificateContent` WRITE;
-/*!40000 ALTER TABLE `t_ChainCertificate_certificateContent` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ChainCertificate_certificateContent` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Cli`
 --
 
@@ -1897,15 +1438,6 @@ CREATE TABLE `t_Cli` (
   KEY `idx_su_me_ma_sy_sy_cl` (`f_meContextId`,`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_cliId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85433 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Cli`
---
-
-LOCK TABLES `t_Cli` WRITE;
-/*!40000 ALTER TABLE `t_Cli` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Cli` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_CliSsh`
@@ -1928,15 +1460,6 @@ CREATE TABLE `t_CliSsh` (
   KEY `idx_su_me_ma_sy_sy_cl` (`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_meContextId`,`f_managedElementId`,`f_cliSshId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85433 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_CliSsh`
---
-
-LOCK TABLES `t_CliSsh` WRITE;
-/*!40000 ALTER TABLE `t_CliSsh` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CliSsh` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_CliTls`
@@ -1963,15 +1486,6 @@ CREATE TABLE `t_CliTls` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CliTls`
---
-
-LOCK TABLES `t_CliTls` WRITE;
-/*!40000 ALTER TABLE `t_CliTls` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CliTls` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CmFunction`
 --
 
@@ -1993,15 +1507,6 @@ CREATE TABLE `t_CmFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_CmFunction`
---
-
-LOCK TABLES `t_CmFunction` WRITE;
-/*!40000 ALTER TABLE `t_CmFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CmFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CmNodeHeartbeatSupervision`
 --
 
@@ -2021,15 +1526,6 @@ CREATE TABLE `t_CmNodeHeartbeatSupervision` (
   KEY `idx_ne_cm` (`f_networkElementId`,`f_cmNodeHeartbeatSupervisionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86836 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_CmNodeHeartbeatSupervision`
---
-
-LOCK TABLES `t_CmNodeHeartbeatSupervision` WRITE;
-/*!40000 ALTER TABLE `t_CmNodeHeartbeatSupervision` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CmNodeHeartbeatSupervision` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ComConnectivityInformation`
@@ -2059,15 +1555,6 @@ CREATE TABLE `t_ComConnectivityInformation` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ComConnectivityInformation`
---
-
-LOCK TABLES `t_ComConnectivityInformation` WRITE;
-/*!40000 ALTER TABLE `t_ComConnectivityInformation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ComConnectivityInformation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ConsumedEnergyMeasurement`
 --
 
@@ -2090,15 +1577,6 @@ CREATE TABLE `t_ConsumedEnergyMeasurement` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ConsumedEnergyMeasurement`
---
-
-LOCK TABLES `t_ConsumedEnergyMeasurement` WRITE;
-/*!40000 ALTER TABLE `t_ConsumedEnergyMeasurement` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ConsumedEnergyMeasurement` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_CpriLinkSupervision`
 --
 
@@ -2117,15 +1595,6 @@ CREATE TABLE `t_CpriLinkSupervision` (
   KEY `idx_su_me_ma_no_cp` (`f_cpriLinkSupervisionId`,`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_nodeSupportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_CpriLinkSupervision`
---
-
-LOCK TABLES `t_CpriLinkSupervision` WRITE;
-/*!40000 ALTER TABLE `t_CpriLinkSupervision` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_CpriLinkSupervision` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_DataRadioBearer`
@@ -2152,15 +1621,6 @@ CREATE TABLE `t_DataRadioBearer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_DataRadioBearer`
---
-
-LOCK TABLES `t_DataRadioBearer` WRITE;
-/*!40000 ALTER TABLE `t_DataRadioBearer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_DataRadioBearer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_DateAndTime`
 --
 
@@ -2185,15 +1645,6 @@ CREATE TABLE `t_DateAndTime` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_DateAndTime`
---
-
-LOCK TABLES `t_DateAndTime` WRITE;
-/*!40000 ALTER TABLE `t_DateAndTime` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_DateAndTime` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_DlComp`
 --
 
@@ -2211,15 +1662,6 @@ CREATE TABLE `t_DlComp` (
   KEY `idx_su_me_ma_en_dl` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_dlCompId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44994 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_DlComp`
---
-
-LOCK TABLES `t_DlComp` WRITE;
-/*!40000 ALTER TABLE `t_DlComp` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_DlComp` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_DnsClient`
@@ -2244,15 +1686,6 @@ CREATE TABLE `t_DnsClient` (
   KEY `idx_su_me_ma_tr_ro_dn` (`f_subNetworkId`,`f_meContextId`,`f_dnsClientId`,`f_routerId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_DnsClient`
---
-
-LOCK TABLES `t_DnsClient` WRITE;
-/*!40000 ALTER TABLE `t_DnsClient` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_DnsClient` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_DrxProfile`
@@ -2280,15 +1713,6 @@ CREATE TABLE `t_DrxProfile` (
   KEY `idx_su_me_ma_en_dr` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_drxProfileId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=854868 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_DrxProfile`
---
-
-LOCK TABLES `t_DrxProfile` WRITE;
-/*!40000 ALTER TABLE `t_DrxProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_DrxProfile` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_DscpPcpMap`
@@ -2320,15 +1744,6 @@ CREATE TABLE `t_DscpPcpMap` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_DscpPcpMap`
---
-
-LOCK TABLES `t_DscpPcpMap` WRITE;
-/*!40000 ALTER TABLE `t_DscpPcpMap` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_DscpPcpMap` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Dst`
 --
 
@@ -2349,15 +1764,6 @@ CREATE TABLE `t_Dst` (
   KEY `idx_su_me_ma_tr_ro_ro_ds` (`f_meContextId`,`f_subNetworkId`,`f_routeTableIPv4StaticId`,`f_routerId`,`f_managedElementId`,`f_transportId`,`f_dstId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=170863 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Dst`
---
-
-LOCK TABLES `t_Dst` WRITE;
-/*!40000 ALTER TABLE `t_Dst` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Dst` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ENodeBFunction`
@@ -2522,15 +1928,6 @@ CREATE TABLE `t_ENodeBFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ENodeBFunction`
---
-
-LOCK TABLES `t_ENodeBFunction` WRITE;
-/*!40000 ALTER TABLE `t_ENodeBFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ENodeBFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ENodeBFunction_eNodeBPlmnId`
 --
 
@@ -2552,15 +1949,6 @@ CREATE TABLE `t_ENodeBFunction_eNodeBPlmnId` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ENodeBFunction_eNodeBPlmnId`
---
-
-LOCK TABLES `t_ENodeBFunction_eNodeBPlmnId` WRITE;
-/*!40000 ALTER TABLE `t_ENodeBFunction_eNodeBPlmnId` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ENodeBFunction_eNodeBPlmnId` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtraNetwork`
 --
 
@@ -2578,15 +1966,6 @@ CREATE TABLE `t_EUtraNetwork` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtraNetworkId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44994 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtraNetwork`
---
-
-LOCK TABLES `t_EUtraNetwork` WRITE;
-/*!40000 ALTER TABLE `t_EUtraNetwork` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtraNetwork` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD`
@@ -2943,15 +2322,6 @@ CREATE TABLE `t_EUtranCellFDD` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD`
---
-
-LOCK TABLES `t_EUtranCellFDD` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_acBarringForCsfb`
 --
 
@@ -2972,15 +2342,6 @@ CREATE TABLE `t_EUtranCellFDD_acBarringForCsfb` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_acBarringForCsfb`
---
-
-LOCK TABLES `t_EUtranCellFDD_acBarringForCsfb` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringForCsfb` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringForCsfb` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_acBarringForMoData`
@@ -3005,15 +2366,6 @@ CREATE TABLE `t_EUtranCellFDD_acBarringForMoData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_acBarringForMoData`
---
-
-LOCK TABLES `t_EUtranCellFDD_acBarringForMoData` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringForMoData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringForMoData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_acBarringForMoSignalling`
 --
 
@@ -3034,15 +2386,6 @@ CREATE TABLE `t_EUtranCellFDD_acBarringForMoSignalling` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_acBarringForMoSignalling`
---
-
-LOCK TABLES `t_EUtranCellFDD_acBarringForMoSignalling` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringForMoSignalling` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringForMoSignalling` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_acBarringPresence`
@@ -3081,15 +2424,6 @@ CREATE TABLE `t_EUtranCellFDD_acBarringPresence` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_acBarringPresence`
---
-
-LOCK TABLES `t_EUtranCellFDD_acBarringPresence` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringPresence` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_acBarringPresence` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_activePlmnList`
 --
 
@@ -3113,15 +2447,6 @@ CREATE TABLE `t_EUtranCellFDD_activePlmnList` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_activePlmnList`
---
-
-LOCK TABLES `t_EUtranCellFDD_activePlmnList` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_activePlmnList` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_activePlmnList` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_additionalMultipleNSPmax`
 --
 
@@ -3141,15 +2466,6 @@ CREATE TABLE `t_EUtranCellFDD_additionalMultipleNSPmax` (
   KEY `idx_su_me_ma_en_eu` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=263860 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_additionalMultipleNSPmax`
---
-
-LOCK TABLES `t_EUtranCellFDD_additionalMultipleNSPmax` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_additionalMultipleNSPmax` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_additionalMultipleNSPmax` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_additionalPlmnList`
@@ -3172,15 +2488,6 @@ CREATE TABLE `t_EUtranCellFDD_additionalPlmnList` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2652701 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_additionalPlmnList`
---
-
-LOCK TABLES `t_EUtranCellFDD_additionalPlmnList` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_additionalPlmnList` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_additionalPlmnList` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_changeNotification`
@@ -3214,15 +2521,6 @@ CREATE TABLE `t_EUtranCellFDD_changeNotification` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_changeNotification`
---
-
-LOCK TABLES `t_EUtranCellFDD_changeNotification` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_changeNotification` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_changeNotification` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_eutranCellCoverage`
 --
 
@@ -3245,15 +2543,6 @@ CREATE TABLE `t_EUtranCellFDD_eutranCellCoverage` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_eutranCellCoverage`
---
-
-LOCK TABLES `t_EUtranCellFDD_eutranCellCoverage` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_eutranCellCoverage` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_eutranCellCoverage` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_frameStartOffset`
 --
 
@@ -3272,15 +2561,6 @@ CREATE TABLE `t_EUtranCellFDD_frameStartOffset` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_frameStartOffset`
---
-
-LOCK TABLES `t_EUtranCellFDD_frameStartOffset` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_frameStartOffset` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_frameStartOffset` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_loadBasedCaMsrThr`
@@ -3310,15 +2590,6 @@ CREATE TABLE `t_EUtranCellFDD_loadBasedCaMsrThr` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_loadBasedCaMsrThr`
---
-
-LOCK TABLES `t_EUtranCellFDD_loadBasedCaMsrThr` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_loadBasedCaMsrThr` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_loadBasedCaMsrThr` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_mappingInfo`
@@ -3353,15 +2624,6 @@ CREATE TABLE `t_EUtranCellFDD_mappingInfo` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_mappingInfo`
---
-
-LOCK TABLES `t_EUtranCellFDD_mappingInfo` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_mappingInfo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_mappingInfo` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_mappingInfoCe`
 --
 
@@ -3393,15 +2655,6 @@ CREATE TABLE `t_EUtranCellFDD_mappingInfoCe` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_mappingInfoCe`
---
-
-LOCK TABLES `t_EUtranCellFDD_mappingInfoCe` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_mappingInfoCe` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_mappingInfoCe` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_pciConflictCell`
 --
 
@@ -3426,15 +2679,6 @@ CREATE TABLE `t_EUtranCellFDD_pciConflictCell` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_pciConflictCell`
---
-
-LOCK TABLES `t_EUtranCellFDD_pciConflictCell` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_pciConflictCell` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_pciConflictCell` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_pciDetectingCell`
 --
 
@@ -3457,15 +2701,6 @@ CREATE TABLE `t_EUtranCellFDD_pciDetectingCell` (
   KEY `idx_su_me_ma_en_eu` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=45512 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_pciDetectingCell`
---
-
-LOCK TABLES `t_EUtranCellFDD_pciDetectingCell` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_pciDetectingCell` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_pciDetectingCell` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_siPeriodicity`
@@ -3497,15 +2732,6 @@ CREATE TABLE `t_EUtranCellFDD_siPeriodicity` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_siPeriodicity`
---
-
-LOCK TABLES `t_EUtranCellFDD_siPeriodicity` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_siPeriodicity` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_siPeriodicity` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_siPeriodicityBr`
 --
 
@@ -3535,15 +2761,6 @@ CREATE TABLE `t_EUtranCellFDD_siPeriodicityBr` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_siPeriodicityBr`
---
-
-LOCK TABLES `t_EUtranCellFDD_siPeriodicityBr` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_siPeriodicityBr` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_siPeriodicityBr` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_ssacBarringForMMTELVideo`
 --
 
@@ -3564,15 +2781,6 @@ CREATE TABLE `t_EUtranCellFDD_ssacBarringForMMTELVideo` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_ssacBarringForMMTELVideo`
---
-
-LOCK TABLES `t_EUtranCellFDD_ssacBarringForMMTELVideo` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_ssacBarringForMMTELVideo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_ssacBarringForMMTELVideo` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_ssacBarringForMMTELVoice`
@@ -3597,15 +2805,6 @@ CREATE TABLE `t_EUtranCellFDD_ssacBarringForMMTELVoice` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_ssacBarringForMMTELVoice`
---
-
-LOCK TABLES `t_EUtranCellFDD_ssacBarringForMMTELVoice` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_ssacBarringForMMTELVoice` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_ssacBarringForMMTELVoice` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_systemInformationBlock24`
 --
 
@@ -3626,15 +2825,6 @@ CREATE TABLE `t_EUtranCellFDD_systemInformationBlock24` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=489561 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_systemInformationBlock24`
---
-
-LOCK TABLES `t_EUtranCellFDD_systemInformationBlock24` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock24` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock24` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_systemInformationBlock3`
@@ -3672,15 +2862,6 @@ CREATE TABLE `t_EUtranCellFDD_systemInformationBlock3` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_systemInformationBlock3`
---
-
-LOCK TABLES `t_EUtranCellFDD_systemInformationBlock3` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock3` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock3` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_systemInformationBlock6`
 --
 
@@ -3703,15 +2884,6 @@ CREATE TABLE `t_EUtranCellFDD_systemInformationBlock6` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellFDD_systemInformationBlock6`
---
-
-LOCK TABLES `t_EUtranCellFDD_systemInformationBlock6` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock6` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock6` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellFDD_systemInformationBlock7`
 --
 
@@ -3732,15 +2904,6 @@ CREATE TABLE `t_EUtranCellFDD_systemInformationBlock7` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530541 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_systemInformationBlock7`
---
-
-LOCK TABLES `t_EUtranCellFDD_systemInformationBlock7` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock7` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock7` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellFDD_systemInformationBlock8`
@@ -3767,15 +2930,6 @@ CREATE TABLE `t_EUtranCellFDD_systemInformationBlock8` (
   KEY `idx_su_me_ma_en_eu` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530541 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellFDD_systemInformationBlock8`
---
-
-LOCK TABLES `t_EUtranCellFDD_systemInformationBlock8` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock8` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellFDD_systemInformationBlock8` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranCellRelation`
@@ -3831,15 +2985,6 @@ CREATE TABLE `t_EUtranCellRelation` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranCellRelation`
---
-
-LOCK TABLES `t_EUtranCellRelation` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellRelation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellRelation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranCellRelation_mobilityStatus`
 --
 
@@ -3861,15 +3006,6 @@ CREATE TABLE `t_EUtranCellRelation_mobilityStatus` (
   KEY `idx_su_me_ma_en_eu_eu_eu` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtranCellRelationId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`,`f_eUtranFreqRelationId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=38786233 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EUtranCellRelation_mobilityStatus`
---
-
-LOCK TABLES `t_EUtranCellRelation_mobilityStatus` WRITE;
-/*!40000 ALTER TABLE `t_EUtranCellRelation_mobilityStatus` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranCellRelation_mobilityStatus` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EUtranFreqRelation`
@@ -3955,15 +3091,6 @@ CREATE TABLE `t_EUtranFreqRelation` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranFreqRelation`
---
-
-LOCK TABLES `t_EUtranFreqRelation` WRITE;
-/*!40000 ALTER TABLE `t_EUtranFreqRelation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranFreqRelation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranFreqRelation_candNeighborRel`
 --
 
@@ -3993,15 +3120,6 @@ CREATE TABLE `t_EUtranFreqRelation_candNeighborRel` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranFreqRelation_candNeighborRel`
---
-
-LOCK TABLES `t_EUtranFreqRelation_candNeighborRel` WRITE;
-/*!40000 ALTER TABLE `t_EUtranFreqRelation_candNeighborRel` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranFreqRelation_candNeighborRel` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EUtranFrequency`
 --
 
@@ -4029,15 +3147,6 @@ CREATE TABLE `t_EUtranFrequency` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EUtranFrequency`
---
-
-LOCK TABLES `t_EUtranFrequency` WRITE;
-/*!40000 ALTER TABLE `t_EUtranFrequency` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EUtranFrequency` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EcBus`
 --
 
@@ -4058,15 +3167,6 @@ CREATE TABLE `t_EcBus` (
   KEY `idx_su_me_ma_eq_ec` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_ecBusId`,`f_equipmentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EcBus`
---
-
-LOCK TABLES `t_EcBus` WRITE;
-/*!40000 ALTER TABLE `t_EcBus` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EcBus` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EcPort`
@@ -4093,15 +3193,6 @@ CREATE TABLE `t_EcPort` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EcPort`
---
-
-LOCK TABLES `t_EcPort` WRITE;
-/*!40000 ALTER TABLE `t_EcPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EcPort` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EmergencyUnlock`
 --
 
@@ -4122,15 +3213,6 @@ CREATE TABLE `t_EmergencyUnlock` (
   KEY `idx_su_me_ma_sy_lm_em` (`f_lmId`,`f_subNetworkId`,`f_managedElementId`,`f_emergencyUnlockId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EmergencyUnlock`
---
-
-LOCK TABLES `t_EmergencyUnlock` WRITE;
-/*!40000 ALTER TABLE `t_EmergencyUnlock` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EmergencyUnlock` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EndcProfilePredefined`
@@ -4156,15 +3238,6 @@ CREATE TABLE `t_EndcProfilePredefined` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EndcProfilePredefined`
---
-
-LOCK TABLES `t_EndcProfilePredefined` WRITE;
-/*!40000 ALTER TABLE `t_EndcProfilePredefined` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EndcProfilePredefined` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EnergyMeter`
 --
 
@@ -4185,15 +3258,6 @@ CREATE TABLE `t_EnergyMeter` (
   KEY `idx_su_me_ma_eq_fi_en` (`f_subNetworkId`,`f_energyMeterId`,`f_meContextId`,`f_managedElementId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=591299 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EnergyMeter`
---
-
-LOCK TABLES `t_EnergyMeter` WRITE;
-/*!40000 ALTER TABLE `t_EnergyMeter` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EnergyMeter` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EnrollmentAuthority`
@@ -4220,15 +3284,6 @@ CREATE TABLE `t_EnrollmentAuthority` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EnrollmentAuthority`
---
-
-LOCK TABLES `t_EnrollmentAuthority` WRITE;
-/*!40000 ALTER TABLE `t_EnrollmentAuthority` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EnrollmentAuthority` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EnrollmentServer`
 --
 
@@ -4253,15 +3308,6 @@ CREATE TABLE `t_EnrollmentServer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EnrollmentServer`
---
-
-LOCK TABLES `t_EnrollmentServer` WRITE;
-/*!40000 ALTER TABLE `t_EnrollmentServer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EnrollmentServer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EnrollmentServerGroup`
 --
 
@@ -4284,15 +3330,6 @@ CREATE TABLE `t_EnrollmentServerGroup` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EnrollmentServerGroup`
---
-
-LOCK TABLES `t_EnrollmentServerGroup` WRITE;
-/*!40000 ALTER TABLE `t_EnrollmentServerGroup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EnrollmentServerGroup` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Equipment`
 --
 
@@ -4310,15 +3347,6 @@ CREATE TABLE `t_Equipment` (
   KEY `idx_su_me_ma_eq` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_equipmentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Equipment`
---
-
-LOCK TABLES `t_Equipment` WRITE;
-/*!40000 ALTER TABLE `t_Equipment` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Equipment` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EquipmentDiscovery`
@@ -4349,15 +3377,6 @@ CREATE TABLE `t_EquipmentDiscovery` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EquipmentDiscovery`
---
-
-LOCK TABLES `t_EquipmentDiscovery` WRITE;
-/*!40000 ALTER TABLE `t_EquipmentDiscovery` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EquipmentDiscovery` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EquipmentSupportFunction`
 --
 
@@ -4378,15 +3397,6 @@ CREATE TABLE `t_EquipmentSupportFunction` (
   KEY `idx_su_me_ma_eq` (`f_meContextId`,`f_subNetworkId`,`f_equipmentSupportFunctionId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EquipmentSupportFunction`
---
-
-LOCK TABLES `t_EquipmentSupportFunction` WRITE;
-/*!40000 ALTER TABLE `t_EquipmentSupportFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EquipmentSupportFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EricssonFilter`
@@ -4414,15 +3424,6 @@ CREATE TABLE `t_EricssonFilter` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EricssonFilter`
---
-
-LOCK TABLES `t_EricssonFilter` WRITE;
-/*!40000 ALTER TABLE `t_EricssonFilter` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EricssonFilter` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EricssonLeanCarrierFunction`
 --
 
@@ -4444,15 +3445,6 @@ CREATE TABLE `t_EricssonLeanCarrierFunction` (
   KEY `idx_su_me_ma_en_er` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_ericssonLeanCarrierFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EricssonLeanCarrierFunction`
---
-
-LOCK TABLES `t_EricssonLeanCarrierFunction` WRITE;
-/*!40000 ALTER TABLE `t_EricssonLeanCarrierFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EricssonLeanCarrierFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EthernetPort`
@@ -4483,15 +3475,6 @@ CREATE TABLE `t_EthernetPort` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EthernetPort`
---
-
-LOCK TABLES `t_EthernetPort` WRITE;
-/*!40000 ALTER TABLE `t_EthernetPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EthernetPort` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Etws`
 --
 
@@ -4510,15 +3493,6 @@ CREATE TABLE `t_Etws` (
   KEY `idx_su_me_ma_en_eu_et` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_etwsId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Etws`
---
-
-LOCK TABLES `t_Etws` WRITE;
-/*!40000 ALTER TABLE `t_Etws` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Etws` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EventCapabilities`
@@ -4543,15 +3517,6 @@ CREATE TABLE `t_EventCapabilities` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EventCapabilities`
---
-
-LOCK TABLES `t_EventCapabilities` WRITE;
-/*!40000 ALTER TABLE `t_EventCapabilities` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EventCapabilities` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EventFilterType`
 --
 
@@ -4573,15 +3538,6 @@ CREATE TABLE `t_EventFilterType` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EventFilterType`
---
-
-LOCK TABLES `t_EventFilterType` WRITE;
-/*!40000 ALTER TABLE `t_EventFilterType` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EventFilterType` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EventGroup`
 --
 
@@ -4601,15 +3557,6 @@ CREATE TABLE `t_EventGroup` (
   KEY `idx_su_me_ma_sy_pm_ev_ev` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_eventProducerId`,`f_pmEventMId`,`f_managedElementId`,`f_eventGroupId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2006153 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EventGroup`
---
-
-LOCK TABLES `t_EventGroup` WRITE;
-/*!40000 ALTER TABLE `t_EventGroup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EventGroup` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EventJob`
@@ -4644,15 +3591,6 @@ CREATE TABLE `t_EventJob` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EventJob`
---
-
-LOCK TABLES `t_EventJob` WRITE;
-/*!40000 ALTER TABLE `t_EventJob` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EventJob` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EventJob_eventFilter`
 --
 
@@ -4676,15 +3614,6 @@ CREATE TABLE `t_EventJob_eventFilter` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_EventJob_eventFilter`
---
-
-LOCK TABLES `t_EventJob_eventFilter` WRITE;
-/*!40000 ALTER TABLE `t_EventJob_eventFilter` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EventJob_eventFilter` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_EventProducer`
 --
 
@@ -4703,15 +3632,6 @@ CREATE TABLE `t_EventProducer` (
   KEY `idx_su_me_ma_sy_pm_ev` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_eventProducerId`,`f_pmEventMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=322773 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EventProducer`
---
-
-LOCK TABLES `t_EventProducer` WRITE;
-/*!40000 ALTER TABLE `t_EventProducer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EventProducer` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_EventType`
@@ -4734,15 +3654,6 @@ CREATE TABLE `t_EventType` (
   KEY `idx_su_me_ma_sy_pm_ev_ev_ev` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_eventProducerId`,`f_pmEventMId`,`f_managedElementId`,`f_eventGroupId`,`f_eventTypeId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=60962005 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_EventType`
---
-
-LOCK TABLES `t_EventType` WRITE;
-/*!40000 ALTER TABLE `t_EventType` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_EventType` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ExternalENodeBFunction`
@@ -4777,15 +3688,6 @@ CREATE TABLE `t_ExternalENodeBFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ExternalENodeBFunction`
---
-
-LOCK TABLES `t_ExternalENodeBFunction` WRITE;
-/*!40000 ALTER TABLE `t_ExternalENodeBFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalENodeBFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ExternalENodeBFunction_eNodeBPlmnId`
 --
 
@@ -4807,15 +3709,6 @@ CREATE TABLE `t_ExternalENodeBFunction_eNodeBPlmnId` (
   KEY `idx_su_me_ma_en_eu_ex` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtraNetworkId`,`f_managedElementId`,`f_externalENodeBFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3981173 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ExternalENodeBFunction_eNodeBPlmnId`
---
-
-LOCK TABLES `t_ExternalENodeBFunction_eNodeBPlmnId` WRITE;
-/*!40000 ALTER TABLE `t_ExternalENodeBFunction_eNodeBPlmnId` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalENodeBFunction_eNodeBPlmnId` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ExternalEUtranCellFDD`
@@ -4866,15 +3759,6 @@ CREATE TABLE `t_ExternalEUtranCellFDD` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ExternalEUtranCellFDD`
---
-
-LOCK TABLES `t_ExternalEUtranCellFDD` WRITE;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ExternalEUtranCellFDD_activePlmnList`
 --
 
@@ -4897,15 +3781,6 @@ CREATE TABLE `t_ExternalEUtranCellFDD_activePlmnList` (
   KEY `idx_su_me_ma_en_eu_ex_ex` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_externalEUtranCellFDDId`,`f_eUtraNetworkId`,`f_managedElementId`,`f_externalENodeBFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12186852 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ExternalEUtranCellFDD_activePlmnList`
---
-
-LOCK TABLES `t_ExternalEUtranCellFDD_activePlmnList` WRITE;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD_activePlmnList` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD_activePlmnList` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ExternalEUtranCellFDD_pciConflictCell`
@@ -4934,15 +3809,6 @@ CREATE TABLE `t_ExternalEUtranCellFDD_pciConflictCell` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ExternalEUtranCellFDD_pciConflictCell`
---
-
-LOCK TABLES `t_ExternalEUtranCellFDD_pciConflictCell` WRITE;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD_pciConflictCell` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD_pciConflictCell` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ExternalEUtranCellFDD_pciDetectingCell`
 --
 
@@ -4969,15 +3835,6 @@ CREATE TABLE `t_ExternalEUtranCellFDD_pciDetectingCell` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ExternalEUtranCellFDD_pciDetectingCell`
---
-
-LOCK TABLES `t_ExternalEUtranCellFDD_pciDetectingCell` WRITE;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD_pciDetectingCell` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalEUtranCellFDD_pciDetectingCell` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ExternalPower`
 --
 
@@ -4996,15 +3853,6 @@ CREATE TABLE `t_ExternalPower` (
   KEY `idx_su_me_ma_eq_ex` (`f_subNetworkId`,`f_equipmentSupportFunctionId`,`f_meContextId`,`f_externalPowerId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=81144 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ExternalPower`
---
-
-LOCK TABLES `t_ExternalPower` WRITE;
-/*!40000 ALTER TABLE `t_ExternalPower` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalPower` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ExternalUtranCellFDD`
@@ -5050,15 +3898,6 @@ CREATE TABLE `t_ExternalUtranCellFDD` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ExternalUtranCellFDD`
---
-
-LOCK TABLES `t_ExternalUtranCellFDD` WRITE;
-/*!40000 ALTER TABLE `t_ExternalUtranCellFDD` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalUtranCellFDD` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ExternalUtranCellFDD_cellIdentity`
 --
 
@@ -5080,15 +3919,6 @@ CREATE TABLE `t_ExternalUtranCellFDD_cellIdentity` (
   KEY `idx_su_me_ma_en_ut_ut_ex` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_externalUtranCellFDDId`,`f_utranFrequencyId`,`f_managedElementId`,`f_utraNetworkId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1262007 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ExternalUtranCellFDD_cellIdentity`
---
-
-LOCK TABLES `t_ExternalUtranCellFDD_cellIdentity` WRITE;
-/*!40000 ALTER TABLE `t_ExternalUtranCellFDD_cellIdentity` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalUtranCellFDD_cellIdentity` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ExternalUtranCellFDD_plmnIdentity`
@@ -5115,15 +3945,6 @@ CREATE TABLE `t_ExternalUtranCellFDD_plmnIdentity` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ExternalUtranCellFDD_plmnIdentity`
---
-
-LOCK TABLES `t_ExternalUtranCellFDD_plmnIdentity` WRITE;
-/*!40000 ALTER TABLE `t_ExternalUtranCellFDD_plmnIdentity` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ExternalUtranCellFDD_plmnIdentity` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FanGroup`
 --
 
@@ -5142,15 +3963,6 @@ CREATE TABLE `t_FanGroup` (
   KEY `idx_su_me_ma_eq_ca_fa` (`f_meContextId`,`f_cabinetId`,`f_subNetworkId`,`f_managedElementId`,`f_fanGroupId`,`f_equipmentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=254737 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FanGroup`
---
-
-LOCK TABLES `t_FanGroup` WRITE;
-/*!40000 ALTER TABLE `t_FanGroup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FanGroup` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FeatureKey`
@@ -5180,15 +3992,6 @@ CREATE TABLE `t_FeatureKey` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FeatureKey`
---
-
-LOCK TABLES `t_FeatureKey` WRITE;
-/*!40000 ALTER TABLE `t_FeatureKey` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FeatureKey` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FeatureState`
 --
 
@@ -5213,15 +4016,6 @@ CREATE TABLE `t_FeatureState` (
   KEY `idx_su_me_ma_sy_lm_fe` (`f_lmId`,`f_featureStateId`,`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=25535115 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FeatureState`
---
-
-LOCK TABLES `t_FeatureState` WRITE;
-/*!40000 ALTER TABLE `t_FeatureState` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FeatureState` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FieldReplaceableUnit`
@@ -5249,15 +4043,6 @@ CREATE TABLE `t_FieldReplaceableUnit` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FieldReplaceableUnit`
---
-
-LOCK TABLES `t_FieldReplaceableUnit` WRITE;
-/*!40000 ALTER TABLE `t_FieldReplaceableUnit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FieldReplaceableUnit` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FieldReplaceableUnit_hwTestResult`
 --
 
@@ -5277,15 +4062,6 @@ CREATE TABLE `t_FieldReplaceableUnit_hwTestResult` (
   KEY `idx_su_me_ma_eq_fi` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FieldReplaceableUnit_hwTestResult`
---
-
-LOCK TABLES `t_FieldReplaceableUnit_hwTestResult` WRITE;
-/*!40000 ALTER TABLE `t_FieldReplaceableUnit_hwTestResult` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FieldReplaceableUnit_hwTestResult` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FieldReplaceableUnit_productData`
@@ -5310,15 +4086,6 @@ CREATE TABLE `t_FieldReplaceableUnit_productData` (
   KEY `idx_su_me_ma_eq_fi` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=599101 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FieldReplaceableUnit_productData`
---
-
-LOCK TABLES `t_FieldReplaceableUnit_productData` WRITE;
-/*!40000 ALTER TABLE `t_FieldReplaceableUnit_productData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FieldReplaceableUnit_productData` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FilePullCapabilities`
@@ -5347,15 +4114,6 @@ CREATE TABLE `t_FilePullCapabilities` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FilePullCapabilities`
---
-
-LOCK TABLES `t_FilePullCapabilities` WRITE;
-/*!40000 ALTER TABLE `t_FilePullCapabilities` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FilePullCapabilities` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FileTPM`
 --
 
@@ -5374,15 +4132,6 @@ CREATE TABLE `t_FileTPM` (
   KEY `idx_su_me_ma_sy_sy_fi` (`f_meContextId`,`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_fileTPMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FileTPM`
---
-
-LOCK TABLES `t_FileTPM` WRITE;
-/*!40000 ALTER TABLE `t_FileTPM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FileTPM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Filter`
@@ -5408,15 +4157,6 @@ CREATE TABLE `t_Filter` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Filter`
---
-
-LOCK TABLES `t_Filter` WRITE;
-/*!40000 ALTER TABLE `t_Filter` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Filter` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FlexibleQoSFunction`
 --
 
@@ -5434,15 +4174,6 @@ CREATE TABLE `t_FlexibleQoSFunction` (
   KEY `idx_su_me_ma_en_fl` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_flexibleQoSFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FlexibleQoSFunction`
---
-
-LOCK TABLES `t_FlexibleQoSFunction` WRITE;
-/*!40000 ALTER TABLE `t_FlexibleQoSFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FlexibleQoSFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Fm`
@@ -5463,15 +4194,6 @@ CREATE TABLE `t_Fm` (
   KEY `idx_su_me_ma_sy_fm` (`f_subNetworkId`,`f_managedElementId`,`f_fmId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Fm`
---
-
-LOCK TABLES `t_Fm` WRITE;
-/*!40000 ALTER TABLE `t_Fm` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Fm` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FmAlarm`
@@ -5497,15 +4219,6 @@ CREATE TABLE `t_FmAlarm` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FmAlarm`
---
-
-LOCK TABLES `t_FmAlarm` WRITE;
-/*!40000 ALTER TABLE `t_FmAlarm` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FmAlarm` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FmAlarmModel`
 --
 
@@ -5524,15 +4237,6 @@ CREATE TABLE `t_FmAlarmModel` (
   KEY `idx_su_me_ma_sy_fm_fm` (`f_subNetworkId`,`f_fmAlarmModelId`,`f_managedElementId`,`f_fmId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FmAlarmModel`
---
-
-LOCK TABLES `t_FmAlarmModel` WRITE;
-/*!40000 ALTER TABLE `t_FmAlarmModel` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FmAlarmModel` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FmAlarmSupervision`
@@ -5556,15 +4260,6 @@ CREATE TABLE `t_FmAlarmSupervision` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FmAlarmSupervision`
---
-
-LOCK TABLES `t_FmAlarmSupervision` WRITE;
-/*!40000 ALTER TABLE `t_FmAlarmSupervision` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FmAlarmSupervision` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FmAlarmType`
 --
 
@@ -5584,15 +4279,6 @@ CREATE TABLE `t_FmAlarmType` (
   KEY `idx_su_me_ma_sy_fm_fm_fm` (`f_subNetworkId`,`f_fmAlarmModelId`,`f_managedElementId`,`f_fmAlarmTypeId`,`f_fmId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=17779664 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FmAlarmType`
---
-
-LOCK TABLES `t_FmAlarmType` WRITE;
-/*!40000 ALTER TABLE `t_FmAlarmType` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FmAlarmType` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FmFunction`
@@ -5615,15 +4301,6 @@ CREATE TABLE `t_FmFunction` (
   KEY `idx_ne_fm` (`f_networkElementId`,`f_fmFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86836 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FmFunction`
---
-
-LOCK TABLES `t_FmFunction` WRITE;
-/*!40000 ALTER TABLE `t_FmFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FmFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FreqBandData`
@@ -5650,15 +4327,6 @@ CREATE TABLE `t_FreqBandData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FreqBandData`
---
-
-LOCK TABLES `t_FreqBandData` WRITE;
-/*!40000 ALTER TABLE `t_FreqBandData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FreqBandData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FtpServer`
 --
 
@@ -5681,15 +4349,6 @@ CREATE TABLE `t_FtpServer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FtpServer`
---
-
-LOCK TABLES `t_FtpServer` WRITE;
-/*!40000 ALTER TABLE `t_FtpServer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FtpServer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_FtpTls`
 --
 
@@ -5709,15 +4368,6 @@ CREATE TABLE `t_FtpTls` (
   KEY `idx_su_me_ma_sy_sy_fi_ft` (`f_meContextId`,`f_ftpTlsId`,`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_fileTPMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_FtpTls`
---
-
-LOCK TABLES `t_FtpTls` WRITE;
-/*!40000 ALTER TABLE `t_FtpTls` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FtpTls` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_FtpTlsServer`
@@ -5744,15 +4394,6 @@ CREATE TABLE `t_FtpTlsServer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_FtpTlsServer`
---
-
-LOCK TABLES `t_FtpTlsServer` WRITE;
-/*!40000 ALTER TABLE `t_FtpTlsServer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_FtpTlsServer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_GeographicLocation`
 --
 
@@ -5767,15 +4408,6 @@ CREATE TABLE `t_GeographicLocation` (
   KEY `idx_ne_ge` (`f_networkElementId`,`f_geographicLocationId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1522 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_GeographicLocation`
---
-
-LOCK TABLES `t_GeographicLocation` WRITE;
-/*!40000 ALTER TABLE `t_GeographicLocation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_GeographicLocation` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_GeometricPoint`
@@ -5795,15 +4427,6 @@ CREATE TABLE `t_GeometricPoint` (
   KEY `idx_ne_ge_ge` (`f_networkElementId`,`f_geographicLocationId`,`f_geometricPointId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1522 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_GeometricPoint`
---
-
-LOCK TABLES `t_GeometricPoint` WRITE;
-/*!40000 ALTER TABLE `t_GeometricPoint` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_GeometricPoint` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_GracePeriod`
@@ -5826,15 +4449,6 @@ CREATE TABLE `t_GracePeriod` (
   KEY `idx_su_me_ma_sy_lm_ca_gr` (`f_gracePeriodId`,`f_lmId`,`f_capacityStateId`,`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_GracePeriod`
---
-
-LOCK TABLES `t_GracePeriod` WRITE;
-/*!40000 ALTER TABLE `t_GracePeriod` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_GracePeriod` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_HcJob`
@@ -5860,15 +4474,6 @@ CREATE TABLE `t_HcJob` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_HcJob`
---
-
-LOCK TABLES `t_HcJob` WRITE;
-/*!40000 ALTER TABLE `t_HcJob` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HcJob` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_HcJob_failedRules`
 --
 
@@ -5891,15 +4496,6 @@ CREATE TABLE `t_HcJob_failedRules` (
   KEY `idx_su_me_ma_sy_he_hc` (`f_subNetworkId`,`f_systemFunctionsId`,`f_hcJobId`,`f_meContextId`,`f_healthCheckMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12170 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_HcJob_failedRules`
---
-
-LOCK TABLES `t_HcJob_failedRules` WRITE;
-/*!40000 ALTER TABLE `t_HcJob_failedRules` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HcJob_failedRules` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_HcJob_progressReport`
@@ -5933,15 +4529,6 @@ CREATE TABLE `t_HcJob_progressReport` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_HcJob_progressReport`
---
-
-LOCK TABLES `t_HcJob_progressReport` WRITE;
-/*!40000 ALTER TABLE `t_HcJob_progressReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HcJob_progressReport` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_HcRule`
 --
 
@@ -5963,15 +4550,6 @@ CREATE TABLE `t_HcRule` (
   KEY `idx_su_me_ma_sy_he_hc` (`f_hcRuleId`,`f_subNetworkId`,`f_managedElementId`,`f_healthCheckMId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1708667 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_HcRule`
---
-
-LOCK TABLES `t_HcRule` WRITE;
-/*!40000 ALTER TABLE `t_HcRule` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HcRule` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_HcRule_inputParameters`
@@ -5997,15 +4575,6 @@ CREATE TABLE `t_HcRule_inputParameters` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_HcRule_inputParameters`
---
-
-LOCK TABLES `t_HcRule_inputParameters` WRITE;
-/*!40000 ALTER TABLE `t_HcRule_inputParameters` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HcRule_inputParameters` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_HealthCheckM`
 --
 
@@ -6029,15 +4598,6 @@ CREATE TABLE `t_HealthCheckM` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_HealthCheckM`
---
-
-LOCK TABLES `t_HealthCheckM` WRITE;
-/*!40000 ALTER TABLE `t_HealthCheckM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HealthCheckM` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_HttpM`
 --
 
@@ -6056,15 +4616,6 @@ CREATE TABLE `t_HttpM` (
   KEY `idx_su_me_ma_sy_sy_ht` (`f_meContextId`,`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`,`f_httpMId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85433 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_HttpM`
---
-
-LOCK TABLES `t_HttpM` WRITE;
-/*!40000 ALTER TABLE `t_HttpM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HttpM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Https`
@@ -6090,15 +4641,6 @@ CREATE TABLE `t_Https` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Https`
---
-
-LOCK TABLES `t_Https` WRITE;
-/*!40000 ALTER TABLE `t_Https` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Https` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_HwInventory`
 --
 
@@ -6117,15 +4659,6 @@ CREATE TABLE `t_HwInventory` (
   KEY `idx_su_me_ma_sy_hw` (`f_meContextId`,`f_hwInventoryId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_HwInventory`
---
-
-LOCK TABLES `t_HwInventory` WRITE;
-/*!40000 ALTER TABLE `t_HwInventory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HwInventory` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_HwItem`
@@ -6156,15 +4689,6 @@ CREATE TABLE `t_HwItem` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_HwItem`
---
-
-LOCK TABLES `t_HwItem` WRITE;
-/*!40000 ALTER TABLE `t_HwItem` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HwItem` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_HwItem_productData`
 --
 
@@ -6190,15 +4714,6 @@ CREATE TABLE `t_HwItem_productData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_HwItem_productData`
---
-
-LOCK TABLES `t_HwItem_productData` WRITE;
-/*!40000 ALTER TABLE `t_HwItem_productData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_HwItem_productData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Ikev2PolicyProfile`
 --
 
@@ -6222,15 +4737,6 @@ CREATE TABLE `t_Ikev2PolicyProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Ikev2PolicyProfile`
---
-
-LOCK TABLES `t_Ikev2PolicyProfile` WRITE;
-/*!40000 ALTER TABLE `t_Ikev2PolicyProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ikev2PolicyProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Ikev2PolicyProfile_ikev2Proposal`
 --
 
@@ -6252,15 +4758,6 @@ CREATE TABLE `t_Ikev2PolicyProfile_ikev2Proposal` (
   KEY `idx_su_me_ma_tr_ik` (`f_subNetworkId`,`f_meContextId`,`f_ikev2PolicyProfileId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Ikev2PolicyProfile_ikev2Proposal`
---
-
-LOCK TABLES `t_Ikev2PolicyProfile_ikev2Proposal` WRITE;
-/*!40000 ALTER TABLE `t_Ikev2PolicyProfile_ikev2Proposal` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ikev2PolicyProfile_ikev2Proposal` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Ikev2Session`
@@ -6287,15 +4784,6 @@ CREATE TABLE `t_Ikev2Session` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Ikev2Session`
---
-
-LOCK TABLES `t_Ikev2Session` WRITE;
-/*!40000 ALTER TABLE `t_Ikev2Session` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ikev2Session` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ImeisvTable`
 --
 
@@ -6313,15 +4801,6 @@ CREATE TABLE `t_ImeisvTable` (
   KEY `idx_su_me_ma_en_im` (`f_meContextId`,`f_eNodeBFunctionId`,`f_imeisvTableId`,`f_subNetworkId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ImeisvTable`
---
-
-LOCK TABLES `t_ImeisvTable` WRITE;
-/*!40000 ALTER TABLE `t_ImeisvTable` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ImeisvTable` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_InstantUplinkAccess`
@@ -6360,15 +4839,6 @@ CREATE TABLE `t_InstantUplinkAccess` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_InstantUplinkAccess`
---
-
-LOCK TABLES `t_InstantUplinkAccess` WRITE;
-/*!40000 ALTER TABLE `t_InstantUplinkAccess` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_InstantUplinkAccess` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_IntegrationUnlock`
 --
 
@@ -6389,15 +4859,6 @@ CREATE TABLE `t_IntegrationUnlock` (
   KEY `idx_su_me_ma_sy_lm_in` (`f_lmId`,`f_integrationUnlockId`,`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_IntegrationUnlock`
---
-
-LOCK TABLES `t_IntegrationUnlock` WRITE;
-/*!40000 ALTER TABLE `t_IntegrationUnlock` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_IntegrationUnlock` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_InterfaceIPv4`
@@ -6430,15 +4891,6 @@ CREATE TABLE `t_InterfaceIPv4` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_InterfaceIPv4`
---
-
-LOCK TABLES `t_InterfaceIPv4` WRITE;
-/*!40000 ALTER TABLE `t_InterfaceIPv4` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_InterfaceIPv4` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_InventoryFunction`
 --
 
@@ -6455,15 +4907,6 @@ CREATE TABLE `t_InventoryFunction` (
   KEY `idx_ne_sh_in` (`f_networkElementId`,`f_inventoryFunctionId`,`f_sHMFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86836 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_InventoryFunction`
---
-
-LOCK TABLES `t_InventoryFunction` WRITE;
-/*!40000 ALTER TABLE `t_InventoryFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_InventoryFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_InventorySupervision`
@@ -6483,15 +4926,6 @@ CREATE TABLE `t_InventorySupervision` (
   KEY `idx_ne_in` (`f_networkElementId`,`f_inventorySupervisionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86836 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_InventorySupervision`
---
-
-LOCK TABLES `t_InventorySupervision` WRITE;
-/*!40000 ALTER TABLE `t_InventorySupervision` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_InventorySupervision` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_IpsecPolicy`
@@ -6517,15 +4951,6 @@ CREATE TABLE `t_IpsecPolicy` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_IpsecPolicy`
---
-
-LOCK TABLES `t_IpsecPolicy` WRITE;
-/*!40000 ALTER TABLE `t_IpsecPolicy` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_IpsecPolicy` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_IpsecProposalProfile`
 --
 
@@ -6545,15 +4970,6 @@ CREATE TABLE `t_IpsecProposalProfile` (
   KEY `idx_su_me_ma_tr_ip` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_ipsecProposalProfileId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_IpsecProposalProfile`
---
-
-LOCK TABLES `t_IpsecProposalProfile` WRITE;
-/*!40000 ALTER TABLE `t_IpsecProposalProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_IpsecProposalProfile` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_IpsecProposalProfile_childSaLifetime`
@@ -6576,15 +4992,6 @@ CREATE TABLE `t_IpsecProposalProfile_childSaLifetime` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_IpsecProposalProfile_childSaLifetime`
---
-
-LOCK TABLES `t_IpsecProposalProfile_childSaLifetime` WRITE;
-/*!40000 ALTER TABLE `t_IpsecProposalProfile_childSaLifetime` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_IpsecProposalProfile_childSaLifetime` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_IpsecProposalProfile_ipsecProposal`
 --
 
@@ -6604,15 +5011,6 @@ CREATE TABLE `t_IpsecProposalProfile_ipsecProposal` (
   KEY `idx_su_me_ma_tr_ip` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_ipsecProposalProfileId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_IpsecProposalProfile_ipsecProposal`
---
-
-LOCK TABLES `t_IpsecProposalProfile_ipsecProposal` WRITE;
-/*!40000 ALTER TABLE `t_IpsecProposalProfile_ipsecProposal` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_IpsecProposalProfile_ipsecProposal` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_IpsecTunnel`
@@ -6637,15 +5035,6 @@ CREATE TABLE `t_IpsecTunnel` (
   KEY `idx_su_me_ma_tr_ro_ip` (`f_meContextId`,`f_ipsecTunnelId`,`f_subNetworkId`,`f_routerId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_IpsecTunnel`
---
-
-LOCK TABLES `t_IpsecTunnel` WRITE;
-/*!40000 ALTER TABLE `t_IpsecTunnel` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_IpsecTunnel` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_IuaProfile`
@@ -6678,15 +5067,6 @@ CREATE TABLE `t_IuaProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_IuaProfile`
---
-
-LOCK TABLES `t_IuaProfile` WRITE;
-/*!40000 ALTER TABLE `t_IuaProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_IuaProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_KeyFileInformation`
 --
 
@@ -6712,15 +5092,6 @@ CREATE TABLE `t_KeyFileInformation` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_KeyFileInformation`
---
-
-LOCK TABLES `t_KeyFileInformation` WRITE;
-/*!40000 ALTER TABLE `t_KeyFileInformation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_KeyFileInformation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_KeyFileManagement`
 --
 
@@ -6739,15 +5110,6 @@ CREATE TABLE `t_KeyFileManagement` (
   KEY `idx_su_me_ma_sy_lm_ke` (`f_meContextId`,`f_subNetworkId`,`f_keyFileManagementId`,`f_systemFunctionsId`,`f_lmId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_KeyFileManagement`
---
-
-LOCK TABLES `t_KeyFileManagement` WRITE;
-/*!40000 ALTER TABLE `t_KeyFileManagement` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_KeyFileManagement` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_KeyFileManagement_reportProgress`
@@ -6779,15 +5141,6 @@ CREATE TABLE `t_KeyFileManagement_reportProgress` (
   KEY `idx_su_me_ma_sy_lm_ke` (`f_subNetworkId`,`f_keyFileManagementId`,`f_systemFunctionsId`,`f_meContextId`,`f_lmId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_KeyFileManagement_reportProgress`
---
-
-LOCK TABLES `t_KeyFileManagement_reportProgress` WRITE;
-/*!40000 ALTER TABLE `t_KeyFileManagement_reportProgress` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_KeyFileManagement_reportProgress` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Ldap`
@@ -6824,15 +5177,6 @@ CREATE TABLE `t_Ldap` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Ldap`
---
-
-LOCK TABLES `t_Ldap` WRITE;
-/*!40000 ALTER TABLE `t_Ldap` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ldap` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_LdapAuthenticationMethod`
 --
 
@@ -6853,15 +5197,6 @@ CREATE TABLE `t_LdapAuthenticationMethod` (
   KEY `idx_su_me_ma_sy_se_us_ld` (`f_subNetworkId`,`f_systemFunctionsId`,`f_secMId`,`f_userManagementId`,`f_meContextId`,`f_ldapAuthenticationMethodId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_LdapAuthenticationMethod`
---
-
-LOCK TABLES `t_LdapAuthenticationMethod` WRITE;
-/*!40000 ALTER TABLE `t_LdapAuthenticationMethod` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LdapAuthenticationMethod` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Ldap_bindPassword`
@@ -6888,15 +5223,6 @@ CREATE TABLE `t_Ldap_bindPassword` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Ldap_bindPassword`
---
-
-LOCK TABLES `t_Ldap_bindPassword` WRITE;
-/*!40000 ALTER TABLE `t_Ldap_bindPassword` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ldap_bindPassword` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_LicenseSupport`
 --
 
@@ -6914,15 +5240,6 @@ CREATE TABLE `t_LicenseSupport` (
   KEY `idx_su_me_ma_no_li` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_licenseSupportId`,`f_nodeSupportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_LicenseSupport`
---
-
-LOCK TABLES `t_LicenseSupport` WRITE;
-/*!40000 ALTER TABLE `t_LicenseSupport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LicenseSupport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Lm`
@@ -6947,15 +5264,6 @@ CREATE TABLE `t_Lm` (
   KEY `idx_su_me_ma_sy_lm` (`f_lmId`,`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Lm`
---
-
-LOCK TABLES `t_Lm` WRITE;
-/*!40000 ALTER TABLE `t_Lm` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Lm` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_LoadBalancingFunction`
@@ -7006,15 +5314,6 @@ CREATE TABLE `t_LoadBalancingFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_LoadBalancingFunction`
---
-
-LOCK TABLES `t_LoadBalancingFunction` WRITE;
-/*!40000 ALTER TABLE `t_LoadBalancingFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LoadBalancingFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_LocalAuthorizationMethod`
 --
 
@@ -7037,15 +5336,6 @@ CREATE TABLE `t_LocalAuthorizationMethod` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_LocalAuthorizationMethod`
---
-
-LOCK TABLES `t_LocalAuthorizationMethod` WRITE;
-/*!40000 ALTER TABLE `t_LocalAuthorizationMethod` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LocalAuthorizationMethod` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Log`
 --
 
@@ -7066,15 +5356,6 @@ CREATE TABLE `t_Log` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Log`
---
-
-LOCK TABLES `t_Log` WRITE;
-/*!40000 ALTER TABLE `t_Log` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Log` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_LogM`
 --
 
@@ -7092,15 +5373,6 @@ CREATE TABLE `t_LogM` (
   KEY `idx_su_me_ma_sy_lo` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_logMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_LogM`
---
-
-LOCK TABLES `t_LogM` WRITE;
-/*!40000 ALTER TABLE `t_LogM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LogM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_LogM_progressReport`
@@ -7131,15 +5403,6 @@ CREATE TABLE `t_LogM_progressReport` (
   KEY `idx_su_me_ma_sy_lo` (`f_subNetworkId`,`f_systemFunctionsId`,`f_meContextId`,`f_logMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=78230 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_LogM_progressReport`
---
-
-LOCK TABLES `t_LogM_progressReport` WRITE;
-/*!40000 ALTER TABLE `t_LogM_progressReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LogM_progressReport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Log_progressReport`
@@ -7173,15 +5436,6 @@ CREATE TABLE `t_Log_progressReport` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Log_progressReport`
---
-
-LOCK TABLES `t_Log_progressReport` WRITE;
-/*!40000 ALTER TABLE `t_Log_progressReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Log_progressReport` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_LoggedMdt`
 --
 
@@ -7212,15 +5466,6 @@ CREATE TABLE `t_LoggedMdt` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_LoggedMdt`
---
-
-LOCK TABLES `t_LoggedMdt` WRITE;
-/*!40000 ALTER TABLE `t_LoggedMdt` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LoggedMdt` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_LogicalChannelGroup`
 --
 
@@ -7240,15 +5485,6 @@ CREATE TABLE `t_LogicalChannelGroup` (
   KEY `idx_su_me_ma_en_qc_lo` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_logicalChannelGroupId`,`f_qciTableId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=179969 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_LogicalChannelGroup`
---
-
-LOCK TABLES `t_LogicalChannelGroup` WRITE;
-/*!40000 ALTER TABLE `t_LogicalChannelGroup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_LogicalChannelGroup` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_MACConfiguration`
@@ -7274,15 +5510,6 @@ CREATE TABLE `t_MACConfiguration` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_MACConfiguration`
---
-
-LOCK TABLES `t_MACConfiguration` WRITE;
-/*!40000 ALTER TABLE `t_MACConfiguration` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MACConfiguration` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_MaintenanceUser`
 --
 
@@ -7304,15 +5531,6 @@ CREATE TABLE `t_MaintenanceUser` (
   KEY `idx_su_me_ma_sy_se_us_us_ma` (`f_meContextId`,`f_maintenanceUserId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_secMId`,`f_managedElementId`,`f_userManagementId`,`f_userIdentityId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_MaintenanceUser`
---
-
-LOCK TABLES `t_MaintenanceUser` WRITE;
-/*!40000 ALTER TABLE `t_MaintenanceUser` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MaintenanceUser` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_MaintenanceUserSecurity`
@@ -7337,15 +5555,6 @@ CREATE TABLE `t_MaintenanceUserSecurity` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_MaintenanceUserSecurity`
---
-
-LOCK TABLES `t_MaintenanceUserSecurity` WRITE;
-/*!40000 ALTER TABLE `t_MaintenanceUserSecurity` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MaintenanceUserSecurity` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ManagedElement`
 --
 
@@ -7368,15 +5577,6 @@ CREATE TABLE `t_ManagedElement` (
   KEY `f_managedElementId` (`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85435 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ManagedElement`
---
-
-LOCK TABLES `t_ManagedElement` WRITE;
-/*!40000 ALTER TABLE `t_ManagedElement` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ManagedElement` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_MdtConfiguration`
@@ -7412,15 +5612,6 @@ CREATE TABLE `t_MdtConfiguration` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_MdtConfiguration`
---
-
-LOCK TABLES `t_MdtConfiguration` WRITE;
-/*!40000 ALTER TABLE `t_MdtConfiguration` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MdtConfiguration` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_MeContext`
 --
 
@@ -7436,15 +5627,6 @@ CREATE TABLE `t_MeContext` (
   KEY `idx_su_me` (`f_subNetworkId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86890 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_MeContext`
---
-
-LOCK TABLES `t_MeContext` WRITE;
-/*!40000 ALTER TABLE `t_MeContext` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MeContext` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_MimoSleepFunction`
@@ -7479,15 +5661,6 @@ CREATE TABLE `t_MimoSleepFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_MimoSleepFunction`
---
-
-LOCK TABLES `t_MimoSleepFunction` WRITE;
-/*!40000 ALTER TABLE `t_MimoSleepFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MimoSleepFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_MpClusterHandling`
 --
 
@@ -7506,15 +5679,6 @@ CREATE TABLE `t_MpClusterHandling` (
   KEY `idx_su_me_ma_no_mp` (`f_meContextId`,`f_subNetworkId`,`f_mpClusterHandlingId`,`f_managedElementId`,`f_nodeSupportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_MpClusterHandling`
---
-
-LOCK TABLES `t_MpClusterHandling` WRITE;
-/*!40000 ALTER TABLE `t_MpClusterHandling` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MpClusterHandling` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_MpProcessingResource`
@@ -7537,15 +5701,6 @@ CREATE TABLE `t_MpProcessingResource` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_MpProcessingResource`
---
-
-LOCK TABLES `t_MpProcessingResource` WRITE;
-/*!40000 ALTER TABLE `t_MpProcessingResource` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_MpProcessingResource` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NetconfSsh`
 --
 
@@ -7566,15 +5721,6 @@ CREATE TABLE `t_NetconfSsh` (
   KEY `idx_su_me_ma_sy_sy_ne` (`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_netconfSshId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85433 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_NetconfSsh`
---
-
-LOCK TABLES `t_NetconfSsh` WRITE;
-/*!40000 ALTER TABLE `t_NetconfSsh` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NetconfSsh` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_NetconfTls`
@@ -7601,15 +5747,6 @@ CREATE TABLE `t_NetconfTls` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NetconfTls`
---
-
-LOCK TABLES `t_NetconfTls` WRITE;
-/*!40000 ALTER TABLE `t_NetconfTls` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NetconfTls` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NetconfYangSsh`
 --
 
@@ -7630,15 +5767,6 @@ CREATE TABLE `t_NetconfYangSsh` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NetconfYangSsh`
---
-
-LOCK TABLES `t_NetconfYangSsh` WRITE;
-/*!40000 ALTER TABLE `t_NetconfYangSsh` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NetconfYangSsh` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NetconfYangTls`
 --
 
@@ -7657,15 +5785,6 @@ CREATE TABLE `t_NetconfYangTls` (
   KEY `idx_su_me_ma_no_on_ne` (`f_netconfYangTlsId`,`f_subNetworkId`,`f_nodeSupportId`,`f_meContextId`,`f_onapSupportId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6321 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_NetconfYangTls`
---
-
-LOCK TABLES `t_NetconfYangTls` WRITE;
-/*!40000 ALTER TABLE `t_NetconfYangTls` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NetconfYangTls` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_NetworkElement`
@@ -7695,15 +5814,6 @@ CREATE TABLE `t_NetworkElement` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NetworkElement`
---
-
-LOCK TABLES `t_NetworkElement` WRITE;
-/*!40000 ALTER TABLE `t_NetworkElement` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NetworkElement` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NetworkElementSecurity`
 --
 
@@ -7731,15 +5841,6 @@ CREATE TABLE `t_NetworkElementSecurity` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NetworkElementSecurity`
---
-
-LOCK TABLES `t_NetworkElementSecurity` WRITE;
-/*!40000 ALTER TABLE `t_NetworkElementSecurity` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NetworkElementSecurity` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NetworkElement_neProductVersion`
 --
 
@@ -7755,15 +5856,6 @@ CREATE TABLE `t_NetworkElement_neProductVersion` (
   KEY `idx_ne` (`f_networkElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85367 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_NetworkElement_neProductVersion`
---
-
-LOCK TABLES `t_NetworkElement_neProductVersion` WRITE;
-/*!40000 ALTER TABLE `t_NetworkElement_neProductVersion` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NetworkElement_neProductVersion` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_NextHop`
@@ -7793,15 +5885,6 @@ CREATE TABLE `t_NextHop` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NextHop`
---
-
-LOCK TABLES `t_NextHop` WRITE;
-/*!40000 ALTER TABLE `t_NextHop` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NextHop` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NodeCredential`
 --
 
@@ -7829,15 +5912,6 @@ CREATE TABLE `t_NodeCredential` (
   KEY `idx_su_me_ma_sy_se_ce_no` (`f_secMId`,`f_subNetworkId`,`f_managedElementId`,`f_nodeCredentialId`,`f_systemFunctionsId`,`f_certMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_NodeCredential`
---
-
-LOCK TABLES `t_NodeCredential` WRITE;
-/*!40000 ALTER TABLE `t_NodeCredential` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NodeCredential` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_NodeCredential_certificateContent`
@@ -7872,15 +5946,6 @@ CREATE TABLE `t_NodeCredential_certificateContent` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NodeCredential_certificateContent`
---
-
-LOCK TABLES `t_NodeCredential_certificateContent` WRITE;
-/*!40000 ALTER TABLE `t_NodeCredential_certificateContent` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NodeCredential_certificateContent` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NodeCredential_enrollmentProgress`
 --
 
@@ -7913,15 +5978,6 @@ CREATE TABLE `t_NodeCredential_enrollmentProgress` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NodeCredential_enrollmentProgress`
---
-
-LOCK TABLES `t_NodeCredential_enrollmentProgress` WRITE;
-/*!40000 ALTER TABLE `t_NodeCredential_enrollmentProgress` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NodeCredential_enrollmentProgress` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NodeGroupSyncMember`
 --
 
@@ -7945,15 +6001,6 @@ CREATE TABLE `t_NodeGroupSyncMember` (
   KEY `idx_su_me_ma_tr_sy_ra_no` (`f_subNetworkId`,`f_synchronizationId`,`f_radioEquipmentClockId`,`f_meContextId`,`f_nodeGroupSyncMemberId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=82311 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_NodeGroupSyncMember`
---
-
-LOCK TABLES `t_NodeGroupSyncMember` WRITE;
-/*!40000 ALTER TABLE `t_NodeGroupSyncMember` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NodeGroupSyncMember` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_NodePerformance`
@@ -7983,15 +6030,6 @@ CREATE TABLE `t_NodePerformance` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NodePerformance`
---
-
-LOCK TABLES `t_NodePerformance` WRITE;
-/*!40000 ALTER TABLE `t_NodePerformance` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NodePerformance` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_NodeSupport`
 --
 
@@ -8010,15 +6048,6 @@ CREATE TABLE `t_NodeSupport` (
   KEY `idx_su_me_ma_no` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_nodeSupportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_NodeSupport`
---
-
-LOCK TABLES `t_NodeSupport` WRITE;
-/*!40000 ALTER TABLE `t_NodeSupport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NodeSupport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_NonPlannedPciDrxProfile`
@@ -8043,15 +6072,6 @@ CREATE TABLE `t_NonPlannedPciDrxProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NonPlannedPciDrxProfile`
---
-
-LOCK TABLES `t_NonPlannedPciDrxProfile` WRITE;
-/*!40000 ALTER TABLE `t_NonPlannedPciDrxProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NonPlannedPciDrxProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Ntp`
 --
 
@@ -8071,15 +6091,6 @@ CREATE TABLE `t_Ntp` (
   KEY `idx_su_me_ma_sy_sy_ti_nt` (`f_timeMId`,`f_meContextId`,`f_sysMId`,`f_subNetworkId`,`f_ntpId`,`f_systemFunctionsId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Ntp`
---
-
-LOCK TABLES `t_Ntp` WRITE;
-/*!40000 ALTER TABLE `t_Ntp` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ntp` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_NtpServer`
@@ -8107,15 +6118,6 @@ CREATE TABLE `t_NtpServer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_NtpServer`
---
-
-LOCK TABLES `t_NtpServer` WRITE;
-/*!40000 ALTER TABLE `t_NtpServer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_NtpServer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_OamAccessPoint`
 --
 
@@ -8137,15 +6139,6 @@ CREATE TABLE `t_OamAccessPoint` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_OamAccessPoint`
---
-
-LOCK TABLES `t_OamAccessPoint` WRITE;
-/*!40000 ALTER TABLE `t_OamAccessPoint` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_OamAccessPoint` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_OamIpSupport`
 --
 
@@ -8164,15 +6157,6 @@ CREATE TABLE `t_OamIpSupport` (
   KEY `idx_su_me_ma_no_oa` (`f_subNetworkId`,`f_oamIpSupportId`,`f_nodeSupportId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_OamIpSupport`
---
-
-LOCK TABLES `t_OamIpSupport` WRITE;
-/*!40000 ALTER TABLE `t_OamIpSupport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_OamIpSupport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_OamTrafficClass`
@@ -8197,15 +6181,6 @@ CREATE TABLE `t_OamTrafficClass` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_OamTrafficClass`
---
-
-LOCK TABLES `t_OamTrafficClass` WRITE;
-/*!40000 ALTER TABLE `t_OamTrafficClass` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_OamTrafficClass` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_OnSiteActivities`
 --
 
@@ -8226,15 +6201,6 @@ CREATE TABLE `t_OnSiteActivities` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_OnSiteActivities`
---
-
-LOCK TABLES `t_OnSiteActivities` WRITE;
-/*!40000 ALTER TABLE `t_OnSiteActivities` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_OnSiteActivities` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_OnapSupport`
 --
 
@@ -8252,15 +6218,6 @@ CREATE TABLE `t_OnapSupport` (
   KEY `idx_su_me_ma_no_on` (`f_subNetworkId`,`f_nodeSupportId`,`f_meContextId`,`f_onapSupportId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6321 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_OnapSupport`
---
-
-LOCK TABLES `t_OnapSupport` WRITE;
-/*!40000 ALTER TABLE `t_OnapSupport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_OnapSupport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PMICScannerInfo`
@@ -8288,15 +6245,6 @@ CREATE TABLE `t_PMICScannerInfo` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PMICScannerInfo`
---
-
-LOCK TABLES `t_PMICScannerInfo` WRITE;
-/*!40000 ALTER TABLE `t_PMICScannerInfo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PMICScannerInfo` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PacketCapture`
 --
 
@@ -8314,15 +6262,6 @@ CREATE TABLE `t_PacketCapture` (
   KEY `idx_su_me_ma_tr_pa` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_packetCaptureId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2958 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PacketCapture`
---
-
-LOCK TABLES `t_PacketCapture` WRITE;
-/*!40000 ALTER TABLE `t_PacketCapture` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PacketCapture` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Paging`
@@ -8356,15 +6295,6 @@ CREATE TABLE `t_Paging` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Paging`
---
-
-LOCK TABLES `t_Paging` WRITE;
-/*!40000 ALTER TABLE `t_Paging` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Paging` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ParameterChangeRequests`
 --
 
@@ -8382,15 +6312,6 @@ CREATE TABLE `t_ParameterChangeRequests` (
   KEY `idx_su_me_ma_en_pa` (`f_meContextId`,`f_eNodeBFunctionId`,`f_parameterChangeRequestsId`,`f_subNetworkId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ParameterChangeRequests`
---
-
-LOCK TABLES `t_ParameterChangeRequests` WRITE;
-/*!40000 ALTER TABLE `t_ParameterChangeRequests` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ParameterChangeRequests` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PeerIPv4`
@@ -8415,15 +6336,6 @@ CREATE TABLE `t_PeerIPv4` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PeerIPv4`
---
-
-LOCK TABLES `t_PeerIPv4` WRITE;
-/*!40000 ALTER TABLE `t_PeerIPv4` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PeerIPv4` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PlmnInfo`
 --
 
@@ -8441,15 +6353,6 @@ CREATE TABLE `t_PlmnInfo` (
   KEY `idx_su_me_ma_en_pl` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_plmnInfoId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44473 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PlmnInfo`
---
-
-LOCK TABLES `t_PlmnInfo` WRITE;
-/*!40000 ALTER TABLE `t_PlmnInfo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PlmnInfo` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PlmnInfo_actualPlmn`
@@ -8474,15 +6377,6 @@ CREATE TABLE `t_PlmnInfo_actualPlmn` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PlmnInfo_actualPlmn`
---
-
-LOCK TABLES `t_PlmnInfo_actualPlmn` WRITE;
-/*!40000 ALTER TABLE `t_PlmnInfo_actualPlmn` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PlmnInfo_actualPlmn` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PlmnInfo_plmnWhiteList`
 --
 
@@ -8505,15 +6399,6 @@ CREATE TABLE `t_PlmnInfo_plmnWhiteList` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PlmnInfo_plmnWhiteList`
---
-
-LOCK TABLES `t_PlmnInfo_plmnWhiteList` WRITE;
-/*!40000 ALTER TABLE `t_PlmnInfo_plmnWhiteList` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PlmnInfo_plmnWhiteList` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Pm`
 --
 
@@ -8533,15 +6418,6 @@ CREATE TABLE `t_Pm` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Pm`
---
-
-LOCK TABLES `t_Pm` WRITE;
-/*!40000 ALTER TABLE `t_Pm` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Pm` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PmEventM`
 --
 
@@ -8559,15 +6435,6 @@ CREATE TABLE `t_PmEventM` (
   KEY `idx_su_me_ma_sy_pm` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_pmEventMId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PmEventM`
---
-
-LOCK TABLES `t_PmEventM` WRITE;
-/*!40000 ALTER TABLE `t_PmEventM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmEventM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PmEventService`
@@ -8600,15 +6467,6 @@ CREATE TABLE `t_PmEventService` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PmEventService`
---
-
-LOCK TABLES `t_PmEventService` WRITE;
-/*!40000 ALTER TABLE `t_PmEventService` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmEventService` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PmEventService_streamStatusPmCellTrace`
 --
 
@@ -8632,15 +6490,6 @@ CREATE TABLE `t_PmEventService_streamStatusPmCellTrace` (
   KEY `idx_su_me_ma_en_pm` (`f_pmEventServiceId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=269953 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PmEventService_streamStatusPmCellTrace`
---
-
-LOCK TABLES `t_PmEventService_streamStatusPmCellTrace` WRITE;
-/*!40000 ALTER TABLE `t_PmEventService_streamStatusPmCellTrace` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmEventService_streamStatusPmCellTrace` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PmEventService_streamStatusPmUeTrace`
@@ -8668,15 +6517,6 @@ CREATE TABLE `t_PmEventService_streamStatusPmUeTrace` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PmEventService_streamStatusPmUeTrace`
---
-
-LOCK TABLES `t_PmEventService_streamStatusPmUeTrace` WRITE;
-/*!40000 ALTER TABLE `t_PmEventService_streamStatusPmUeTrace` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmEventService_streamStatusPmUeTrace` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PmFunction`
 --
 
@@ -8696,15 +6536,6 @@ CREATE TABLE `t_PmFunction` (
   KEY `idx_ne_pm` (`f_networkElementId`,`f_pmFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86836 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PmFunction`
---
-
-LOCK TABLES `t_PmFunction` WRITE;
-/*!40000 ALTER TABLE `t_PmFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PmMeasurementCapabilities`
@@ -8743,15 +6574,6 @@ CREATE TABLE `t_PmMeasurementCapabilities` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PmMeasurementCapabilities`
---
-
-LOCK TABLES `t_PmMeasurementCapabilities` WRITE;
-/*!40000 ALTER TABLE `t_PmMeasurementCapabilities` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmMeasurementCapabilities` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PmSupport`
 --
 
@@ -8770,15 +6592,6 @@ CREATE TABLE `t_PmSupport` (
   KEY `idx_su_me_ma_no_pm` (`f_subNetworkId`,`f_pmSupportId`,`f_nodeSupportId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PmSupport`
---
-
-LOCK TABLES `t_PmSupport` WRITE;
-/*!40000 ALTER TABLE `t_PmSupport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmSupport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PmUlInterferenceReport`
@@ -8800,15 +6613,6 @@ CREATE TABLE `t_PmUlInterferenceReport` (
   KEY `idx_su_me_ma_en_se_pm` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_pmUlInterferenceReportId`,`f_meContextId`,`f_sectorCarrierId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1240613 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PmUlInterferenceReport`
---
-
-LOCK TABLES `t_PmUlInterferenceReport` WRITE;
-/*!40000 ALTER TABLE `t_PmUlInterferenceReport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PmUlInterferenceReport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PreschedProfile`
@@ -8833,15 +6637,6 @@ CREATE TABLE `t_PreschedProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PreschedProfile`
---
-
-LOCK TABLES `t_PreschedProfile` WRITE;
-/*!40000 ALTER TABLE `t_PreschedProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PreschedProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PreschedulingProfile`
 --
 
@@ -8864,15 +6659,6 @@ CREATE TABLE `t_PreschedulingProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PreschedulingProfile`
---
-
-LOCK TABLES `t_PreschedulingProfile` WRITE;
-/*!40000 ALTER TABLE `t_PreschedulingProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PreschedulingProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_PtmFunction`
 --
 
@@ -8893,15 +6679,6 @@ CREATE TABLE `t_PtmFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_PtmFunction`
---
-
-LOCK TABLES `t_PtmFunction` WRITE;
-/*!40000 ALTER TABLE `t_PtmFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PtmFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Ptp`
 --
 
@@ -8919,15 +6696,6 @@ CREATE TABLE `t_Ptp` (
   KEY `idx_su_me_ma_tr_pt` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_transportId`,`f_ptpId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Ptp`
---
-
-LOCK TABLES `t_Ptp` WRITE;
-/*!40000 ALTER TABLE `t_Ptp` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ptp` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_PtpBcOcPort`
@@ -8965,15 +6733,6 @@ CREATE TABLE `t_PtpBcOcPort` (
   KEY `idx_su_me_ma_tr_pt_bo_pt` (`f_subNetworkId`,`f_boundaryOrdinaryClockId`,`f_meContextId`,`f_managedElementId`,`f_ptpBcOcPortId`,`f_transportId`,`f_ptpId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_PtpBcOcPort`
---
-
-LOCK TABLES `t_PtpBcOcPort` WRITE;
-/*!40000 ALTER TABLE `t_PtpBcOcPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_PtpBcOcPort` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_QciProfilePredefined`
@@ -9038,15 +6797,6 @@ CREATE TABLE `t_QciProfilePredefined` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_QciProfilePredefined`
---
-
-LOCK TABLES `t_QciProfilePredefined` WRITE;
-/*!40000 ALTER TABLE `t_QciProfilePredefined` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_QciProfilePredefined` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_QciProfilePredefined_measReportConfigParams`
 --
 
@@ -9097,15 +6847,6 @@ CREATE TABLE `t_QciProfilePredefined_measReportConfigParams` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_QciProfilePredefined_measReportConfigParams`
---
-
-LOCK TABLES `t_QciProfilePredefined_measReportConfigParams` WRITE;
-/*!40000 ALTER TABLE `t_QciProfilePredefined_measReportConfigParams` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_QciProfilePredefined_measReportConfigParams` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_QciTable`
 --
 
@@ -9123,15 +6864,6 @@ CREATE TABLE `t_QciTable` (
   KEY `idx_su_me_ma_en_qc` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_qciTableId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_QciTable`
---
-
-LOCK TABLES `t_QciTable` WRITE;
-/*!40000 ALTER TABLE `t_QciTable` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_QciTable` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_QosProfiles`
@@ -9153,15 +6885,6 @@ CREATE TABLE `t_QosProfiles` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_QosProfiles`
---
-
-LOCK TABLES `t_QosProfiles` WRITE;
-/*!40000 ALTER TABLE `t_QosProfiles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_QosProfiles` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_RadioBearerTable`
 --
 
@@ -9179,15 +6902,6 @@ CREATE TABLE `t_RadioBearerTable` (
   KEY `idx_su_me_ma_en_ra` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_radioBearerTableId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_RadioBearerTable`
---
-
-LOCK TABLES `t_RadioBearerTable` WRITE;
-/*!40000 ALTER TABLE `t_RadioBearerTable` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RadioBearerTable` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_RadioEquipmentClock`
@@ -9212,15 +6926,6 @@ CREATE TABLE `t_RadioEquipmentClock` (
   KEY `idx_su_me_ma_tr_sy_ra` (`f_subNetworkId`,`f_synchronizationId`,`f_radioEquipmentClockId`,`f_meContextId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85431 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_RadioEquipmentClock`
---
-
-LOCK TABLES `t_RadioEquipmentClock` WRITE;
-/*!40000 ALTER TABLE `t_RadioEquipmentClock` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RadioEquipmentClock` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_RadioEquipmentClockReference`
@@ -9255,15 +6960,6 @@ CREATE TABLE `t_RadioEquipmentClockReference` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_RadioEquipmentClockReference`
---
-
-LOCK TABLES `t_RadioEquipmentClockReference` WRITE;
-/*!40000 ALTER TABLE `t_RadioEquipmentClockReference` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RadioEquipmentClockReference` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_RadioEquipmentClockReference_adminQualityLevel`
 --
 
@@ -9286,15 +6982,6 @@ CREATE TABLE `t_RadioEquipmentClockReference_adminQualityLevel` (
   KEY `idx_su_me_ma_tr_sy_ra_ra` (`f_subNetworkId`,`f_synchronizationId`,`f_radioEquipmentClockReferenceId`,`f_radioEquipmentClockId`,`f_meContextId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85431 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_RadioEquipmentClockReference_adminQualityLevel`
---
-
-LOCK TABLES `t_RadioEquipmentClockReference_adminQualityLevel` WRITE;
-/*!40000 ALTER TABLE `t_RadioEquipmentClockReference_adminQualityLevel` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RadioEquipmentClockReference_adminQualityLevel` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_RadioEquipmentClock_minQualityLevel`
@@ -9320,15 +7007,6 @@ CREATE TABLE `t_RadioEquipmentClock_minQualityLevel` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_RadioEquipmentClock_minQualityLevel`
---
-
-LOCK TABLES `t_RadioEquipmentClock_minQualityLevel` WRITE;
-/*!40000 ALTER TABLE `t_RadioEquipmentClock_minQualityLevel` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RadioEquipmentClock_minQualityLevel` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_RadioEquipmentClock_timeHoldoverAlarmConfig`
 --
 
@@ -9351,15 +7029,6 @@ CREATE TABLE `t_RadioEquipmentClock_timeHoldoverAlarmConfig` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_RadioEquipmentClock_timeHoldoverAlarmConfig`
---
-
-LOCK TABLES `t_RadioEquipmentClock_timeHoldoverAlarmConfig` WRITE;
-/*!40000 ALTER TABLE `t_RadioEquipmentClock_timeHoldoverAlarmConfig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RadioEquipmentClock_timeHoldoverAlarmConfig` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Rcs`
 --
 
@@ -9380,15 +7049,6 @@ CREATE TABLE `t_Rcs` (
   KEY `idx_su_me_ma_en_rc` (`f_rcsId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Rcs`
---
-
-LOCK TABLES `t_Rcs` WRITE;
-/*!40000 ALTER TABLE `t_Rcs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Rcs` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigA1A2Br`
@@ -9414,15 +7074,6 @@ CREATE TABLE `t_ReportConfigA1A2Br` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_reportConfigA1A2BrId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530541 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigA1A2Br`
---
-
-LOCK TABLES `t_ReportConfigA1A2Br` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA1A2Br` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA1A2Br` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigA1Prim`
@@ -9451,15 +7102,6 @@ CREATE TABLE `t_ReportConfigA1Prim` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigA1Prim`
---
-
-LOCK TABLES `t_ReportConfigA1Prim` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA1Prim` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA1Prim` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigA1Sec`
 --
 
@@ -9486,15 +7128,6 @@ CREATE TABLE `t_ReportConfigA1Sec` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigA1Sec`
---
-
-LOCK TABLES `t_ReportConfigA1Sec` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA1Sec` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA1Sec` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigA4`
 --
 
@@ -9519,15 +7152,6 @@ CREATE TABLE `t_ReportConfigA4` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`,`f_reportConfigA4Id`,`f_ueMeasControlId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigA4`
---
-
-LOCK TABLES `t_ReportConfigA4` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA4` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA4` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigA5`
@@ -9560,15 +7184,6 @@ CREATE TABLE `t_ReportConfigA5` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigA5`
---
-
-LOCK TABLES `t_ReportConfigA5` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA5` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA5` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigA5Anr`
 --
 
@@ -9597,15 +7212,6 @@ CREATE TABLE `t_ReportConfigA5Anr` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigA5Anr`
---
-
-LOCK TABLES `t_ReportConfigA5Anr` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA5Anr` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA5Anr` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigA5DlComp`
 --
 
@@ -9625,15 +7231,6 @@ CREATE TABLE `t_ReportConfigA5DlComp` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_reportConfigA5DlCompId`,`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigA5DlComp`
---
-
-LOCK TABLES `t_ReportConfigA5DlComp` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA5DlComp` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA5DlComp` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigA5SoftLock`
@@ -9656,15 +7253,6 @@ CREATE TABLE `t_ReportConfigA5SoftLock` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_reportConfigA5SoftLockId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigA5SoftLock`
---
-
-LOCK TABLES `t_ReportConfigA5SoftLock` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA5SoftLock` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA5SoftLock` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigA5UlTrig`
@@ -9695,15 +7283,6 @@ CREATE TABLE `t_ReportConfigA5UlTrig` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigA5UlTrig`
---
-
-LOCK TABLES `t_ReportConfigA5UlTrig` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigA5UlTrig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigA5UlTrig` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB1GUtra`
 --
 
@@ -9729,15 +7308,6 @@ CREATE TABLE `t_ReportConfigB1GUtra` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB1GUtra`
---
-
-LOCK TABLES `t_ReportConfigB1GUtra` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB1GUtra` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB1GUtra` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB1Geran`
 --
 
@@ -9760,15 +7330,6 @@ CREATE TABLE `t_ReportConfigB1Geran` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_reportConfigB1GeranId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigB1Geran`
---
-
-LOCK TABLES `t_ReportConfigB1Geran` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB1Geran` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB1Geran` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigB1NR`
@@ -9796,15 +7357,6 @@ CREATE TABLE `t_ReportConfigB1NR` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB1NR`
---
-
-LOCK TABLES `t_ReportConfigB1NR` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB1NR` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB1NR` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB1Utra`
 --
 
@@ -9828,15 +7380,6 @@ CREATE TABLE `t_ReportConfigB1Utra` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_reportConfigB1UtraId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigB1Utra`
---
-
-LOCK TABLES `t_ReportConfigB1Utra` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB1Utra` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB1Utra` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigB2Cdma2000`
@@ -9868,15 +7411,6 @@ CREATE TABLE `t_ReportConfigB2Cdma2000` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB2Cdma2000`
---
-
-LOCK TABLES `t_ReportConfigB2Cdma2000` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2Cdma2000` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2Cdma2000` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB2Cdma20001xRtt`
 --
 
@@ -9906,15 +7440,6 @@ CREATE TABLE `t_ReportConfigB2Cdma20001xRtt` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB2Cdma20001xRtt`
---
-
-LOCK TABLES `t_ReportConfigB2Cdma20001xRtt` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2Cdma20001xRtt` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2Cdma20001xRtt` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB2CdmaRttUlTrig`
 --
 
@@ -9936,15 +7461,6 @@ CREATE TABLE `t_ReportConfigB2CdmaRttUlTrig` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB2CdmaRttUlTrig`
---
-
-LOCK TABLES `t_ReportConfigB2CdmaRttUlTrig` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2CdmaRttUlTrig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2CdmaRttUlTrig` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB2CdmaUlTrig`
 --
 
@@ -9964,15 +7480,6 @@ CREATE TABLE `t_ReportConfigB2CdmaUlTrig` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_reportConfigB2CdmaUlTrigId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigB2CdmaUlTrig`
---
-
-LOCK TABLES `t_ReportConfigB2CdmaUlTrig` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2CdmaUlTrig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2CdmaUlTrig` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigB2Geran`
@@ -10004,15 +7511,6 @@ CREATE TABLE `t_ReportConfigB2Geran` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB2Geran`
---
-
-LOCK TABLES `t_ReportConfigB2Geran` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2Geran` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2Geran` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB2GeranUlTrig`
 --
 
@@ -10036,15 +7534,6 @@ CREATE TABLE `t_ReportConfigB2GeranUlTrig` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_reportConfigB2GeranUlTrigId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`,`f_ueMeasControlId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigB2GeranUlTrig`
---
-
-LOCK TABLES `t_ReportConfigB2GeranUlTrig` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2GeranUlTrig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2GeranUlTrig` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigB2Utra`
@@ -10077,15 +7566,6 @@ CREATE TABLE `t_ReportConfigB2Utra` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB2Utra`
---
-
-LOCK TABLES `t_ReportConfigB2Utra` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2Utra` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2Utra` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigB2UtraUlTrig`
 --
 
@@ -10112,15 +7592,6 @@ CREATE TABLE `t_ReportConfigB2UtraUlTrig` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigB2UtraUlTrig`
---
-
-LOCK TABLES `t_ReportConfigB2UtraUlTrig` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigB2UtraUlTrig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigB2UtraUlTrig` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigCsfbCdma2000`
 --
 
@@ -10145,15 +7616,6 @@ CREATE TABLE `t_ReportConfigCsfbCdma2000` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigCsfbCdma2000`
---
-
-LOCK TABLES `t_ReportConfigCsfbCdma2000` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigCsfbCdma2000` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigCsfbCdma2000` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigCsfbGeran`
 --
 
@@ -10176,15 +7638,6 @@ CREATE TABLE `t_ReportConfigCsfbGeran` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`,`f_reportConfigCsfbGeranId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigCsfbGeran`
---
-
-LOCK TABLES `t_ReportConfigCsfbGeran` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigCsfbGeran` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigCsfbGeran` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigCsfbUtra`
@@ -10212,15 +7665,6 @@ CREATE TABLE `t_ReportConfigCsfbUtra` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigCsfbUtra`
---
-
-LOCK TABLES `t_ReportConfigCsfbUtra` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigCsfbUtra` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigCsfbUtra` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigCsg`
 --
 
@@ -10244,15 +7688,6 @@ CREATE TABLE `t_ReportConfigCsg` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_reportConfigCsgId`,`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigCsg`
---
-
-LOCK TABLES `t_ReportConfigCsg` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigCsg` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigCsg` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigEUtraBadCovPrim`
@@ -10282,15 +7717,6 @@ CREATE TABLE `t_ReportConfigEUtraBadCovPrim` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigEUtraBadCovPrim`
---
-
-LOCK TABLES `t_ReportConfigEUtraBadCovPrim` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBadCovPrim` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBadCovPrim` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigEUtraBadCovSec`
 --
 
@@ -10318,15 +7744,6 @@ CREATE TABLE `t_ReportConfigEUtraBadCovSec` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigEUtraBadCovSec`
---
-
-LOCK TABLES `t_ReportConfigEUtraBadCovSec` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBadCovSec` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBadCovSec` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigEUtraBestCell`
 --
 
@@ -10350,15 +7767,6 @@ CREATE TABLE `t_ReportConfigEUtraBestCell` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_reportConfigEUtraBestCellId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`,`f_ueMeasControlId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigEUtraBestCell`
---
-
-LOCK TABLES `t_ReportConfigEUtraBestCell` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBestCell` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBestCell` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigEUtraBestCellAnr`
@@ -10386,15 +7794,6 @@ CREATE TABLE `t_ReportConfigEUtraBestCellAnr` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigEUtraBestCellAnr`
---
-
-LOCK TABLES `t_ReportConfigEUtraBestCellAnr` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBestCellAnr` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraBestCellAnr` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigEUtraIFA3UlTrig`
 --
 
@@ -10418,15 +7817,6 @@ CREATE TABLE `t_ReportConfigEUtraIFA3UlTrig` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`,`f_ueMeasControlId`,`f_reportConfigEUtraIFA3UlTrigId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigEUtraIFA3UlTrig`
---
-
-LOCK TABLES `t_ReportConfigEUtraIFA3UlTrig` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraIFA3UlTrig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraIFA3UlTrig` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigEUtraIFBestCell`
@@ -10457,15 +7847,6 @@ CREATE TABLE `t_ReportConfigEUtraIFBestCell` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigEUtraIFBestCell`
---
-
-LOCK TABLES `t_ReportConfigEUtraIFBestCell` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraIFBestCell` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraIFBestCell` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigEUtraInterFreqLb`
 --
 
@@ -10491,15 +7872,6 @@ CREATE TABLE `t_ReportConfigEUtraInterFreqLb` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigEUtraInterFreqLb`
---
-
-LOCK TABLES `t_ReportConfigEUtraInterFreqLb` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraInterFreqLb` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraInterFreqLb` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigEUtraInterFreqMbms`
 --
 
@@ -10521,15 +7893,6 @@ CREATE TABLE `t_ReportConfigEUtraInterFreqMbms` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_reportConfigEUtraInterFreqMbmsId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigEUtraInterFreqMbms`
---
-
-LOCK TABLES `t_ReportConfigEUtraInterFreqMbms` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraInterFreqMbms` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigEUtraInterFreqMbms` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigElcA1A2`
@@ -10557,15 +7920,6 @@ CREATE TABLE `t_ReportConfigElcA1A2` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigElcA1A2`
---
-
-LOCK TABLES `t_ReportConfigElcA1A2` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigElcA1A2` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigElcA1A2` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigInterEnbUlComp`
 --
 
@@ -10591,15 +7945,6 @@ CREATE TABLE `t_ReportConfigInterEnbUlComp` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigInterEnbUlComp`
---
-
-LOCK TABLES `t_ReportConfigInterEnbUlComp` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigInterEnbUlComp` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigInterEnbUlComp` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigInterRatLb`
 --
 
@@ -10622,15 +7967,6 @@ CREATE TABLE `t_ReportConfigInterRatLb` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_ueMeasControlId`,`f_eUtranCellFDDId`,`f_reportConfigInterRatLbId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigInterRatLb`
---
-
-LOCK TABLES `t_ReportConfigInterRatLb` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigInterRatLb` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigInterRatLb` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigSCellA1A2`
@@ -10663,15 +7999,6 @@ CREATE TABLE `t_ReportConfigSCellA1A2` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigSCellA1A2`
---
-
-LOCK TABLES `t_ReportConfigSCellA1A2` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigSCellA1A2` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigSCellA1A2` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigSCellA4`
 --
 
@@ -10698,15 +8025,6 @@ CREATE TABLE `t_ReportConfigSCellA4` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigSCellA4`
---
-
-LOCK TABLES `t_ReportConfigSCellA4` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigSCellA4` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigSCellA4` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ReportConfigSCellA6`
 --
 
@@ -10730,15 +8048,6 @@ CREATE TABLE `t_ReportConfigSCellA6` (
   KEY `idx_su_me_ma_en_eu_ue_re` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtranCellFDDId`,`f_meContextId`,`f_managedElementId`,`f_reportConfigSCellA6Id`,`f_ueMeasControlId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=530542 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ReportConfigSCellA6`
---
-
-LOCK TABLES `t_ReportConfigSCellA6` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigSCellA6` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigSCellA6` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_ReportConfigSearch`
@@ -10792,15 +8101,6 @@ CREATE TABLE `t_ReportConfigSearch` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_ReportConfigSearch`
---
-
-LOCK TABLES `t_ReportConfigSearch` WRITE;
-/*!40000 ALTER TABLE `t_ReportConfigSearch` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ReportConfigSearch` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_ResourcePartitions`
 --
 
@@ -10818,15 +8118,6 @@ CREATE TABLE `t_ResourcePartitions` (
   KEY `idx_su_me_ma_en_re` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_resourcePartitionsId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_ResourcePartitions`
---
-
-LOCK TABLES `t_ResourcePartitions` WRITE;
-/*!40000 ALTER TABLE `t_ResourcePartitions` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_ResourcePartitions` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_RetSubUnit`
@@ -10867,15 +8158,6 @@ CREATE TABLE `t_RetSubUnit` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_RetSubUnit`
---
-
-LOCK TABLES `t_RetSubUnit` WRITE;
-/*!40000 ALTER TABLE `t_RetSubUnit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RetSubUnit` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_RfBranch`
 --
 
@@ -10905,15 +8187,6 @@ CREATE TABLE `t_RfBranch` (
   KEY `idx_su_me_ma_eq_an_rf` (`f_subNetworkId`,`f_antennaUnitGroupId`,`f_rfBranchId`,`f_meContextId`,`f_managedElementId`,`f_equipmentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1399131 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_RfBranch`
---
-
-LOCK TABLES `t_RfBranch` WRITE;
-/*!40000 ALTER TABLE `t_RfBranch` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RfBranch` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_RfPort`
@@ -10950,15 +8223,6 @@ CREATE TABLE `t_RfPort` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_RfPort`
---
-
-LOCK TABLES `t_RfPort` WRITE;
-/*!40000 ALTER TABLE `t_RfPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RfPort` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_RiLink`
 --
 
@@ -10985,15 +8249,6 @@ CREATE TABLE `t_RiLink` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_RiLink`
---
-
-LOCK TABLES `t_RiLink` WRITE;
-/*!40000 ALTER TABLE `t_RiLink` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RiLink` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_RiPort`
 --
 
@@ -11016,15 +8271,6 @@ CREATE TABLE `t_RiPort` (
   KEY `idx_su_me_ma_eq_fi_ri` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_riPortId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2323704 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_RiPort`
---
-
-LOCK TABLES `t_RiPort` WRITE;
-/*!40000 ALTER TABLE `t_RiPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RiPort` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_RlfProfile`
@@ -11052,15 +8298,6 @@ CREATE TABLE `t_RlfProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_RlfProfile`
---
-
-LOCK TABLES `t_RlfProfile` WRITE;
-/*!40000 ALTER TABLE `t_RlfProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RlfProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Role`
 --
 
@@ -11085,15 +8322,6 @@ CREATE TABLE `t_Role` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Role`
---
-
-LOCK TABLES `t_Role` WRITE;
-/*!40000 ALTER TABLE `t_Role` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Role` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_RouteTableIPv4Static`
 --
 
@@ -11112,15 +8340,6 @@ CREATE TABLE `t_RouteTableIPv4Static` (
   KEY `idx_su_me_ma_tr_ro_ro` (`f_meContextId`,`f_subNetworkId`,`f_routeTableIPv4StaticId`,`f_routerId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=170863 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_RouteTableIPv4Static`
---
-
-LOCK TABLES `t_RouteTableIPv4Static` WRITE;
-/*!40000 ALTER TABLE `t_RouteTableIPv4Static` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_RouteTableIPv4Static` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Router`
@@ -11144,15 +8363,6 @@ CREATE TABLE `t_Router` (
   KEY `idx_su_me_ma_tr_ro` (`f_meContextId`,`f_subNetworkId`,`f_routerId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=170863 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Router`
---
-
-LOCK TABLES `t_Router` WRITE;
-/*!40000 ALTER TABLE `t_Router` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Router` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Rrc`
@@ -11188,15 +8398,6 @@ CREATE TABLE `t_Rrc` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Rrc`
---
-
-LOCK TABLES `t_Rrc` WRITE;
-/*!40000 ALTER TABLE `t_Rrc` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Rrc` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Rule`
 --
 
@@ -11221,15 +8422,6 @@ CREATE TABLE `t_Rule` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Rule`
---
-
-LOCK TABLES `t_Rule` WRITE;
-/*!40000 ALTER TABLE `t_Rule` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Rule` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SHMFunction`
 --
 
@@ -11244,15 +8436,6 @@ CREATE TABLE `t_SHMFunction` (
   KEY `idx_ne_sh` (`f_networkElementId`,`f_sHMFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86836 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SHMFunction`
---
-
-LOCK TABLES `t_SHMFunction` WRITE;
-/*!40000 ALTER TABLE `t_SHMFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SHMFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Schema`
@@ -11277,15 +8460,6 @@ CREATE TABLE `t_Schema` (
   KEY `idx_su_me_ma_sy_sy_sc` (`f_meContextId`,`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`,`f_schemaId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12726342 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Schema`
---
-
-LOCK TABLES `t_Schema` WRITE;
-/*!40000 ALTER TABLE `t_Schema` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Schema` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SciProfile`
@@ -11324,15 +8498,6 @@ CREATE TABLE `t_SciProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SciProfile`
---
-
-LOCK TABLES `t_SciProfile` WRITE;
-/*!40000 ALTER TABLE `t_SciProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SciProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Sctp`
 --
 
@@ -11350,15 +8515,6 @@ CREATE TABLE `t_Sctp` (
   KEY `idx_su_me_ma_tr_sc` (`f_meContextId`,`f_subNetworkId`,`f_sctpId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Sctp`
---
-
-LOCK TABLES `t_Sctp` WRITE;
-/*!40000 ALTER TABLE `t_Sctp` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Sctp` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SctpAssociation`
@@ -11380,15 +8536,6 @@ CREATE TABLE `t_SctpAssociation` (
   KEY `idx_su_me_ma_tr_sc_sc` (`f_meContextId`,`f_subNetworkId`,`f_sctpEndpointId`,`f_managedElementId`,`f_sctpAssociationId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4024551 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SctpAssociation`
---
-
-LOCK TABLES `t_SctpAssociation` WRITE;
-/*!40000 ALTER TABLE `t_SctpAssociation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SctpAssociation` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SctpEndpoint`
@@ -11414,15 +8561,6 @@ CREATE TABLE `t_SctpEndpoint` (
   KEY `idx_su_me_ma_tr_sc` (`f_subNetworkId`,`f_sctpEndpointId`,`f_meContextId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44993 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SctpEndpoint`
---
-
-LOCK TABLES `t_SctpEndpoint` WRITE;
-/*!40000 ALTER TABLE `t_SctpEndpoint` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SctpEndpoint` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SctpProfile`
@@ -11478,15 +8616,6 @@ CREATE TABLE `t_SctpProfile` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SctpProfile`
---
-
-LOCK TABLES `t_SctpProfile` WRITE;
-/*!40000 ALTER TABLE `t_SctpProfile` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SctpProfile` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SecM`
 --
 
@@ -11504,15 +8633,6 @@ CREATE TABLE `t_SecM` (
   KEY `idx_su_me_ma_sy_se` (`f_secMId`,`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85435 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SecM`
---
-
-LOCK TABLES `t_SecM` WRITE;
-/*!40000 ALTER TABLE `t_SecM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SecM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SectorCarrier`
@@ -11564,15 +8684,6 @@ CREATE TABLE `t_SectorCarrier` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SectorCarrier`
---
-
-LOCK TABLES `t_SectorCarrier` WRITE;
-/*!40000 ALTER TABLE `t_SectorCarrier` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SectorCarrier` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SectorEquipmentFunction`
 --
 
@@ -11599,15 +8710,6 @@ CREATE TABLE `t_SectorEquipmentFunction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SectorEquipmentFunction`
---
-
-LOCK TABLES `t_SectorEquipmentFunction` WRITE;
-/*!40000 ALTER TABLE `t_SectorEquipmentFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SectorEquipmentFunction` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SecurityFunction`
 --
 
@@ -11622,15 +8724,6 @@ CREATE TABLE `t_SecurityFunction` (
   KEY `idx_ne_se` (`f_networkElementId`,`f_securityFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=86836 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SecurityFunction`
---
-
-LOCK TABLES `t_SecurityFunction` WRITE;
-/*!40000 ALTER TABLE `t_SecurityFunction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SecurityFunction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SecurityHandling`
@@ -11656,15 +8749,6 @@ CREATE TABLE `t_SecurityHandling` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SecurityHandling`
---
-
-LOCK TABLES `t_SecurityHandling` WRITE;
-/*!40000 ALTER TABLE `t_SecurityHandling` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SecurityHandling` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SfpChannel`
 --
 
@@ -11687,15 +8771,6 @@ CREATE TABLE `t_SfpChannel` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SfpChannel`
---
-
-LOCK TABLES `t_SfpChannel` WRITE;
-/*!40000 ALTER TABLE `t_SfpChannel` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SfpChannel` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SfpModule`
 --
 
@@ -11715,15 +8790,6 @@ CREATE TABLE `t_SfpModule` (
   KEY `idx_su_me_ma_eq_fi_sf` (`f_subNetworkId`,`f_sfpModuleId`,`f_meContextId`,`f_managedElementId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2484404 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SfpModule`
---
-
-LOCK TABLES `t_SfpModule` WRITE;
-/*!40000 ALTER TABLE `t_SfpModule` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SfpModule` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SignalingRadioBearer`
@@ -11752,15 +8818,6 @@ CREATE TABLE `t_SignalingRadioBearer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SignalingRadioBearer`
---
-
-LOCK TABLES `t_SignalingRadioBearer` WRITE;
-/*!40000 ALTER TABLE `t_SignalingRadioBearer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SignalingRadioBearer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Snmp`
 --
 
@@ -11783,15 +8840,6 @@ CREATE TABLE `t_Snmp` (
   KEY `idx_su_me_ma_sy_sy_sn` (`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_snmpId`,`f_meContextId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Snmp`
---
-
-LOCK TABLES `t_Snmp` WRITE;
-/*!40000 ALTER TABLE `t_Snmp` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Snmp` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SnmpTargetV2C`
@@ -11821,15 +8869,6 @@ CREATE TABLE `t_SnmpTargetV2C` (
   KEY `idx_su_me_ma_sy_sy_sn_sn` (`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_snmpId`,`f_meContextId`,`f_snmpTargetV2CId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85436 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SnmpTargetV2C`
---
-
-LOCK TABLES `t_SnmpTargetV2C` WRITE;
-/*!40000 ALTER TABLE `t_SnmpTargetV2C` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SnmpTargetV2C` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SnmpTargetV3`
@@ -11864,15 +8903,6 @@ CREATE TABLE `t_SnmpTargetV3` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SnmpTargetV3`
---
-
-LOCK TABLES `t_SnmpTargetV3` WRITE;
-/*!40000 ALTER TABLE `t_SnmpTargetV3` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SnmpTargetV3` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SnmpTargetV3_authKey`
 --
 
@@ -11894,15 +8924,6 @@ CREATE TABLE `t_SnmpTargetV3_authKey` (
   KEY `idx_su_me_ma_sy_sy_sn_sn` (`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_snmpId`,`f_meContextId`,`f_snmpTargetV3Id`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=148815 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SnmpTargetV3_authKey`
---
-
-LOCK TABLES `t_SnmpTargetV3_authKey` WRITE;
-/*!40000 ALTER TABLE `t_SnmpTargetV3_authKey` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SnmpTargetV3_authKey` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SnmpTargetV3_privKey`
@@ -11928,15 +8949,6 @@ CREATE TABLE `t_SnmpTargetV3_privKey` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SnmpTargetV3_privKey`
---
-
-LOCK TABLES `t_SnmpTargetV3_privKey` WRITE;
-/*!40000 ALTER TABLE `t_SnmpTargetV3_privKey` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SnmpTargetV3_privKey` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Snmp_agentAddress`
 --
 
@@ -11957,15 +8969,6 @@ CREATE TABLE `t_Snmp_agentAddress` (
   KEY `idx_su_me_ma_sy_sy_sn` (`f_snmpId`,`f_meContextId`,`f_sysMId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Snmp_agentAddress`
---
-
-LOCK TABLES `t_Snmp_agentAddress` WRITE;
-/*!40000 ALTER TABLE `t_Snmp_agentAddress` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Snmp_agentAddress` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Ssh`
@@ -11994,15 +8997,6 @@ CREATE TABLE `t_Ssh` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Ssh`
---
-
-LOCK TABLES `t_Ssh` WRITE;
-/*!40000 ALTER TABLE `t_Ssh` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Ssh` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_StreamingCapabilities`
 --
 
@@ -12026,15 +9020,6 @@ CREATE TABLE `t_StreamingCapabilities` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_StreamingCapabilities`
---
-
-LOCK TABLES `t_StreamingCapabilities` WRITE;
-/*!40000 ALTER TABLE `t_StreamingCapabilities` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_StreamingCapabilities` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SupportUnit`
 --
 
@@ -12056,15 +9041,6 @@ CREATE TABLE `t_SupportUnit` (
   KEY `idx_su_me_ma_eq_su` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_supportUnitId`,`f_equipmentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=116247 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SupportUnit`
---
-
-LOCK TABLES `t_SupportUnit` WRITE;
-/*!40000 ALTER TABLE `t_SupportUnit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SupportUnit` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SupportUnit_productData`
@@ -12091,15 +9067,6 @@ CREATE TABLE `t_SupportUnit_productData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SupportUnit_productData`
---
-
-LOCK TABLES `t_SupportUnit_productData` WRITE;
-/*!40000 ALTER TABLE `t_SupportUnit_productData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SupportUnit_productData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SwInventory`
 --
 
@@ -12118,15 +9085,6 @@ CREATE TABLE `t_SwInventory` (
   KEY `idx_su_me_ma_sy_sw` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`,`f_swInventoryId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85433 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SwInventory`
---
-
-LOCK TABLES `t_SwInventory` WRITE;
-/*!40000 ALTER TABLE `t_SwInventory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SwInventory` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SwItem`
@@ -12148,15 +9106,6 @@ CREATE TABLE `t_SwItem` (
   KEY `idx_su_me_ma_sy_sw_sw` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`,`f_swInventoryId`,`f_swItemId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8887119 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SwItem`
---
-
-LOCK TABLES `t_SwItem` WRITE;
-/*!40000 ALTER TABLE `t_SwItem` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SwItem` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SwItem_administrativeData`
@@ -12185,15 +9134,6 @@ CREATE TABLE `t_SwItem_administrativeData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SwItem_administrativeData`
---
-
-LOCK TABLES `t_SwItem_administrativeData` WRITE;
-/*!40000 ALTER TABLE `t_SwItem_administrativeData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SwItem_administrativeData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SwM`
 --
 
@@ -12214,15 +9154,6 @@ CREATE TABLE `t_SwM` (
   KEY `idx_su_me_ma_sy_sw` (`f_subNetworkId`,`f_systemFunctionsId`,`f_meContextId`,`f_managedElementId`,`f_swMId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85433 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SwM`
---
-
-LOCK TABLES `t_SwM` WRITE;
-/*!40000 ALTER TABLE `t_SwM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SwM` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SwM_reportProgress`
@@ -12255,15 +9186,6 @@ CREATE TABLE `t_SwM_reportProgress` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SwM_reportProgress`
---
-
-LOCK TABLES `t_SwM_reportProgress` WRITE;
-/*!40000 ALTER TABLE `t_SwM_reportProgress` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SwM_reportProgress` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SwVersion`
 --
 
@@ -12285,15 +9207,6 @@ CREATE TABLE `t_SwVersion` (
   KEY `idx_su_me_ma_sy_sw_sw` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`,`f_swVersionId`,`f_swInventoryId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=91892 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SwVersion`
---
-
-LOCK TABLES `t_SwVersion` WRITE;
-/*!40000 ALTER TABLE `t_SwVersion` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SwVersion` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_SwVersion_administrativeData`
@@ -12322,15 +9235,6 @@ CREATE TABLE `t_SwVersion_administrativeData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SwVersion_administrativeData`
---
-
-LOCK TABLES `t_SwVersion_administrativeData` WRITE;
-/*!40000 ALTER TABLE `t_SwVersion_administrativeData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SwVersion_administrativeData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SyncPort`
 --
 
@@ -12351,15 +9255,6 @@ CREATE TABLE `t_SyncPort` (
   KEY `idx_su_me_ma_eq_fi_sy` (`f_subNetworkId`,`f_syncPortId`,`f_meContextId`,`f_managedElementId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SyncPort`
---
-
-LOCK TABLES `t_SyncPort` WRITE;
-/*!40000 ALTER TABLE `t_SyncPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SyncPort` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Synchronization`
@@ -12383,15 +9278,6 @@ CREATE TABLE `t_Synchronization` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Synchronization`
---
-
-LOCK TABLES `t_Synchronization` WRITE;
-/*!40000 ALTER TABLE `t_Synchronization` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Synchronization` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SysM`
 --
 
@@ -12411,15 +9297,6 @@ CREATE TABLE `t_SysM` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_SysM`
---
-
-LOCK TABLES `t_SysM` WRITE;
-/*!40000 ALTER TABLE `t_SysM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SysM` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_SystemFunctions`
 --
 
@@ -12436,15 +9313,6 @@ CREATE TABLE `t_SystemFunctions` (
   KEY `idx_su_me_ma_sy` (`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85435 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_SystemFunctions`
---
-
-LOCK TABLES `t_SystemFunctions` WRITE;
-/*!40000 ALTER TABLE `t_SystemFunctions` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_SystemFunctions` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_TermPointToENB`
@@ -12478,15 +9346,6 @@ CREATE TABLE `t_TermPointToENB` (
   KEY `idx_su_me_ma_en_eu_ex_te` (`f_eNodeBFunctionId`,`f_subNetworkId`,`f_eUtraNetworkId`,`f_termPointToENBId`,`f_meContextId`,`f_managedElementId`,`f_externalENodeBFunctionId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3611195 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_TermPointToENB`
---
-
-LOCK TABLES `t_TermPointToENB` WRITE;
-/*!40000 ALTER TABLE `t_TermPointToENB` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TermPointToENB` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_TermPointToMme`
@@ -12523,15 +9382,6 @@ CREATE TABLE `t_TermPointToMme` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_TermPointToMme`
---
-
-LOCK TABLES `t_TermPointToMme` WRITE;
-/*!40000 ALTER TABLE `t_TermPointToMme` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TermPointToMme` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_TermPointToMme_servedPlmnListLTERelated`
 --
 
@@ -12554,15 +9404,6 @@ CREATE TABLE `t_TermPointToMme_servedPlmnListLTERelated` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_TermPointToMme_servedPlmnListLTERelated`
---
-
-LOCK TABLES `t_TermPointToMme_servedPlmnListLTERelated` WRITE;
-/*!40000 ALTER TABLE `t_TermPointToMme_servedPlmnListLTERelated` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TermPointToMme_servedPlmnListLTERelated` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_TermPointToSGW`
 --
 
@@ -12581,15 +9422,6 @@ CREATE TABLE `t_TermPointToSGW` (
   KEY `idx_su_me_ma_en_te` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_termPointToSGWId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=225395 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_TermPointToSGW`
---
-
-LOCK TABLES `t_TermPointToSGW` WRITE;
-/*!40000 ALTER TABLE `t_TermPointToSGW` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TermPointToSGW` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_TimeM`
@@ -12612,15 +9444,6 @@ CREATE TABLE `t_TimeM` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_TimeM`
---
-
-LOCK TABLES `t_TimeM` WRITE;
-/*!40000 ALTER TABLE `t_TimeM` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TimeM` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_TimeSettings`
 --
 
@@ -12639,15 +9462,6 @@ CREATE TABLE `t_TimeSettings` (
   KEY `idx_su_me_ma_no_ti` (`f_meContextId`,`f_subNetworkId`,`f_timeSettingsId`,`f_managedElementId`,`f_nodeSupportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_TimeSettings`
---
-
-LOCK TABLES `t_TimeSettings` WRITE;
-/*!40000 ALTER TABLE `t_TimeSettings` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TimeSettings` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Tls`
@@ -12669,15 +9483,6 @@ CREATE TABLE `t_Tls` (
   KEY `idx_su_me_ma_sy_se_tl` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_secMId`,`f_tlsId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Tls`
---
-
-LOCK TABLES `t_Tls` WRITE;
-/*!40000 ALTER TABLE `t_Tls` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Tls` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_Tls_enabledCiphers`
@@ -12706,15 +9511,6 @@ CREATE TABLE `t_Tls_enabledCiphers` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_Tls_enabledCiphers`
---
-
-LOCK TABLES `t_Tls_enabledCiphers` WRITE;
-/*!40000 ALTER TABLE `t_Tls_enabledCiphers` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Tls_enabledCiphers` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Tls_supportedCiphers`
 --
 
@@ -12739,15 +9535,6 @@ CREATE TABLE `t_Tls_supportedCiphers` (
   KEY `idx_su_me_ma_sy_se_tl` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_secMId`,`f_tlsId`,`f_managedElementId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3986799 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Tls_supportedCiphers`
---
-
-LOCK TABLES `t_Tls_supportedCiphers` WRITE;
-/*!40000 ALTER TABLE `t_Tls_supportedCiphers` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Tls_supportedCiphers` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_TmaSubUnit`
@@ -12789,15 +9576,6 @@ CREATE TABLE `t_TmaSubUnit` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_TmaSubUnit`
---
-
-LOCK TABLES `t_TmaSubUnit` WRITE;
-/*!40000 ALTER TABLE `t_TmaSubUnit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TmaSubUnit` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_TmaSubUnit_tmfData`
 --
 
@@ -12825,15 +9603,6 @@ CREATE TABLE `t_TmaSubUnit_tmfData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_TmaSubUnit_tmfData`
---
-
-LOCK TABLES `t_TmaSubUnit_tmfData` WRITE;
-/*!40000 ALTER TABLE `t_TmaSubUnit_tmfData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TmaSubUnit_tmfData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_TnPort`
 --
 
@@ -12855,15 +9624,6 @@ CREATE TABLE `t_TnPort` (
   KEY `idx_su_me_ma_eq_fi_tn` (`f_meContextId`,`f_subNetworkId`,`f_tnPortId`,`f_managedElementId`,`f_equipmentId`,`f_fieldReplaceableUnitId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=341725 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_TnPort`
---
-
-LOCK TABLES `t_TnPort` WRITE;
-/*!40000 ALTER TABLE `t_TnPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TnPort` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_TopologySchema`
@@ -12888,15 +9648,6 @@ CREATE TABLE `t_TopologySchema` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_TopologySchema`
---
-
-LOCK TABLES `t_TopologySchema` WRITE;
-/*!40000 ALTER TABLE `t_TopologySchema` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TopologySchema` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_Transport`
 --
 
@@ -12913,15 +9664,6 @@ CREATE TABLE `t_Transport` (
   KEY `idx_su_me_ma_tr` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_Transport`
---
-
-LOCK TABLES `t_Transport` WRITE;
-/*!40000 ALTER TABLE `t_Transport` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_Transport` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_TrustCategory`
@@ -12947,15 +9689,6 @@ CREATE TABLE `t_TrustCategory` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_TrustCategory`
---
-
-LOCK TABLES `t_TrustCategory` WRITE;
-/*!40000 ALTER TABLE `t_TrustCategory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TrustCategory` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_TrustedCertificate`
 --
 
@@ -12978,15 +9711,6 @@ CREATE TABLE `t_TrustedCertificate` (
   KEY `idx_su_me_ma_sy_se_ce_tr` (`f_secMId`,`f_trustedCertificateId`,`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_certMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=341733 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_TrustedCertificate`
---
-
-LOCK TABLES `t_TrustedCertificate` WRITE;
-/*!40000 ALTER TABLE `t_TrustedCertificate` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TrustedCertificate` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_TrustedCertificate_certificateContent`
@@ -13019,15 +9743,6 @@ CREATE TABLE `t_TrustedCertificate_certificateContent` (
   KEY `idx_su_me_ma_sy_se_ce_tr` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_certMId`,`f_secMId`,`f_managedElementId`,`f_trustedCertificateId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=341733 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_TrustedCertificate_certificateContent`
---
-
-LOCK TABLES `t_TrustedCertificate_certificateContent` WRITE;
-/*!40000 ALTER TABLE `t_TrustedCertificate_certificateContent` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_TrustedCertificate_certificateContent` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_UeMeasControl`
@@ -13120,15 +9835,6 @@ CREATE TABLE `t_UeMeasControl` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UeMeasControl`
---
-
-LOCK TABLES `t_UeMeasControl` WRITE;
-/*!40000 ALTER TABLE `t_UeMeasControl` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UeMeasControl` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_UpgradePackage`
 --
 
@@ -13153,15 +9859,6 @@ CREATE TABLE `t_UpgradePackage` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UpgradePackage`
---
-
-LOCK TABLES `t_UpgradePackage` WRITE;
-/*!40000 ALTER TABLE `t_UpgradePackage` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UpgradePackage` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_UpgradePackage_activationStep`
 --
 
@@ -13183,15 +9880,6 @@ CREATE TABLE `t_UpgradePackage_activationStep` (
   KEY `idx_su_me_ma_sy_sw_up` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_managedElementId`,`f_swMId`,`f_upgradePackageId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=91673 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_UpgradePackage_activationStep`
---
-
-LOCK TABLES `t_UpgradePackage_activationStep` WRITE;
-/*!40000 ALTER TABLE `t_UpgradePackage_activationStep` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UpgradePackage_activationStep` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_UpgradePackage_administrativeData`
@@ -13220,15 +9908,6 @@ CREATE TABLE `t_UpgradePackage_administrativeData` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UpgradePackage_administrativeData`
---
-
-LOCK TABLES `t_UpgradePackage_administrativeData` WRITE;
-/*!40000 ALTER TABLE `t_UpgradePackage_administrativeData` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UpgradePackage_administrativeData` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_UpgradePackage_password`
 --
 
@@ -13249,15 +9928,6 @@ CREATE TABLE `t_UpgradePackage_password` (
   KEY `idx_su_me_ma_sy_sw_up` (`f_subNetworkId`,`f_systemFunctionsId`,`f_meContextId`,`f_managedElementId`,`f_swMId`,`f_upgradePackageId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=73759 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_UpgradePackage_password`
---
-
-LOCK TABLES `t_UpgradePackage_password` WRITE;
-/*!40000 ALTER TABLE `t_UpgradePackage_password` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UpgradePackage_password` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_UpgradePackage_reportProgress`
@@ -13293,15 +9963,6 @@ CREATE TABLE `t_UpgradePackage_reportProgress` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UpgradePackage_reportProgress`
---
-
-LOCK TABLES `t_UpgradePackage_reportProgress` WRITE;
-/*!40000 ALTER TABLE `t_UpgradePackage_reportProgress` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UpgradePackage_reportProgress` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_UserIdentity`
 --
 
@@ -13321,15 +9982,6 @@ CREATE TABLE `t_UserIdentity` (
   KEY `idx_su_me_ma_sy_se_us_us` (`f_meContextId`,`f_subNetworkId`,`f_systemFunctionsId`,`f_secMId`,`f_managedElementId`,`f_userManagementId`,`f_userIdentityId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_UserIdentity`
---
-
-LOCK TABLES `t_UserIdentity` WRITE;
-/*!40000 ALTER TABLE `t_UserIdentity` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UserIdentity` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_UserManagement`
@@ -13354,15 +10006,6 @@ CREATE TABLE `t_UserManagement` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UserManagement`
---
-
-LOCK TABLES `t_UserManagement` WRITE;
-/*!40000 ALTER TABLE `t_UserManagement` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UserManagement` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_UtraNetwork`
 --
 
@@ -13380,15 +10023,6 @@ CREATE TABLE `t_UtraNetwork` (
   KEY `idx_su_me_ma_en_ut` (`f_meContextId`,`f_eNodeBFunctionId`,`f_subNetworkId`,`f_managedElementId`,`f_utraNetworkId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44994 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_UtraNetwork`
---
-
-LOCK TABLES `t_UtraNetwork` WRITE;
-/*!40000 ALTER TABLE `t_UtraNetwork` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UtraNetwork` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_UtranCellRelation`
@@ -13422,15 +10056,6 @@ CREATE TABLE `t_UtranCellRelation` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UtranCellRelation`
---
-
-LOCK TABLES `t_UtranCellRelation` WRITE;
-/*!40000 ALTER TABLE `t_UtranCellRelation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UtranCellRelation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_UtranCellRelation_mobilityStatus`
 --
 
@@ -13451,15 +10076,6 @@ CREATE TABLE `t_UtranCellRelation_mobilityStatus` (
   KEY `idx_su_me_ma_en_eu_ut_ut` (`f_meContextId`,`f_eNodeBFunctionId`,`f_utranFreqRelationId`,`f_subNetworkId`,`f_utranCellRelationId`,`f_managedElementId`,`f_eUtranCellFDDId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2306441 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_UtranCellRelation_mobilityStatus`
---
-
-LOCK TABLES `t_UtranCellRelation_mobilityStatus` WRITE;
-/*!40000 ALTER TABLE `t_UtranCellRelation_mobilityStatus` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UtranCellRelation_mobilityStatus` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_UtranFreqRelation`
@@ -13508,15 +10124,6 @@ CREATE TABLE `t_UtranFreqRelation` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UtranFreqRelation`
---
-
-LOCK TABLES `t_UtranFreqRelation` WRITE;
-/*!40000 ALTER TABLE `t_UtranFreqRelation` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UtranFreqRelation` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_UtranFrequency`
 --
 
@@ -13539,15 +10146,6 @@ CREATE TABLE `t_UtranFrequency` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_UtranFrequency`
---
-
-LOCK TABLES `t_UtranFrequency` WRITE;
-/*!40000 ALTER TABLE `t_UtranFrequency` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_UtranFrequency` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_VendorCredential`
 --
 
@@ -13568,15 +10166,6 @@ CREATE TABLE `t_VendorCredential` (
   KEY `idx_su_me_ma_sy_se_ce_ve` (`f_vendorCredentialId`,`f_secMId`,`f_subNetworkId`,`f_managedElementId`,`f_systemFunctionsId`,`f_certMId`,`f_meContextId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_VendorCredential`
---
-
-LOCK TABLES `t_VendorCredential` WRITE;
-/*!40000 ALTER TABLE `t_VendorCredential` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_VendorCredential` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_VendorCredential_certificateContent`
@@ -13611,15 +10200,6 @@ CREATE TABLE `t_VendorCredential_certificateContent` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `t_VendorCredential_certificateContent`
---
-
-LOCK TABLES `t_VendorCredential_certificateContent` WRITE;
-/*!40000 ALTER TABLE `t_VendorCredential_certificateContent` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_VendorCredential_certificateContent` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `t_VlanPort`
 --
 
@@ -13642,15 +10222,6 @@ CREATE TABLE `t_VlanPort` (
   KEY `idx_su_me_ma_tr_vl` (`f_meContextId`,`f_subNetworkId`,`f_managedElementId`,`f_vlanPortId`,`f_transportId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85432 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `t_VlanPort`
---
-
-LOCK TABLES `t_VlanPort` WRITE;
-/*!40000 ALTER TABLE `t_VlanPort` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_VlanPort` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -13661,4 +10232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-16  0:20:09
+-- Dump completed on 2019-11-17  1:08:38
