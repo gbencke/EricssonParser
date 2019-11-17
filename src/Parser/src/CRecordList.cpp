@@ -32,7 +32,20 @@ CRecordList::CRecordList() {
 
 CRecordList::~CRecordList() {}
 
+void CRecordList::RecreateDataTable() {
+  CRecord **newRecords =
+      (CRecord **)malloc(sizeof(CRecord *) * this->_MaxRecords * 2);
+  memcpy(newRecords, this->_Records, sizeof(CRecord *) * this->_MaxRecords);
+
+  this->_MaxRecords *= 2;
+  free(this->_Records);
+  this->_Records = (CRecord **)newRecords;
+}
+
 int CRecordList::AddRecord(CRecord *toAdd) {
+  if (this->_NumberRecords == this->_MaxRecords) {
+    this->RecreateDataTable();
+  }
   this->_Records[this->_NumberRecords] = toAdd;
   this->_NumberRecords++;
 

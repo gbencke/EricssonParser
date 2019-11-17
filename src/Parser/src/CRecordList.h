@@ -30,6 +30,7 @@ private:
   int _MaxRecords;
 
   CRecord **_Records;
+  void RecreateDataTable();
 };
 
 #endif /* CRECORDLIST_H */

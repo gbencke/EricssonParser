@@ -33,7 +33,7 @@ CRecord::CRecord() {
 }
 
 void CRecord::ResizeFieldTable() {
-  this->_MaxFields = this->_MaxFields * 0xF;
+  this->_MaxFields = this->_MaxFields * 0x2;
 
   CRecordField **newInternalTable =
       (CRecordField **)malloc(sizeof(CRecordField *) * this->_MaxFields);

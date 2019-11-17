@@ -38,11 +38,6 @@ CParser::CParser(const char *DataFileToParse, const char *OutputFolder,
   this->_TablePrefix = new char[strlen(TablePrefix) + 1];
   strcpy(this->_TablePrefix, TablePrefix);
 
-  if (_SQLSchema) {
-    this->_SQLSchema = new char[strlen(SQLSchema) + 1];
-    strcpy(this->_SQLSchema, SQLSchema);
-  }
-
   this->_RecordList = new CRecordList();
   this->_TableList = new CTableList();
 
@@ -185,44 +180,36 @@ void CParser::AssignRecordsToTables() {
 }
 
 void CParser::GenerateDDL() {
-  if (this->_SQLSchema) {
+  char *DDLFileName;
+  FILE *output;
 
-  } else {
-    char *DDLFileName;
-    FILE *output;
+  DDLFileName = new char[strlen(this->_OutputFolder) + 30];
+  sprintf(DDLFileName, "%s/%s", this->_OutputFolder, "000.DDL.CREATE.SQL");
 
-    DDLFileName = new char[strlen(this->_OutputFolder) + 30];
-    sprintf(DDLFileName, "%s/%s", this->_OutputFolder, "000.DDL.CREATE.SQL");
-
-    output = fopen(DDLFileName, "w");
-    if (!output) {
-      printf("Error in opening DDL file for write...");
-      exit(3);
-    }
-
-    int NumberOfTables = this->_TableList->GetNumberOfTables();
-    for (int x = 0; x < NumberOfTables; x++) {
-      CTable *CurrentTable = this->_TableList->GetTable(x);
-      fprintf(output, "%s\n", CurrentTable->GetDDLCreateSQL());
-    }
-    fclose(output);
+  output = fopen(DDLFileName, "w");
+  if (!output) {
+    printf("Error in opening DDL file for write...");
+    exit(3);
   }
+
+  int NumberOfTables = this->_TableList->GetNumberOfTables();
+  for (int x = 0; x < NumberOfTables; x++) {
+    CTable *CurrentTable = this->_TableList->GetTable(x);
+    fprintf(output, "%s\n", CurrentTable->GetDDLCreateSQL());
+  }
+  fclose(output);
 }
+
 void CParser::GenerateDML() {
-  if (this->_SQLSchema) {
+  int NumberOfTables = this->_TableList->GetNumberOfTables();
+  for (int x = 0; x < NumberOfTables; x++) {
+    CTable *CurrentTable = this->_TableList->GetTable(x);
+    char *DMLFileName;
 
-  } else {
+    DMLFileName = new char[strlen(this->_OutputFolder) +
+                           strlen(CurrentTable->GetTableName()) + 30];
+    sprintf(DMLFileName, "%s.DML.SQL", CurrentTable->GetTableName());
 
-    int NumberOfTables = this->_TableList->GetNumberOfTables();
-    for (int x = 0; x < NumberOfTables; x++) {
-      CTable *CurrentTable = this->_TableList->GetTable(x);
-      char *DMLFileName;
-
-      DMLFileName = new char[strlen(this->_OutputFolder) +
-                             strlen(CurrentTable->GetTableName()) + 30];
-      sprintf(DMLFileName, "%s.DML.SQL", CurrentTable->GetTableName());
-
-      CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
-    }
+    CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
   }
 }

@@ -261,6 +261,6 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
     strcat(RecordSQL, ");\n");
 
     fprintf(output, "%s", RecordSQL);
-    free(RecordSQL);
+    delete[] RecordSQL;
   }
 }
