@@ -53,6 +53,7 @@ private:
 
   void RecreateInternalTable();
   int GetRecordNecessarySize(int fieldToUse);
+  void AddIndex(char *Record);
 };
 
 #endif /* CTABLE_H */

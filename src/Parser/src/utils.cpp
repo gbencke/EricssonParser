@@ -5,11 +5,11 @@
  */
 #include <string.h>
 
-char *camelCase(char *source){
-    if(source[0] >='A' and source[0] <= 'Z'){
-	source[0]+='a' - 'A';
-    }
-    return source;
+char *camelCase(char *source) {
+  if (source[0] >= 'A' and source[0] <= 'Z') {
+    source[0] += 'a' - 'A';
+  }
+  return source;
 }
 
 char *trim(char *toTrim) {

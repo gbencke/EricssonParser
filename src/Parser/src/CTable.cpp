@@ -131,7 +131,8 @@ char *CTable::GetDDLCreateSQL() {
 
     sprintf(_DDLCreateSQL, "DROP TABLE IF EXISTS %s;\n\nCREATE TABLE %s (",
             this->_TableName, this->_TableName);
-    strcat(_DDLCreateSQL, "\n  `id` bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,");
+    strcat(_DDLCreateSQL,
+           "\n  `id` bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,");
     for (int x = 1; x < this->_NumberTableFields; x++) {
       char tmpField[1000];
       char tmpFieldType[100];
@@ -158,9 +159,53 @@ char *CTable::GetDDLCreateSQL() {
     _DDLCreateSQL[strlen(_DDLCreateSQL) - 1] = 0;
     strcat(_DDLCreateSQL,
            "\n) ENGINE=MyISAM AUTO_INCREMENT=85434 CHARSET=latin1;\n");
+    this->AddIndex(_DDLCreateSQL);
   }
 
   return _DDLCreateSQL;
+}
+
+void CTable::AddIndex(char *Record) {
+  int fieldsInIndex = 0;
+  strcat(Record, "CREATE UNIQUE INDEX idx_");
+  for (int x = 0; x < this->_NumberTableFields; x++) {
+    char *TableFieldName =
+        new char[strlen(this->_TableFields[x]->GetFieldName()) + 3];
+    strcpy(TableFieldName, this->_TableFields[x]->GetFieldName());
+    int sizeTableFieldName = strlen(TableFieldName);
+
+    if (fieldsInIndex < 7 &&
+        strcmp("Id", &TableFieldName[sizeTableFieldName - 2]) == 0) {
+      TableFieldName[2] = 0;
+      strcat(Record, TableFieldName);
+      strcat(Record, "_");
+      fieldsInIndex++;
+    }
+  }
+
+  Record[strlen(Record) - 1] = 0;
+
+  strcat(Record, " ON ");
+  strcat(Record, this->_TableName);
+  strcat(Record, " ( ");
+
+  fieldsInIndex = 0;
+  for (int x = 0; x < this->_NumberTableFields; x++) {
+    char *TableFieldName =
+        new char[strlen(this->_TableFields[x]->GetFieldName()) + 3];
+    strcpy(TableFieldName, this->_TableFields[x]->GetFieldName());
+    int sizeTableFieldName = strlen(TableFieldName);
+
+    if (fieldsInIndex < 7 &&
+        strcmp("Id", &TableFieldName[sizeTableFieldName - 2]) == 0) {
+      strcat(Record, this->_FieldNamePrefix);
+      strcat(Record, TableFieldName);
+      strcat(Record, ",");
+      fieldsInIndex++;
+    }
+  }
+  Record[strlen(Record) - 1] = 0;
+  strcat(Record, ");");
 }
 
 void CTable::GenerateDML(char *outputFolder, char *fileName) {
@@ -177,12 +222,23 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
   for (int x = 0; x < this->_NumberRecords; x++) {
     char *RecordSQL = new char[RecordSize];
     RecordSQL[0] = 0;
-    sprintf(RecordSQL, "INSERT INTO %s VALUES (", this->GetTableName());
-    for (int y = 0; y < this->_NumberTableFields; y++) {
+    sprintf(RecordSQL, "INSERT INTO %s (", this->GetTableName());
+    for (int y = 1; y < this->_NumberTableFields; y++) {
+      CTableField *currentField = this->_TableFields[y];
+
+      strcat(RecordSQL, this->_FieldNamePrefix);
+      strcat(RecordSQL, currentField->GetFieldName());
+      strcat(RecordSQL, ",");
+    }
+    RecordSQL[strlen(RecordSQL) - 1] = 0;
+    strcat(RecordSQL, ") VALUES (");
+    for (int y = 1; y < this->_NumberTableFields; y++) {
       CRecord *currentRecord = this->_Records[x];
       CRecordField *currentField = currentRecord->GetRecordField(y);
       if (!currentField) {
-        // printf("Error in %s:\n", this->GetTableName());
+        strcat(RecordSQL, "\'");
+        strcat(RecordSQL, "");
+        strcat(RecordSQL, "\',");
         continue;
       }
       char *currentFieldValue = currentField->GetValue();
@@ -203,6 +259,7 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
     }
     RecordSQL[strlen(RecordSQL) - 1] = 0;
     strcat(RecordSQL, ");\n");
+
     fprintf(output, "%s", RecordSQL);
     free(RecordSQL);
   }
