@@ -35,6 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/antlr4/parser/JsonBaseVisitor.o \
+	${OBJECTDIR}/antlr4/parser/JsonLexer.o \
+	${OBJECTDIR}/antlr4/parser/JsonParser.o \
+	${OBJECTDIR}/antlr4/parser/JsonVisitor.o \
 	${OBJECTDIR}/src/CParser.o \
 	${OBJECTDIR}/src/CRecord.o \
 	${OBJECTDIR}/src/CRecordField.o \
@@ -60,60 +64,82 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/lib/libantlr4-runtime.a
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk bin/parser
 
+bin/parser: /home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/lib/libantlr4-runtime.a
+
 bin/parser: ${OBJECTFILES}
 	${MKDIR} -p bin
-	${LINK.cc} -o bin/parser ${OBJECTFILES} ${LDLIBSOPTIONS} -pg
+	${LINK.cc} -o bin/parser ${OBJECTFILES} ${LDLIBSOPTIONS} -pg -static
+
+${OBJECTDIR}/antlr4/parser/JsonBaseVisitor.o: antlr4/parser/JsonBaseVisitor.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonBaseVisitor.o antlr4/parser/JsonBaseVisitor.cpp
+
+${OBJECTDIR}/antlr4/parser/JsonLexer.o: antlr4/parser/JsonLexer.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonLexer.o antlr4/parser/JsonLexer.cpp
+
+${OBJECTDIR}/antlr4/parser/JsonParser.o: antlr4/parser/JsonParser.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonParser.o antlr4/parser/JsonParser.cpp
+
+${OBJECTDIR}/antlr4/parser/JsonVisitor.o: antlr4/parser/JsonVisitor.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonVisitor.o antlr4/parser/JsonVisitor.cpp
 
 ${OBJECTDIR}/src/CParser.o: src/CParser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CParser.o src/CParser.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CParser.o src/CParser.cpp
 
 ${OBJECTDIR}/src/CRecord.o: src/CRecord.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecord.o src/CRecord.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecord.o src/CRecord.cpp
 
 ${OBJECTDIR}/src/CRecordField.o: src/CRecordField.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordField.o src/CRecordField.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordField.o src/CRecordField.cpp
 
 ${OBJECTDIR}/src/CRecordList.o: src/CRecordList.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordList.o src/CRecordList.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordList.o src/CRecordList.cpp
 
 ${OBJECTDIR}/src/CTable.o: src/CTable.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTable.o src/CTable.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTable.o src/CTable.cpp
 
 ${OBJECTDIR}/src/CTableField.o: src/CTableField.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableField.o src/CTableField.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableField.o src/CTableField.cpp
 
 ${OBJECTDIR}/src/CTableList.o: src/CTableList.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableList.o src/CTableList.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableList.o src/CTableList.cpp
 
 ${OBJECTDIR}/src/main.o: src/main.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 ${OBJECTDIR}/src/utils.o: src/utils.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/utils.o src/utils.cpp
+	$(COMPILE.cc) -g -I/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/utils.o src/utils.cpp
 
 # Subprojects
 .build-subprojects:

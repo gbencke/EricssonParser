@@ -35,6 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/antlr4/parser/JsonBaseVisitor.o \
+	${OBJECTDIR}/antlr4/parser/JsonLexer.o \
+	${OBJECTDIR}/antlr4/parser/JsonParser.o \
+	${OBJECTDIR}/antlr4/parser/JsonVisitor.o \
 	${OBJECTDIR}/src/CParser.o \
 	${OBJECTDIR}/src/CRecord.o \
 	${OBJECTDIR}/src/CRecordField.o \
@@ -69,6 +73,26 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/parser: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/parser ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/antlr4/parser/JsonBaseVisitor.o: antlr4/parser/JsonBaseVisitor.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonBaseVisitor.o antlr4/parser/JsonBaseVisitor.cpp
+
+${OBJECTDIR}/antlr4/parser/JsonLexer.o: antlr4/parser/JsonLexer.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonLexer.o antlr4/parser/JsonLexer.cpp
+
+${OBJECTDIR}/antlr4/parser/JsonParser.o: antlr4/parser/JsonParser.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonParser.o antlr4/parser/JsonParser.cpp
+
+${OBJECTDIR}/antlr4/parser/JsonVisitor.o: antlr4/parser/JsonVisitor.cpp
+	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonVisitor.o antlr4/parser/JsonVisitor.cpp
 
 ${OBJECTDIR}/src/CParser.o: src/CParser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

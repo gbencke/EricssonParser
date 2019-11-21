@@ -11,6 +11,8 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>src</sourceRootElem>
+                <sourceRootElem>/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/lib</sourceRootElem>
+                <sourceRootElem>antlr4/parser</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

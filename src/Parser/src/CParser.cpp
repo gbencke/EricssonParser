@@ -23,6 +23,8 @@
 #include "CRecord.h"
 #include "utils.h"
 
+#include <antlr4-runtime.h>
+
 CParser::CParser(const char *DataFileToParse, const char *OutputFolder,
                  const char *FieldPrefix, const char *TablePrefix,
                  const char *SQLSchema) {

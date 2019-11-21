@@ -22,6 +22,22 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="Antlr4" projectFiles="true">
+        <logicalFolder name="parser" displayName="parser" projectFiles="true">
+          <itemPath>antlr4/parser/Json.interp</itemPath>
+          <itemPath>antlr4/parser/Json.tokens</itemPath>
+          <itemPath>antlr4/parser/JsonBaseVisitor.cpp</itemPath>
+          <itemPath>antlr4/parser/JsonBaseVisitor.h</itemPath>
+          <itemPath>antlr4/parser/JsonLexer.cpp</itemPath>
+          <itemPath>antlr4/parser/JsonLexer.h</itemPath>
+          <itemPath>antlr4/parser/JsonLexer.interp</itemPath>
+          <itemPath>antlr4/parser/JsonLexer.tokens</itemPath>
+          <itemPath>antlr4/parser/JsonParser.cpp</itemPath>
+          <itemPath>antlr4/parser/JsonParser.h</itemPath>
+          <itemPath>antlr4/parser/JsonVisitor.cpp</itemPath>
+          <itemPath>antlr4/parser/JsonVisitor.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>src/CParser.cpp</itemPath>
       <itemPath>src/CRecord.cpp</itemPath>
       <itemPath>src/CRecordField.cpp</itemPath>
@@ -47,6 +63,8 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>src</Elem>
+    <Elem>/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/lib</Elem>
+    <Elem>antlr4/parser</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -63,13 +81,43 @@
         </cTool>
         <ccTool>
           <standard>8</standard>
+          <incDir>
+            <pElem>/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/include</pElem>
+          </incDir>
           <commandLine>-Wall -pg</commandLine>
         </ccTool>
         <linkerTool>
           <output>bin/parser</output>
-          <commandLine>-pg</commandLine>
+          <linkerLibItems>
+            <linkerLibFileItem>/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/lib/libantlr4-runtime.a</linkerLibFileItem>
+          </linkerLibItems>
+          <commandLine>-pg -static</commandLine>
         </linkerTool>
       </compileType>
+      <item path="antlr4/parser/Json.interp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/Json.tokens" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonBaseVisitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonBaseVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.interp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.tokens" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonParser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonVisitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="run.sh" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/CParser.cpp" ex="false" tool="1" flavor2="0">
@@ -132,6 +180,30 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="antlr4/parser/Json.interp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/Json.tokens" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonBaseVisitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonBaseVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.interp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonLexer.tokens" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonParser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonVisitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="antlr4/parser/JsonVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="run.sh" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/CParser.cpp" ex="false" tool="1" flavor2="0">
