@@ -43,6 +43,9 @@ public:
   void GenerateDDL();
   void GenerateDML();
 
+  void AddStructRecord(char *RecordToParse, char *ParentTable,
+                       CRecord *ParentRecord, char *StructName);
+
 private:
   char *_DataFileToParse;
   char *_OutputFolder;

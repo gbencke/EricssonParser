@@ -62,7 +62,7 @@
           <commandLine>-Wall -pg</commandLine>
         </cTool>
         <ccTool>
-          <standard>4</standard>
+          <standard>8</standard>
           <commandLine>-Wall -pg</commandLine>
         </ccTool>
         <linkerTool>

@@ -20,6 +20,7 @@
 #include <time.h>
 
 #include "CParser.h"
+#include "CRecord.h"
 #include "utils.h"
 
 CParser::CParser(const char *DataFileToParse, const char *OutputFolder,
@@ -148,7 +149,8 @@ int CParser::CalculateNecessaryTables() {
       this->_TableList->AddTable(
           new CTable(this->_TableList->GetNumberOfTables() + 1, Signature,
                      this->_RecordList->GetRecord(x), this->_TablePrefix,
-                     this->_FieldPrefix));
+                     this->_FieldPrefix,
+                     this->_RecordList->GetRecord(x)->GetParentTable()));
     }
   }
 
@@ -212,4 +214,13 @@ void CParser::GenerateDML() {
 
     CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
   }
+}
+
+void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
+                              CRecord *ParentRecord, char *StructName) {
+  CRecord *CurrentRecord = new CRecord(ParentTable);
+
+  CurrentRecord->SetFieldSignature(StructName);
+
+  //this->_RecordList->AddRecord(CurrentRecord);
 }

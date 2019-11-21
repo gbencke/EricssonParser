@@ -19,10 +19,27 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#include "CParser.h"
 #include "CRecord.h"
+#include "globals.h"
 
 CRecord::CRecord() {
+  InitializeRecord();
+  this->_ParentTable = NULL;
+}
 
+CRecord::CRecord(char *ParentTable) {
+  InitializeRecord();
+  this->_ParentTable = new char[strlen(ParentTable) + 10];
+  strcpy(this->_ParentTable, ParentTable);
+}
+
+void CRecord::SetFieldSignature(char *Signature) {
+  this->_FieldSignature = new char[strlen(Signature) + 10];
+  strcpy(this->_FieldSignature, Signature);
+}
+
+void CRecord::InitializeRecord() {
   this->_NumberFields = 0;
   this->_MaxFields = MAX_FIELDS;
   this->_FieldSignature = NULL;
@@ -48,6 +65,22 @@ void CRecord::ResizeFieldTable() {
 
 CRecord::~CRecord() {}
 
+int CRecord::IsStruct(CRecordField *toAdd) {
+  if (toAdd->GetValue()[0] == '{') {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int CRecord::IsStructArray(CRecordField *toAdd) {
+  if (toAdd->GetValue()[0] == '[') {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
 int CRecord::AddField(CRecordField *toAdd) {
   if (this->_NumberFields > (this->_MaxFields - 10)) {
     this->ResizeFieldTable();
@@ -56,6 +89,10 @@ int CRecord::AddField(CRecordField *toAdd) {
   this->_NumberFields++;
   if (this->_NumberFields == 1) {
     ParseFDNField();
+  }
+  if (this->IsStruct(toAdd) && !this->_ParentTable) {
+    Parser->AddStructRecord(toAdd->GetValue(), this->GetFieldSignature(), this,
+                            toAdd->GetKey());
   }
   return this->_NumberFields;
 }
@@ -110,6 +147,8 @@ void CRecord::ParseFDNField() {
     this->AddField(new CRecordField(fieldName, fieldValue));
   }
 }
+
+char *CRecord::GetParentTable() { return this->_ParentTable; }
 
 char *CRecord::GetFieldSignature() {
   if (!this->_FieldSignature) {

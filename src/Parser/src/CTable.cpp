@@ -27,7 +27,8 @@
 #include "utils.h"
 
 CTable::CTable(int TableId, char *Signature, CRecord *Template,
-               char *TableNamePrefix, char *FieldNamePrefix) {
+               char *TableNamePrefix, char *FieldNamePrefix,
+               char *ParentTable) {
   this->_TableId = TableId;
 
   this->_Signature = new char[strlen(Signature) + 1];
@@ -40,8 +41,14 @@ CTable::CTable(int TableId, char *Signature, CRecord *Template,
   strcpy(this->_FieldNamePrefix, FieldNamePrefix);
 
   this->_TableName =
-      new char[strlen(this->_Signature) + strlen(this->_TableNamePrefix) + 10];
-  sprintf(this->_TableName, "%s%s", this->_TableNamePrefix, this->_Signature);
+      new char[strlen(this->_Signature) + strlen(this->_TableNamePrefix) + 100];
+
+  if (ParentTable) {
+    sprintf(this->_TableName, "%s%s_%s", this->_TableNamePrefix, ParentTable,
+            this->_Signature);
+  } else {
+    sprintf(this->_TableName, "%s%s", this->_TableNamePrefix, this->_Signature);
+  }
 
   if (strlen(this->_TableName) > 40) {
     this->_TableName[40] = 0;

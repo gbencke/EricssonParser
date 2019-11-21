@@ -20,7 +20,7 @@
 class CTable {
 public:
   CTable(int TableId, char *Signature, CRecord *Template, char *TableNamePrefix,
-         char *FieldNamePrefix);
+         char *FieldNamePrefix, char *ParentTable);
   virtual ~CTable();
 
   char *GetSignature();

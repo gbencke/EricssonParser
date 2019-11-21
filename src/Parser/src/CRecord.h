@@ -20,24 +20,31 @@
 class CRecord {
 public:
   CRecord();
+  CRecord(char *ParentTable);
   virtual ~CRecord();
 
   int AddField(CRecordField *toAdd);
   void PrintRecord();
   char *GetFieldSignature();
+  char *GetParentTable();
 
   int GetNumberOfFields();
   CRecordField *GetRecordField(int x);
+  void SetFieldSignature(char *newSignature);
 
 private:
   int _NumberFields;
   int _MaxFields;
 
   char *_FieldSignature;
+  char *_ParentTable;
 
   CRecordField **_Fields;
   void ResizeFieldTable();
   void ParseFDNField();
+  int IsStruct(CRecordField *toAdd);
+  int IsStructArray(CRecordField *toAdd);
+  void InitializeRecord();
 };
 
 #endif /* CRECORD_H */
