@@ -70,26 +70,44 @@ void CRecord::PrintRecord() {
 void CRecord::ParseFDNField() {
   char *currentFDNPointer = this->_Fields[0]->GetValue();
 
-  while (1) {
+  if (strstr(currentFDNPointer, ",")) {
+    while (1) {
+      char buffer[strlen(currentFDNPointer) + 10];
+      char fieldName[strlen(currentFDNPointer) + 10];
+      char fieldValue[strlen(currentFDNPointer) + 10];
+
+      if (strstr(currentFDNPointer, ",")) {
+        strcpy(buffer, currentFDNPointer);
+        *strstr(buffer, ",") = 0;
+
+        strcpy(fieldName, buffer);
+        strcpy(fieldValue, strstr(fieldName, "=") + 1);
+
+        *strstr(fieldName, "=") = 0;
+        strcat(fieldName, "Id");
+
+        this->AddField(new CRecordField(fieldName, fieldValue));
+        currentFDNPointer = strstr(currentFDNPointer, ",") + 1;
+      } else {
+        break;
+      }
+    }
+
+  } else {
+
     char buffer[strlen(currentFDNPointer) + 10];
     char fieldName[strlen(currentFDNPointer) + 10];
     char fieldValue[strlen(currentFDNPointer) + 10];
 
-    if (strstr(currentFDNPointer, ",")) {
-      strcpy(buffer, currentFDNPointer);
-      *strstr(buffer, ",") = 0;
+    strcpy(buffer, currentFDNPointer);
 
-      strcpy(fieldName, buffer);
-      strcpy(fieldValue, strstr(fieldName, "=") + 1);
+    strcpy(fieldName, buffer);
+    strcpy(fieldValue, strstr(fieldName, "=") + 1);
 
-      *strstr(fieldName, "=") = 0;
-      strcat(fieldName, "Id");
+    *strstr(fieldName, "=") = 0;
+    strcat(fieldName, "Id");
 
-      this->AddField(new CRecordField(fieldName, fieldValue));
-      currentFDNPointer = strstr(currentFDNPointer, ",") + 1;
-    } else {
-      break;
-    }
+    this->AddField(new CRecordField(fieldName, fieldValue));
   }
 }
 
@@ -97,10 +115,14 @@ char *CRecord::GetFieldSignature() {
   if (!this->_FieldSignature) {
     char *FieldValue = this->_Fields[0]->GetValue();
     char *FieldValuePointer = &FieldValue[strlen(FieldValue) - 1];
-    while (*FieldValuePointer != ',' && FieldValuePointer > FieldValue) {
-      FieldValuePointer--;
+    if (strstr(FieldValue, ",")) {
+      while (*FieldValuePointer != ',' && FieldValuePointer > FieldValue) {
+        FieldValuePointer--;
+      }
+      FieldValuePointer++;
+    } else {
+      FieldValuePointer = FieldValue;
     }
-    FieldValuePointer++;
 
     this->_FieldSignature = new char[strlen(FieldValuePointer) + 10];
     strcpy(this->_FieldSignature, FieldValuePointer);
