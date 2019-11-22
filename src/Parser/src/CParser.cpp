@@ -23,7 +23,21 @@
 #include "CRecord.h"
 #include "utils.h"
 
-#include <antlr4-runtime.h>
+#include "antlr4-runtime.h"
+#include "JsonLexer.h"
+#include "JsonParser.h"
+
+class MyParserErrorListener: public antlr4::BaseErrorListener {
+  virtual void syntaxError(
+      antlr4::Recognizer *recognizer,
+      antlr4::Token *offendingSymbol,
+      size_t line,
+      size_t charPositionInLine,
+      const std::string &msg,
+      std::exception_ptr e) override {
+      std::cout << msg;
+  }
+};
 
 CParser::CParser(const char *DataFileToParse, const char *OutputFolder,
                  const char *FieldPrefix, const char *TablePrefix,
@@ -222,7 +236,22 @@ void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
                               CRecord *ParentRecord, char *StructName) {
   CRecord *CurrentRecord = new CRecord(ParentTable);
 
+
   CurrentRecord->SetFieldSignature(StructName);
 
-  //this->_RecordList->AddRecord(CurrentRecord);
+  MyParserErrorListener listener;
+
+  antlr4::ANTLRInputStream input(RecordToParse,strlen(RecordToParse));
+  JsonLexer lexer(&input);
+  antlr4::CommonTokenStream tokens(&lexer);
+
+  JsonParser parser(&tokens);
+
+  std::vector<JsonParser::PairContext *> obj = parser.obj()->pair();
+  
+  for(auto x : obj){
+      std::cout << x->toString();
+      fflush(stdout);
+  }
+
 }

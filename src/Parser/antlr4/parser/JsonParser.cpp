@@ -2,7 +2,7 @@
 // Generated from Json.g4 by ANTLR 4.7.2
 
 
-#include "JsonVisitor.h"
+#include "JsonListener.h"
 
 #include "JsonParser.h"
 
@@ -46,12 +46,16 @@ size_t JsonParser::JsonContext::getRuleIndex() const {
   return JsonParser::RuleJson;
 }
 
+void JsonParser::JsonContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterJson(this);
+}
 
-antlrcpp::Any JsonParser::JsonContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<JsonVisitor*>(visitor))
-    return parserVisitor->visitJson(this);
-  else
-    return visitor->visitChildren(this);
+void JsonParser::JsonContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitJson(this);
 }
 
 JsonParser::JsonContext* JsonParser::json() {
@@ -95,12 +99,16 @@ size_t JsonParser::ObjContext::getRuleIndex() const {
   return JsonParser::RuleObj;
 }
 
+void JsonParser::ObjContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterObj(this);
+}
 
-antlrcpp::Any JsonParser::ObjContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<JsonVisitor*>(visitor))
-    return parserVisitor->visitObj(this);
-  else
-    return visitor->visitChildren(this);
+void JsonParser::ObjContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitObj(this);
 }
 
 JsonParser::ObjContext* JsonParser::obj() {
@@ -182,12 +190,16 @@ size_t JsonParser::PairContext::getRuleIndex() const {
   return JsonParser::RulePair;
 }
 
+void JsonParser::PairContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterPair(this);
+}
 
-antlrcpp::Any JsonParser::PairContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<JsonVisitor*>(visitor))
-    return parserVisitor->visitPair(this);
-  else
-    return visitor->visitChildren(this);
+void JsonParser::PairContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitPair(this);
 }
 
 JsonParser::PairContext* JsonParser::pair() {
@@ -254,12 +266,16 @@ size_t JsonParser::ArrayContext::getRuleIndex() const {
   return JsonParser::RuleArray;
 }
 
+void JsonParser::ArrayContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterArray(this);
+}
 
-antlrcpp::Any JsonParser::ArrayContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<JsonVisitor*>(visitor))
-    return parserVisitor->visitArray(this);
-  else
-    return visitor->visitChildren(this);
+void JsonParser::ArrayContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitArray(this);
 }
 
 JsonParser::ArrayContext* JsonParser::array() {
@@ -345,12 +361,16 @@ size_t JsonParser::ValueContext::getRuleIndex() const {
   return JsonParser::RuleValue;
 }
 
+void JsonParser::ValueContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterValue(this);
+}
 
-antlrcpp::Any JsonParser::ValueContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<JsonVisitor*>(visitor))
-    return parserVisitor->visitValue(this);
-  else
-    return visitor->visitChildren(this);
+void JsonParser::ValueContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<JsonListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitValue(this);
 }
 
 JsonParser::ValueContext* JsonParser::value() {
