@@ -23,19 +23,16 @@
 #include "CRecord.h"
 #include "utils.h"
 
-#include "antlr4-runtime.h"
 #include "JsonLexer.h"
 #include "JsonParser.h"
+#include "antlr4-runtime.h"
 
-class MyParserErrorListener: public antlr4::BaseErrorListener {
-  virtual void syntaxError(
-      antlr4::Recognizer *recognizer,
-      antlr4::Token *offendingSymbol,
-      size_t line,
-      size_t charPositionInLine,
-      const std::string &msg,
-      std::exception_ptr e) override {
-      std::cout << msg;
+class MyParserErrorListener : public antlr4::BaseErrorListener {
+  virtual void syntaxError(antlr4::Recognizer *recognizer,
+                           antlr4::Token *offendingSymbol, size_t line,
+                           size_t charPositionInLine, const std::string &msg,
+                           std::exception_ptr e) override {
+    std::cout << msg;
   }
 };
 
@@ -236,22 +233,39 @@ void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
                               CRecord *ParentRecord, char *StructName) {
   CRecord *CurrentRecord = new CRecord(ParentTable);
 
-
   CurrentRecord->SetFieldSignature(StructName);
 
-  MyParserErrorListener listener;
+  std::string toParse(RecordToParse);
 
-  antlr4::ANTLRInputStream input(RecordToParse,strlen(RecordToParse));
+  antlr4::ANTLRInputStream input(toParse);
   JsonLexer lexer(&input);
   antlr4::CommonTokenStream tokens(&lexer);
 
   JsonParser parser(&tokens);
 
-  std::vector<JsonParser::PairContext *> obj = parser.obj()->pair();
-  
-  for(auto x : obj){
-      std::cout << x->toString();
-      fflush(stdout);
-  }
+  JsonParser::JsonContext *json = parser.json();
 
+  if (json) {
+    JsonParser::ValueContext *value = json->value();
+    if (value) {
+      JsonParser::ObjContext *obj = value->obj();
+      if (obj) {
+        std::vector<JsonParser::PairContext *> pairs = obj->pair();
+        for (auto x : pairs) {
+          std::cout << x->toString();
+          fflush(stdout);
+        }
+      }
+    }
+    /*
+    if (obj) {
+      std::vector<JsonParser::PairContext *> pairs = obj->pair();
+
+      for (auto x : pairs) {
+        std::cout << x->toString();
+        fflush(stdout);
+      }
+    }
+     * */
+  }
 }
