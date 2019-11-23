@@ -9,6 +9,8 @@ sudo docker run --name MYSQL_PARSER_ORIG -e MYSQL_ROOT_PASSWORD=PARSER1234 -e MY
 sudo docker start MYSQL_PARSER
 sudo docker start MYSQL_PARSER_ORIG
 
+sleep 20
+
 sudo docker cp ../data/ericssonEdff.sql.noinserts.txt  MYSQL_PARSER_ORIG:/
 
 sudo docker exec MYSQL_PARSER_ORIG /bin/sh -c "mysql -uPARSER -pPARSER PARSER < /ericssonEdff.sql.noinserts.txt"
