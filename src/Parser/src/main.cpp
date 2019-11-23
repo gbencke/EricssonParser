@@ -56,15 +56,26 @@ int main(int argc, char **argv) {
   Parser = new CParser(_DataFile, _OutputFolder, _FieldPrefix, _TablePrefix,
                        _SQLSchema);
 
+  printf("Reading the text file...\n");
+  fflush(stdout);
+
   Parser->Parse();
-  printf("Execution time:%.2f\n", Parser->GetLastParsingTime());
+  printf("Reading time:%.2f\n", Parser->GetLastParsingTime());
+  printf("Calculating Tables to be created\n");
+  fflush(stdout);
 
   Parser->CalculateNecessaryTables();
-  printf("NumberOfTables:%d", Parser->GetNumberOfTables());
+  printf("NumberOfTables:%d\n", Parser->GetNumberOfTables());
+  printf("Assigning Records to Tables...\n");
+  fflush(stdout);
 
   Parser->AssignRecordsToTables();
+  printf("Generating DDL...\n");
+  fflush(stdout);
 
   Parser->GenerateDDL();
+  printf("DDL was generated...\n");
+  fflush(stdout);
 
   // Parser->GenerateDML();
 }
