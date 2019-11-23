@@ -19,6 +19,7 @@ pair
 
 array
    : '[' value (',' value)* ']'
+   | '[' IDENTIFIER (',' IDENTIFIER)* ']'
    | '[' ']'
    ;
 
