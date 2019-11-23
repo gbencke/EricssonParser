@@ -69,6 +69,7 @@ LDLIBSOPTIONS=antlr4/dist/libantlr4-runtime.so
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk bin/parser
+	${CP} antlr4/dist/libantlr4-runtime.so bin
 
 bin/parser: antlr4/dist/libantlr4-runtime.so
 

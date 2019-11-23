@@ -89,12 +89,30 @@
         </ccTool>
         <linkerTool>
           <output>bin/parser</output>
+          <linkerCopySharedLibs>true</linkerCopySharedLibs>
           <linkerLibItems>
             <linkerLibFileItem>antlr4/dist/libantlr4-runtime.so</linkerLibFileItem>
           </linkerLibItems>
           <commandLine>-pg</commandLine>
         </linkerTool>
       </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libantlr4-runtime.so"
+                            from="bin/libantlr4-runtime.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
       <item path="antlr4/parser/Json.interp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="antlr4/parser/Json.tokens" ex="false" tool="3" flavor2="0">
