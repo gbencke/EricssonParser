@@ -109,7 +109,6 @@ int CRecord::AddField(CRecordField *toAdd) {
   }
 
   if (this->IsStruct(toAdd) && !this->_ParentTable) {
-    this->_NumberFields--;
     Parser->AddStructRecord(toAdd->GetValue(), this->GetFieldSignature(), this,
                             toAdd->GetKey());
   } else {
