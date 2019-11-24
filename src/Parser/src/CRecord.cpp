@@ -99,6 +99,7 @@ int CRecord::AddField(CRecordField *toAdd) {
   if (this->_NumberFields == 1) {
     ParseFDNField();
   }
+
   if (this->IsStruct(toAdd) && !this->_ParentTable) {
     Parser->AddStructRecord(toAdd->GetValue(), this->GetFieldSignature(), this,
                             toAdd->GetKey());
@@ -106,7 +107,7 @@ int CRecord::AddField(CRecordField *toAdd) {
     for (int x = 0; x < this->_NumberFields - 1; x++) {
       if (strcmp(this->_Fields[x]->GetKey(), toAdd->GetKey()) == 0) {
         this->_NumberFields--;
-	break;
+        break;
       }
     }
   }
@@ -182,7 +183,7 @@ char *CRecord::GetFieldSignature() {
       FieldValuePointer = FieldValue;
     }
 
-    this->_FieldSignature = new char[strlen(FieldValuePointer) + 10];
+    this->_FieldSignature = new char[strlen(FieldValuePointer) + 100];
     strcpy(this->_FieldSignature, FieldValuePointer);
     if (strstr(this->_FieldSignature, "=")) {
       *strstr(this->_FieldSignature, "=") = 0;

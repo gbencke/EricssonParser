@@ -234,7 +234,11 @@ void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
 
   CRecord *CurrentRecord = new CRecord(ParentTable);
 
-  CurrentRecord->SetFieldSignature(StructName);
+  char NewSignature[strlen(ParentTable) + strlen(StructName) + 10];
+  sprintf(NewSignature, "%s_%s", ParentTable, StructName);
+
+  CurrentRecord->SetFieldSignature(NewSignature);
+
   std::vector<JsonParser::PairContext *> pairs = obj->pair();
   for (auto x : pairs) {
     auto identifiers = x->IDENTIFIER();

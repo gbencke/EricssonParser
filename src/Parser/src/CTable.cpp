@@ -47,17 +47,16 @@ CTable::CTable(int TableId, char *Signature, CRecord *Template,
       new char[strlen(this->_Signature) + strlen(this->_TableNamePrefix) + 100];
 
   if (ParentTable) {
-    sprintf(this->_TableName, "%s%s_%s", this->_TableNamePrefix, ParentTable,
-            this->_Signature);
-    sprintf(this->_ShortName, "%s%s", this->_TableNamePrefix, ParentTable);
+    sprintf(this->_TableName, "%s%s", this->_TableNamePrefix, this->_Signature);
+    sprintf(this->_ShortName, "%s%s", this->_TableNamePrefix, this->_Signature);
     this->_HasParentTable = 1;
   } else {
     sprintf(this->_TableName, "%s%s", this->_TableNamePrefix, this->_Signature);
     this->_HasParentTable = 0;
   }
 
-  if (strlen(this->_TableName) > 40) {
-    this->_TableName[40] = 0;
+  if (strlen(this->_TableName) > 120) {
+    this->_TableName[120] = 0;
   }
 
   this->_NumberRecords = 0;
