@@ -261,7 +261,9 @@ void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
           strcpy(FieldValue, x->value()->obj()->getText().c_str());
         } else if (x->value()->array()) {
           strcpy(FieldValue, x->value()->array()->getText().c_str());
-        }
+        } else {
+          strcpy(FieldValue, x->value()->getText().c_str());
+	}
       } else {
         printf("No value in pair:%s", x->getText().c_str());
         fflush(stdout);
@@ -296,6 +298,18 @@ void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
       if (obj) {
         AddStructRecord(obj, RecordToParse, ParentTable, ParentRecord,
                         StructName);
+      } else {
+        JsonParser::ArrayContext *array = value->array();
+        if (array) {
+          std::vector<JsonParser::ValueContext *> values = array->value();
+          for (auto x : values) {
+            JsonParser::ObjContext *obj_from_array = x->obj();
+            if (obj_from_array) {
+              AddStructRecord(obj_from_array, RecordToParse, ParentTable,
+                              ParentRecord, StructName);
+            }
+          }
+        }
       }
     }
   } else {

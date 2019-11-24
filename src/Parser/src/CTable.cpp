@@ -55,10 +55,6 @@ CTable::CTable(int TableId, char *Signature, CRecord *Template,
     this->_HasParentTable = 0;
   }
 
-  if (strlen(this->_TableName) > 120) {
-    this->_TableName[120] = 0;
-  }
-
   this->_NumberRecords = 0;
   this->_MaxNumberOfRecords = MAX_RECORDS_PER_TABLE;
   this->_Records =
