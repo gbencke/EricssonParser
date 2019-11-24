@@ -450,6 +450,21 @@ CREATE TABLE `t_AuthenticationOrder` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_AuthenticationOrder_authenticationMethodOrder`
+--
+
+DROP TABLE IF EXISTS `t_AuthenticationOrder_authenticationMethodOrder`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_AuthenticationOrder_authenticationMethodOrder` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_orderNumber` varchar(100) DEFAULT NULL,
+  `f_methodReference` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_AuthorizationOrder`
 --
 
@@ -468,6 +483,21 @@ CREATE TABLE `t_AuthorizationOrder` (
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_su_me_ma_sy_se_au` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_systemFunctionsId`,`f_secMId`,`f_authorizationOrderId`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_AuthorizationOrder_authorizationMethodOrder`
+--
+
+DROP TABLE IF EXISTS `t_AuthorizationOrder_authorizationMethodOrder`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_AuthorizationOrder_authorizationMethodOrder` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_orderNumber` varchar(100) DEFAULT NULL,
+  `f_methodReference` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -819,6 +849,24 @@ CREATE TABLE `t_BrmBackup_progressReport` (
   `f_timeActionStarted` varchar(100) DEFAULT NULL,
   `f_resultInfo` varchar(255) DEFAULT NULL,
   `f_actionName` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_BrmBackup_swVersion`
+--
+
+DROP TABLE IF EXISTS `t_BrmBackup_swVersion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_BrmBackup_swVersion` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_description` varchar(100) DEFAULT NULL,
+  `f_productNumber` varchar(100) DEFAULT NULL,
+  `f_type` varchar(100) DEFAULT NULL,
+  `f_productName` varchar(100) DEFAULT NULL,
+  `f_productRevision` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2279,6 +2327,50 @@ CREATE TABLE `t_EUtranCellFDD_acBarringPresence` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_EUtranCellFDD_activePlmnList`
+--
+
+DROP TABLE IF EXISTS `t_EUtranCellFDD_activePlmnList`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_EUtranCellFDD_activePlmnList` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_EUtranCellFDD_additionalMultipleNSPmax`
+--
+
+DROP TABLE IF EXISTS `t_EUtranCellFDD_additionalMultipleNSPmax`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_EUtranCellFDD_additionalMultipleNSPmax` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_multiplePmax` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_EUtranCellFDD_additionalPlmnList`
+--
+
+DROP TABLE IF EXISTS `t_EUtranCellFDD_additionalPlmnList`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_EUtranCellFDD_additionalPlmnList` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_EUtranCellFDD_changeNotification`
 --
 
@@ -2397,6 +2489,40 @@ CREATE TABLE `t_EUtranCellFDD_mappingInfoCe` (
   `f_mappingInfoSIB7` varchar(100) DEFAULT NULL,
   `f_mappingInfoSIB4` varchar(100) DEFAULT NULL,
   `f_mappingInfoSIB5` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_EUtranCellFDD_pciConflictCell`
+--
+
+DROP TABLE IF EXISTS `t_EUtranCellFDD_pciConflictCell`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_EUtranCellFDD_pciConflictCell` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_enbId` varchar(100) DEFAULT NULL,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  `f_cellId` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_EUtranCellFDD_pciDetectingCell`
+--
+
+DROP TABLE IF EXISTS `t_EUtranCellFDD_pciDetectingCell`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_EUtranCellFDD_pciDetectingCell` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_enbId` varchar(100) DEFAULT NULL,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  `f_cellId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2721,6 +2847,27 @@ CREATE TABLE `t_EUtranFreqRelation` (
   `f_zzzTemporary3` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_su_me_ma_eN_cs_eU_hy` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_eNodeBFunctionId`,`f_csgPhysCellId`,`f_eUtranFreqRelationId`,`f_hybridCsgPhysCellId`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_EUtranFreqRelation_candNeighborRel`
+--
+
+DROP TABLE IF EXISTS `t_EUtranFreqRelation_candNeighborRel`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_EUtranFreqRelation_candNeighborRel` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_mnc` varchar(100) DEFAULT NULL,
+  `f_physicalLayerSubCellId` varchar(100) DEFAULT NULL,
+  `f_enbId` varchar(100) DEFAULT NULL,
+  `f_tac` varchar(100) DEFAULT NULL,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_physicalLayerCellIdGroup` varchar(100) DEFAULT NULL,
+  `f_cellId` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -3203,6 +3350,20 @@ CREATE TABLE `t_EventJob` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_EventJob_eventFilter`
+--
+
+DROP TABLE IF EXISTS `t_EventJob_eventFilter`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_EventJob_eventFilter` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_filterName` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_EventProducer`
 --
 
@@ -3343,6 +3504,55 @@ CREATE TABLE `t_ExternalEUtranCellFDD` (
   `f_zzzTemporaryExt5` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_su_me_ma_eN_eU_ac_ex` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_eNodeBFunctionId`,`f_eUtraNetworkId`,`f_activeServiceAreaId`,`f_externalEUtranCellFDDId`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_ExternalEUtranCellFDD_activePlmnList`
+--
+
+DROP TABLE IF EXISTS `t_ExternalEUtranCellFDD_activePlmnList`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_ExternalEUtranCellFDD_activePlmnList` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_ExternalEUtranCellFDD_pciConflictCell`
+--
+
+DROP TABLE IF EXISTS `t_ExternalEUtranCellFDD_pciConflictCell`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_ExternalEUtranCellFDD_pciConflictCell` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_enbId` varchar(100) DEFAULT NULL,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  `f_cellId` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_ExternalEUtranCellFDD_pciDetectingCell`
+--
+
+DROP TABLE IF EXISTS `t_ExternalEUtranCellFDD_pciDetectingCell`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_ExternalEUtranCellFDD_pciDetectingCell` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_enbId` varchar(100) DEFAULT NULL,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  `f_cellId` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -3955,6 +4165,22 @@ CREATE TABLE `t_HcJob` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_HcJob_failedRules`
+--
+
+DROP TABLE IF EXISTS `t_HcJob_failedRules`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_HcJob_failedRules` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_reason` varchar(255) DEFAULT NULL,
+  `f_hcRule` varchar(100) DEFAULT NULL,
+  `f_entity` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_HcJob_progressReport`
 --
 
@@ -4152,6 +4378,22 @@ CREATE TABLE `t_Ikev2PolicyProfile` (
   `f_userLabel` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_su_me_ma_ik` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_ikev2PolicyProfileId`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_Ikev2PolicyProfile_ikev2Proposal`
+--
+
+DROP TABLE IF EXISTS `t_Ikev2PolicyProfile_ikev2Proposal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_Ikev2PolicyProfile_ikev2Proposal` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_integrityAlgorithm` varchar(100) DEFAULT NULL,
+  `f_encryptionAlgorithm` varchar(100) DEFAULT NULL,
+  `f_pseudoRandomFunction` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -4384,6 +4626,20 @@ DROP TABLE IF EXISTS `t_IpsecProposalProfile_childSaLifetime`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `t_IpsecProposalProfile_childSaLifetime` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_IpsecProposalProfile_ipsecProposal`
+--
+
+DROP TABLE IF EXISTS `t_IpsecProposalProfile_ipsecProposal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_IpsecProposalProfile_ipsecProposal` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_encryptionAlgorithm` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5189,6 +5445,20 @@ CREATE TABLE `t_NetworkElementSecurity` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_NetworkElement_neProductVersion`
+--
+
+DROP TABLE IF EXISTS `t_NetworkElement_neProductVersion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_NetworkElement_neProductVersion` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_revision` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_NextHop`
 --
 
@@ -5672,6 +5942,21 @@ CREATE TABLE `t_PlmnInfo_actualPlmn` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_PlmnInfo_plmnWhiteList`
+--
+
+DROP TABLE IF EXISTS `t_PlmnInfo_plmnWhiteList`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_PlmnInfo_plmnWhiteList` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_Pm`
 --
 
@@ -5735,6 +6020,42 @@ CREATE TABLE `t_PmEventService` (
   `f_ueTraceFileSize` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_su_me_ma_pm` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_pmEventServiceId`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_PmEventService_streamStatusPmCellTrace`
+--
+
+DROP TABLE IF EXISTS `t_PmEventService_streamStatusPmCellTrace`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_PmEventService_streamStatusPmCellTrace` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_traceReference` varchar(100) DEFAULT NULL,
+  `f_ipAddress` varchar(100) DEFAULT NULL,
+  `f_scannerId` varchar(100) DEFAULT NULL,
+  `f_streamStatus` varchar(100) DEFAULT NULL,
+  `f_portNumber` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_PmEventService_streamStatusPmUeTrace`
+--
+
+DROP TABLE IF EXISTS `t_PmEventService_streamStatusPmUeTrace`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_PmEventService_streamStatusPmUeTrace` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_traceReference` varchar(100) DEFAULT NULL,
+  `f_ipAddress` varchar(100) DEFAULT NULL,
+  `f_scannerId` varchar(100) DEFAULT NULL,
+  `f_streamStatus` varchar(100) DEFAULT NULL,
+  `f_portNumber` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -8144,6 +8465,20 @@ CREATE TABLE `t_SnmpTargetV3_privKey` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_Snmp_agentAddress`
+--
+
+DROP TABLE IF EXISTS `t_Snmp_agentAddress`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_Snmp_agentAddress` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_host` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_Ssh`
 --
 
@@ -8531,6 +8866,21 @@ CREATE TABLE `t_TermPointToMme` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_TermPointToMme_servedPlmnListLTERelated`
+--
+
+DROP TABLE IF EXISTS `t_TermPointToMme_servedPlmnListLTERelated`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_TermPointToMme_servedPlmnListLTERelated` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_mncLength` varchar(100) DEFAULT NULL,
+  `f_mcc` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_TermPointToSGW`
 --
 
@@ -8611,6 +8961,44 @@ CREATE TABLE `t_Tls` (
   `f_tlsId` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_su_me_ma_sy_tl` (`f_subNetworkId`,`f_meContextId`,`f_managedElementId`,`f_systemFunctionsId`,`f_tlsId`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_Tls_enabledCiphers`
+--
+
+DROP TABLE IF EXISTS `t_Tls_enabledCiphers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_Tls_enabledCiphers` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_name` varchar(100) DEFAULT NULL,
+  `f_protocolVersion` varchar(100) DEFAULT NULL,
+  `f_export` varchar(100) DEFAULT NULL,
+  `f_keyExchange` varchar(100) DEFAULT NULL,
+  `f_mac` varchar(100) DEFAULT NULL,
+  `f_authentication` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_Tls_supportedCiphers`
+--
+
+DROP TABLE IF EXISTS `t_Tls_supportedCiphers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_Tls_supportedCiphers` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_name` varchar(100) DEFAULT NULL,
+  `f_protocolVersion` varchar(100) DEFAULT NULL,
+  `f_export` varchar(100) DEFAULT NULL,
+  `f_keyExchange` varchar(100) DEFAULT NULL,
+  `f_mac` varchar(100) DEFAULT NULL,
+  `f_authentication` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -8929,6 +9317,39 @@ CREATE TABLE `t_UpgradePackage` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `t_UpgradePackage_activationStep`
+--
+
+DROP TABLE IF EXISTS `t_UpgradePackage_activationStep`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_UpgradePackage_activationStep` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_name` varchar(100) DEFAULT NULL,
+  `f_description` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `t_UpgradePackage_administrativeData`
+--
+
+DROP TABLE IF EXISTS `t_UpgradePackage_administrativeData`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `t_UpgradePackage_administrativeData` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `f_description` varchar(100) DEFAULT NULL,
+  `f_productNumber` varchar(100) DEFAULT NULL,
+  `f_type` varchar(100) DEFAULT NULL,
+  `f_productName` varchar(100) DEFAULT NULL,
+  `f_productRevision` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=85434 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `t_UpgradePackage_password`
 --
 
@@ -9228,4 +9649,4 @@ CREATE TABLE `t_VlanPort` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-24  1:17:10
+-- Dump completed on 2019-11-24  1:33:29
