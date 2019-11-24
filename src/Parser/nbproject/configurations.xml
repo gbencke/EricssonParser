@@ -82,7 +82,7 @@
         <ccTool>
           <standard>8</standard>
           <incDir>
-            <pElem>antlr4/src</pElem>
+            <pElem>3rdparty/antlr4_runtime/runtime/Cpp/runtime/src</pElem>
             <pElem>antlr4/parser</pElem>
           </incDir>
           <commandLine>-Wall -pg</commandLine>
@@ -91,7 +91,7 @@
           <output>bin/parser</output>
           <linkerCopySharedLibs>true</linkerCopySharedLibs>
           <linkerLibItems>
-            <linkerLibFileItem>antlr4/dist/libantlr4-runtime.so</linkerLibFileItem>
+            <linkerLibFileItem>3rdparty/antlr4_runtime/runtime/Cpp/dist/libantlr4-runtime.so</linkerLibFileItem>
           </linkerLibItems>
           <commandLine>-pg</commandLine>
         </linkerTool>
@@ -99,6 +99,18 @@
       <packaging>
         <packType>Tar</packType>
         <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libantlr4-runtime.so"
+                            from="bin/libantlr4-runtime.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
           <packFileListElem type="File"
                             to="${PACKAGE_TOP_DIR}bin/libantlr4-runtime.so"
                             from="bin/libantlr4-runtime.so"

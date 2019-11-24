@@ -64,14 +64,14 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=antlr4/dist/libantlr4-runtime.so
+LDLIBSOPTIONS=3rdparty/antlr4_runtime/runtime/Cpp/dist/libantlr4-runtime.so
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk bin/parser
-	${CP} antlr4/dist/libantlr4-runtime.so bin
+	${CP} 3rdparty/antlr4_runtime/runtime/Cpp/dist/libantlr4-runtime.so bin
 
-bin/parser: antlr4/dist/libantlr4-runtime.so
+bin/parser: 3rdparty/antlr4_runtime/runtime/Cpp/dist/libantlr4-runtime.so
 
 bin/parser: ${OBJECTFILES}
 	${MKDIR} -p bin
@@ -80,67 +80,67 @@ bin/parser: ${OBJECTFILES}
 ${OBJECTDIR}/antlr4/parser/JsonBaseListener.o: antlr4/parser/JsonBaseListener.cpp
 	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonBaseListener.o antlr4/parser/JsonBaseListener.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonBaseListener.o antlr4/parser/JsonBaseListener.cpp
 
 ${OBJECTDIR}/antlr4/parser/JsonLexer.o: antlr4/parser/JsonLexer.cpp
 	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonLexer.o antlr4/parser/JsonLexer.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonLexer.o antlr4/parser/JsonLexer.cpp
 
 ${OBJECTDIR}/antlr4/parser/JsonListener.o: antlr4/parser/JsonListener.cpp
 	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonListener.o antlr4/parser/JsonListener.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonListener.o antlr4/parser/JsonListener.cpp
 
 ${OBJECTDIR}/antlr4/parser/JsonParser.o: antlr4/parser/JsonParser.cpp
 	${MKDIR} -p ${OBJECTDIR}/antlr4/parser
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonParser.o antlr4/parser/JsonParser.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/antlr4/parser/JsonParser.o antlr4/parser/JsonParser.cpp
 
 ${OBJECTDIR}/src/CParser.o: src/CParser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CParser.o src/CParser.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CParser.o src/CParser.cpp
 
 ${OBJECTDIR}/src/CRecord.o: src/CRecord.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecord.o src/CRecord.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecord.o src/CRecord.cpp
 
 ${OBJECTDIR}/src/CRecordField.o: src/CRecordField.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordField.o src/CRecordField.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordField.o src/CRecordField.cpp
 
 ${OBJECTDIR}/src/CRecordList.o: src/CRecordList.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordList.o src/CRecordList.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CRecordList.o src/CRecordList.cpp
 
 ${OBJECTDIR}/src/CTable.o: src/CTable.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTable.o src/CTable.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTable.o src/CTable.cpp
 
 ${OBJECTDIR}/src/CTableField.o: src/CTableField.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableField.o src/CTableField.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableField.o src/CTableField.cpp
 
 ${OBJECTDIR}/src/CTableList.o: src/CTableList.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableList.o src/CTableList.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CTableList.o src/CTableList.cpp
 
 ${OBJECTDIR}/src/main.o: src/main.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 ${OBJECTDIR}/src/utils.o: src/utils.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Iantlr4/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/utils.o src/utils.cpp
+	$(COMPILE.cc) -g -I3rdparty/antlr4_runtime/runtime/Cpp/runtime/src -Iantlr4/parser -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/utils.o src/utils.cpp
 
 # Subprojects
 .build-subprojects:
