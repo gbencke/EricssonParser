@@ -228,12 +228,52 @@ void CParser::GenerateDML() {
     CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
   }
 }
+void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
+                              char *ParentTable, CRecord *ParentRecord,
+                              char *StructName) {
 
-void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
-                              CRecord *ParentRecord, char *StructName) {
   CRecord *CurrentRecord = new CRecord(ParentTable);
 
   CurrentRecord->SetFieldSignature(StructName);
+  std::vector<JsonParser::PairContext *> pairs = obj->pair();
+  for (auto x : pairs) {
+    auto identifiers = x->IDENTIFIER();
+    char FieldName[strlen(RecordToParse) + 10];
+    char FieldValue[strlen(RecordToParse) + 10];
+
+    FieldName[0] = 0;
+    FieldValue[0] = 0;
+
+    if (identifiers.size() == 1) {
+      strcpy(FieldName, identifiers[0]->getSymbol()->getText().c_str());
+      if (x->value()) {
+        if (x->value()->NUMBER()) {
+          strcpy(FieldValue,
+                 x->value()->NUMBER()->getSymbol()->getText().c_str());
+        } else if (x->value()->STRING()) {
+          strcpy(FieldValue,
+                 x->value()->STRING()->getSymbol()->getText().c_str());
+        } else if (x->value()->obj()) {
+          strcpy(FieldValue, x->value()->obj()->getText().c_str());
+        } else if (x->value()->array()) {
+          strcpy(FieldValue, x->value()->array()->getText().c_str());
+        }
+      } else {
+        printf("No value in pair:%s", x->getText().c_str());
+        fflush(stdout);
+      }
+    } else {
+      strcpy(FieldName, identifiers[0]->getSymbol()->getText().c_str());
+      strcpy(FieldValue, identifiers[1]->getSymbol()->getText().c_str());
+    }
+
+    CurrentRecord->AddStructureField(new CRecordField(FieldName, FieldValue));
+  }
+  this->_RecordList->AddRecord(CurrentRecord);
+}
+
+void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
+                              CRecord *ParentRecord, char *StructName) {
 
   std::string toParse(RecordToParse);
 
@@ -250,22 +290,11 @@ void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
     if (value) {
       JsonParser::ObjContext *obj = value->obj();
       if (obj) {
-        std::vector<JsonParser::PairContext *> pairs = obj->pair();
-        for (auto x : pairs) {
-          std::cout << x->toString();
-          fflush(stdout);
-        }
+        AddStructRecord(obj, RecordToParse, ParentTable, ParentRecord,
+                        StructName);
       }
     }
-    /*
-    if (obj) {
-      std::vector<JsonParser::PairContext *> pairs = obj->pair();
-
-      for (auto x : pairs) {
-        std::cout << x->toString();
-        fflush(stdout);
-      }
-    }
-     * */
+  } else {
+    printf("Error in parsing JSON...");
   }
 }

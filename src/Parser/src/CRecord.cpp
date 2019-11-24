@@ -66,12 +66,13 @@ void CRecord::ResizeFieldTable() {
 CRecord::~CRecord() {}
 
 int CRecord::IsStruct(CRecordField *toAdd) {
-  if (toAdd->GetValue()[0] == '{') {
+  if (toAdd->GetValue()[0] == '{' || IsStructArray(toAdd)) {
     return 1;
   } else {
     return 0;
   }
 }
+
 
 int CRecord::IsStructArray(CRecordField *toAdd) {
   if (toAdd->GetValue()[0] == '[') {
@@ -79,6 +80,15 @@ int CRecord::IsStructArray(CRecordField *toAdd) {
   } else {
     return 0;
   }
+}
+
+int CRecord::AddStructureField(CRecordField *toAdd) {
+  if (this->_NumberFields > (this->_MaxFields - 10)) {
+    this->ResizeFieldTable();
+  }
+  this->_Fields[this->_NumberFields] = toAdd;
+  this->_NumberFields++;
+  return this->_NumberFields;
 }
 
 int CRecord::AddField(CRecordField *toAdd) {
@@ -103,7 +113,6 @@ void CRecord::PrintRecord() {
            this->_Fields[x]->GetValue());
   }
 }
-
 void CRecord::ParseFDNField() {
   char *currentFDNPointer = this->_Fields[0]->GetValue();
 
@@ -123,7 +132,9 @@ void CRecord::ParseFDNField() {
         *strstr(fieldName, "=") = 0;
         strcat(fieldName, "Id");
 
-        this->AddField(new CRecordField(fieldName, fieldValue));
+        this->_Fields[this->_NumberFields] =
+            new CRecordField(fieldName, fieldValue);
+        this->_NumberFields++;
         currentFDNPointer = strstr(currentFDNPointer, ",") + 1;
       } else {
         break;
@@ -144,7 +155,9 @@ void CRecord::ParseFDNField() {
     *strstr(fieldName, "=") = 0;
     strcat(fieldName, "Id");
 
-    this->AddField(new CRecordField(fieldName, fieldValue));
+    this->_Fields[this->_NumberFields] =
+        new CRecordField(fieldName, fieldValue);
+    this->_NumberFields++;
   }
 }
 
@@ -165,7 +178,9 @@ char *CRecord::GetFieldSignature() {
 
     this->_FieldSignature = new char[strlen(FieldValuePointer) + 10];
     strcpy(this->_FieldSignature, FieldValuePointer);
-    *strstr(this->_FieldSignature, "=") = 0;
+    if (strstr(this->_FieldSignature, "=")) {
+      *strstr(this->_FieldSignature, "=") = 0;
+    }
   }
 
   return this->_FieldSignature;

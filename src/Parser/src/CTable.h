@@ -51,6 +51,8 @@ private:
 
   char *_DDLCreateSQL;
 
+  int _HasParentTable;
+
   void RecreateInternalTable();
   int GetRecordNecessarySize(int fieldToUse);
   void AddIndex(char *Record);

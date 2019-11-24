@@ -24,6 +24,7 @@ public:
   virtual ~CRecord();
 
   int AddField(CRecordField *toAdd);
+  int AddStructureField(CRecordField *toAdd);
   void PrintRecord();
   char *GetFieldSignature();
   char *GetParentTable();

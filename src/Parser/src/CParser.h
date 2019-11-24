@@ -18,6 +18,9 @@
 #include "CRecordField.h"
 #include "CRecordList.h"
 #include "CTableList.h"
+#include "JsonLexer.h"
+#include "JsonParser.h"
+#include "antlr4-runtime.h"
 #include "constants.h"
 
 class CParser {
@@ -64,6 +67,10 @@ private:
   int ReadParseFile();
 
   double _lastParseTime;
+
+  void AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
+                       char *ParentTable, CRecord *ParentRecord,
+                       char *StructName);
 };
 
 #endif /* CPARSER_H */

@@ -43,11 +43,17 @@ CTable::CTable(int TableId, char *Signature, CRecord *Template,
   this->_TableName =
       new char[strlen(this->_Signature) + strlen(this->_TableNamePrefix) + 100];
 
+  this->_ShortName =
+      new char[strlen(this->_Signature) + strlen(this->_TableNamePrefix) + 100];
+
   if (ParentTable) {
     sprintf(this->_TableName, "%s%s_%s", this->_TableNamePrefix, ParentTable,
             this->_Signature);
+    sprintf(this->_ShortName, "%s%s", this->_TableNamePrefix, ParentTable);
+    this->_HasParentTable = 1;
   } else {
     sprintf(this->_TableName, "%s%s", this->_TableNamePrefix, this->_Signature);
+    this->_HasParentTable = 0;
   }
 
   if (strlen(this->_TableName) > 40) {
@@ -174,7 +180,10 @@ char *CTable::GetDDLCreateSQL() {
 
 void CTable::AddIndex(char *Record) {
   int fieldsInIndex = 0;
-  strcat(Record, "CREATE INDEX idx_");
+
+  if (this->_HasParentTable)
+    return;
+
   for (int x = 0; x < this->_NumberTableFields; x++) {
     char *TableFieldName =
         new char[strlen(this->_TableFields[x]->GetFieldName()) + 3];
@@ -184,35 +193,54 @@ void CTable::AddIndex(char *Record) {
     if (fieldsInIndex < 7 &&
         strcmp("Id", &TableFieldName[sizeTableFieldName - 2]) == 0) {
       TableFieldName[2] = 0;
-      strcat(Record, TableFieldName);
-      strcat(Record, "_");
       fieldsInIndex++;
     }
   }
 
-  Record[strlen(Record) - 1] = 0;
+  if (fieldsInIndex) {
+    fieldsInIndex = 0;
 
-  strcat(Record, " ON ");
-  strcat(Record, this->_TableName);
-  strcat(Record, " ( ");
+    strcat(Record, "CREATE INDEX idx_");
 
-  fieldsInIndex = 0;
-  for (int x = 0; x < this->_NumberTableFields; x++) {
-    char *TableFieldName =
-        new char[strlen(this->_TableFields[x]->GetFieldName()) + 3];
-    strcpy(TableFieldName, this->_TableFields[x]->GetFieldName());
-    int sizeTableFieldName = strlen(TableFieldName);
+    for (int x = 0; x < this->_NumberTableFields; x++) {
+      char *TableFieldName =
+          new char[strlen(this->_TableFields[x]->GetFieldName()) + 3];
+      strcpy(TableFieldName, this->_TableFields[x]->GetFieldName());
+      int sizeTableFieldName = strlen(TableFieldName);
 
-    if (fieldsInIndex < 7 &&
-        strcmp("Id", &TableFieldName[sizeTableFieldName - 2]) == 0) {
-      strcat(Record, this->_FieldNamePrefix);
-      strcat(Record, TableFieldName);
-      strcat(Record, ",");
-      fieldsInIndex++;
+      if (fieldsInIndex < 7 &&
+          strcmp("Id", &TableFieldName[sizeTableFieldName - 2]) == 0) {
+        TableFieldName[2] = 0;
+        strcat(Record, TableFieldName);
+        strcat(Record, "_");
+        fieldsInIndex++;
+      }
     }
+
+    Record[strlen(Record) - 1] = 0;
+
+    strcat(Record, " ON ");
+    strcat(Record, this->_TableName);
+    strcat(Record, " ( ");
+
+    fieldsInIndex = 0;
+    for (int x = 0; x < this->_NumberTableFields; x++) {
+      char *TableFieldName =
+          new char[strlen(this->_TableFields[x]->GetFieldName()) + 3];
+      strcpy(TableFieldName, this->_TableFields[x]->GetFieldName());
+      int sizeTableFieldName = strlen(TableFieldName);
+
+      if (fieldsInIndex < 7 &&
+          strcmp("Id", &TableFieldName[sizeTableFieldName - 2]) == 0) {
+        strcat(Record, this->_FieldNamePrefix);
+        strcat(Record, TableFieldName);
+        strcat(Record, ",");
+        fieldsInIndex++;
+      }
+    }
+    Record[strlen(Record) - 1] = 0;
+    strcat(Record, ");");
   }
-  Record[strlen(Record) - 1] = 0;
-  strcat(Record, ");");
 }
 
 void CTable::GenerateDML(char *outputFolder, char *fileName) {
