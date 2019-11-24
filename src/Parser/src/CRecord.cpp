@@ -87,6 +87,14 @@ int CRecord::AddStructureField(CRecordField *toAdd) {
   }
   this->_Fields[this->_NumberFields] = toAdd;
   this->_NumberFields++;
+
+  for (int x = 0; x < this->_NumberFields - 1; x++) {
+    if (strcmp(this->_Fields[x]->GetKey(), toAdd->GetKey()) == 0) {
+      this->_NumberFields--;
+      break;
+    }
+  }
+
   return this->_NumberFields;
 }
 
@@ -101,6 +109,7 @@ int CRecord::AddField(CRecordField *toAdd) {
   }
 
   if (this->IsStruct(toAdd) && !this->_ParentTable) {
+    this->_NumberFields--;
     Parser->AddStructRecord(toAdd->GetValue(), this->GetFieldSignature(), this,
                             toAdd->GetKey());
   } else {

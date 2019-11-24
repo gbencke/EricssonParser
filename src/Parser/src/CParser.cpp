@@ -239,6 +239,10 @@ void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
 
   CurrentRecord->SetFieldSignature(NewSignature);
 
+  if (CurrentRecord->GetNumberOfFields() == 0) {
+    CurrentRecord->AddField(ParentRecord->GetRecordField(0));
+  }
+
   std::vector<JsonParser::PairContext *> pairs = obj->pair();
   for (auto x : pairs) {
     auto identifiers = x->IDENTIFIER();
@@ -263,7 +267,7 @@ void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
           strcpy(FieldValue, x->value()->array()->getText().c_str());
         } else {
           strcpy(FieldValue, x->value()->getText().c_str());
-	}
+        }
       } else {
         printf("No value in pair:%s", x->getText().c_str());
         fflush(stdout);

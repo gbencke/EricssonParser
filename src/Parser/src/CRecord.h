@@ -32,6 +32,7 @@ public:
   int GetNumberOfFields();
   CRecordField *GetRecordField(int x);
   void SetFieldSignature(char *newSignature);
+  void ParseFDNField();
 
 private:
   int _NumberFields;
@@ -42,7 +43,6 @@ private:
 
   CRecordField **_Fields;
   void ResizeFieldTable();
-  void ParseFDNField();
   int IsStruct(CRecordField *toAdd);
   int IsStructArray(CRecordField *toAdd);
   void InitializeRecord();
