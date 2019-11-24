@@ -77,5 +77,9 @@ int main(int argc, char **argv) {
   printf("DDL was generated...\n");
   fflush(stdout);
 
-  // Parser->GenerateDML();
+  printf("Generating DML ...\n");
+  fflush(stdout);
+  Parser->GenerateDML();
+  printf("DML Generated...\n");
+  fflush(stdout);
 }
