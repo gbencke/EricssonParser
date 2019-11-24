@@ -73,7 +73,6 @@ int CRecord::IsStruct(CRecordField *toAdd) {
   }
 }
 
-
 int CRecord::IsStructArray(CRecordField *toAdd) {
   if (toAdd->GetValue()[0] == '[') {
     return 1;
@@ -103,6 +102,13 @@ int CRecord::AddField(CRecordField *toAdd) {
   if (this->IsStruct(toAdd) && !this->_ParentTable) {
     Parser->AddStructRecord(toAdd->GetValue(), this->GetFieldSignature(), this,
                             toAdd->GetKey());
+  } else {
+    for (int x = 0; x < this->_NumberFields - 1; x++) {
+      if (strcmp(this->_Fields[x]->GetKey(), toAdd->GetKey()) == 0) {
+        this->_NumberFields--;
+	break;
+      }
+    }
   }
   return this->_NumberFields;
 }
