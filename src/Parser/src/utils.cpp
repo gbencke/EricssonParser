@@ -3,7 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/wait.h>
+
+void waitAll() {
+  pid_t wpid;
+  int status = 0;
+
+  while ((wpid = wait(&status)) > 0)
+    ;
+}
 
 char *camelCase(char *source) {
   if (source[0] >= 'A' and source[0] <= 'Z') {

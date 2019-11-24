@@ -14,8 +14,10 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+
 char *trim(char *toTrim);
 char *clean(char *toClean);
 char *camelCase(char *source);
+void waitAll();
 
 #endif /* UTILS_H */

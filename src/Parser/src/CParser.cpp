@@ -17,7 +17,9 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <time.h>
+#include <unistd.h>
 
 #include "CParser.h"
 #include "CRecord.h"
@@ -216,6 +218,7 @@ void CParser::GenerateDDL() {
 }
 
 void CParser::GenerateDML() {
+  int NumberProcesses = 0;
   int NumberOfTables = this->_TableList->GetNumberOfTables();
   for (int x = 0; x < NumberOfTables; x++) {
     CTable *CurrentTable = this->_TableList->GetTable(x);
@@ -225,7 +228,12 @@ void CParser::GenerateDML() {
                            strlen(CurrentTable->GetTableName()) + 30];
     sprintf(DMLFileName, "%s.DML.SQL", CurrentTable->GetTableName());
 
-    CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
+    if (fork()) {
+
+    } else {
+      CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
+      exit(0);
+    }
   }
 }
 void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,

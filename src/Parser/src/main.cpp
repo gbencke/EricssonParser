@@ -18,9 +18,11 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 #include "CParser.h"
 #include "globals.h"
+#include "utils.h"
 
 CParser *Parser;
 FILE *current_log;
@@ -80,6 +82,8 @@ int main(int argc, char **argv) {
   printf("Generating DML ...\n");
   fflush(stdout);
   Parser->GenerateDML();
+
+  waitAll();
   printf("DML Generated...\n");
   fflush(stdout);
 }
