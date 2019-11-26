@@ -66,7 +66,7 @@ namespace dfa {
      * @throws IllegalStateException if this is not a precedence DFA.
      * @see #isPrecedenceDfa()
      */
-    void setPrecedenceStartState(int precedence, DFAState *startState, antlrcpp::SingleWriteMultipleReadLock &lock);
+    void setPrecedenceStartState(int precedence, DFAState *startState);
 
     /// Return a list of all states in this DFA, ordered by state number.
     virtual std::vector<DFAState *> getStates() const;

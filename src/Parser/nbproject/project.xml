@@ -13,6 +13,8 @@
                 <sourceRootElem>src</sourceRootElem>
                 <sourceRootElem>/home/gbencke/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/antlr4/lib</sourceRootElem>
                 <sourceRootElem>antlr4/parser</sourceRootElem>
+                <sourceRootElem>Antlr4Runtime</sourceRootElem>
+                <sourceRootElem>3rdparty/antlr4_runtime/runtime/Cpp/runtime/src</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

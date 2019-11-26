@@ -108,7 +108,6 @@ size_t ParserATNSimulator::adaptivePredict(TokenStream *input, size_t decision, 
     std::unique_ptr<ATNConfigSet> s0_closure = computeStartState(dynamic_cast<ATNState *>(dfa.atnStartState),
                                                                  &ParserRuleContext::EMPTY, fullCtx);
 
-    _stateLock.writeLock();
     if (dfa.isPrecedenceDfa()) {
       /* If this is a precedence DFA, we use applyPrecedenceFilter
        * to convert the computed start state to a precedence start
@@ -119,7 +118,7 @@ size_t ParserATNSimulator::adaptivePredict(TokenStream *input, size_t decision, 
       dfa.s0->configs = std::move(s0_closure); // not used for prediction but useful to know start configs anyway
       dfa::DFAState *newState = new dfa::DFAState(applyPrecedenceFilter(dfa.s0->configs.get())); /* mem-check: managed by the DFA or deleted below */
       s0 = addDFAState(dfa, newState);
-      dfa.setPrecedenceStartState(parser->getPrecedence(), s0, _edgeLock);
+      dfa.setPrecedenceStartState(parser->getPrecedence(), s0);
       if (s0 != newState) {
         delete newState; // If there was already a state with this config set we don't need the new one.
       }
@@ -135,7 +134,6 @@ size_t ParserATNSimulator::adaptivePredict(TokenStream *input, size_t decision, 
         delete newState; // If there was already a state with this config set we don't need the new one.
       }
     }
-    _stateLock.writeUnlock();
   }
 
   // We can start with an existing DFA.
@@ -260,10 +258,8 @@ size_t ParserATNSimulator::execATN(dfa::DFA &dfa, dfa::DFAState *s0, TokenStream
 
 dfa::DFAState *ParserATNSimulator::getExistingTargetState(dfa::DFAState *previousD, size_t t) {
   dfa::DFAState* retval;
-  _edgeLock.readLock();
   auto iterator = previousD->edges.find(t);
   retval = (iterator == previousD->edges.end()) ? nullptr : iterator->second;
-  _edgeLock.readUnlock();
   return retval;
 }
 
@@ -1254,17 +1250,13 @@ dfa::DFAState *ParserATNSimulator::addDFAEdge(dfa::DFA &dfa, dfa::DFAState *from
     return nullptr;
   }
 
-  _stateLock.writeLock();
   to = addDFAState(dfa, to); // used existing if possible not incoming
-  _stateLock.writeUnlock();
   if (from == nullptr || t > (int)atn.maxTokenType) {
     return to;
   }
 
   {
-    _edgeLock.writeLock();
     from->edges[t] = to; // connect
-    _edgeLock.writeUnlock();
   }
 
 #if DEBUG_DFA == 1
