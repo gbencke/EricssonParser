@@ -241,6 +241,7 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
   }
 
   for (int x = 0; x < this->_NumberRecords; x++) {
+    CRecord *currentRecord = this->_Records[x];
     char *RecordSQL = new char[RecordSize];
     RecordSQL[0] = 0;
     sprintf(RecordSQL, "INSERT INTO %s (", this->GetTableName());
@@ -253,20 +254,30 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
     }
     RecordSQL[strlen(RecordSQL) - 1] = 0;
     strcat(RecordSQL, ") VALUES (");
+
+
     for (int y = 1; y < this->_NumberTableFields; y++) {
-      CRecord *currentRecord = this->_Records[x];
-      CRecordField *currentField = currentRecord->GetRecordField(y);
+      CTableField *currentTableField = this->_TableFields[y];
+      CRecordField *currentField = currentRecord->GetRecordFieldByName(currentTableField->GetFieldName());
+
       if (!currentField) {
-        strcat(RecordSQL, "\'");
         strcat(RecordSQL, "");
-        strcat(RecordSQL, "\',");
+        strcat(RecordSQL, "NULL");
+        strcat(RecordSQL, ",");
         continue;
       }
+
       char *currentFieldValue = currentField->GetValue();
 
-      strcat(RecordSQL, "\'");
-      strcat(RecordSQL, currentFieldValue);
-      strcat(RecordSQL, "\',");
+      if(strcmp("<empty>", currentFieldValue) == 0){
+        strcat(RecordSQL, "");
+        strcat(RecordSQL, "NULL");
+        strcat(RecordSQL, ",");
+      }else{
+        strcat(RecordSQL, "\'");
+        strcat(RecordSQL, currentFieldValue);
+        strcat(RecordSQL, "\',");
+      }
 
       if ((int)strlen(RecordSQL) > (RecordSize - 1000)) {
         char *newRecord;
@@ -278,6 +289,7 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
         RecordSQL = newRecord;
       }
     }
+
     RecordSQL[strlen(RecordSQL) - 1] = 0;
     strcat(RecordSQL, ");\n");
 
