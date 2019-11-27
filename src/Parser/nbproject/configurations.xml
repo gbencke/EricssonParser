@@ -405,22 +405,19 @@
       <compileType>
         <cTool>
           <standard>10</standard>
-          <commandLine>-Wall -pg</commandLine>
+          <commandLine>-Wall -g</commandLine>
         </cTool>
         <ccTool>
-          <developmentMode>6</developmentMode>
-          <stripSymbols>true</stripSymbols>
           <standard>8</standard>
           <incDir>
             <pElem>3rdparty/antlr4_runtime/runtime/Cpp/runtime/src</pElem>
             <pElem>antlr4/parser</pElem>
           </incDir>
-          <commandLine>-Wall -O3</commandLine>
+          <commandLine>-Wall -g</commandLine>
         </ccTool>
         <linkerTool>
           <output>bin/parser</output>
           <linkerCopySharedLibs>true</linkerCopySharedLibs>
-          <commandLine>-static</commandLine>
         </linkerTool>
       </compileType>
       <packaging>
@@ -441,6 +438,18 @@
           <packFileListElem type="File"
                             to="${PACKAGE_TOP_DIR}bin/libantlr4-runtime.so"
                             from="bin/libantlr4-runtime.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
                             perm="755"
                             owner="root"
                             group="bin"/>
