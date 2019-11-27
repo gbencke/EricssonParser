@@ -82,7 +82,7 @@ int CRecord::IsStructArray(CRecordField *toAdd) {
 }
 
 int CRecord::AddStructureField(CRecordField *toAdd) {
-  if (this->_NumberFields > (this->_MaxFields - 10)) {
+  if (this->_NumberFields > (this->_MaxFields - 4)) {
     this->ResizeFieldTable();
   }
   this->_Fields[this->_NumberFields] = toAdd;
@@ -203,4 +203,18 @@ char *CRecord::GetFieldSignature() {
 
 int CRecord::GetNumberOfFields() { return this->_NumberFields; }
 
-CRecordField *CRecord::GetRecordField(int x) { return this->_Fields[x]; }
+CRecordField *CRecord::GetRecordField(int x) { 
+    if(x >= this->_NumberFields){
+	return NULL;
+    }
+    return this->_Fields[x]; 
+}
+
+CRecordField *CRecord::GetRecordFieldByName(char *FieldName) { 
+    for(int x=0;x<this->_NumberFields;x++){
+	if(strcmp(FieldName, this->_Fields[x]->GetKey()) == 0 ){
+	    return this->_Fields[x]; 
+	}
+    }
+    return NULL;
+}

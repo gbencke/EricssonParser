@@ -17,8 +17,8 @@
 #define PARSER_SUCCESS 0
 #define PARSER_ERROR 1
 
-#define MAX_FIELDS 0xF
-#define MAX_RECORDS 0xF
+#define MAX_FIELDS 0x2F
+#define MAX_RECORDS 0xFF
 #define MAX_TABLES 0xFFFF
 #define MAX_TABLE_FIELDS 0xFFF
 #define MAX_RECORDS_PER_TABLE 0xFF;

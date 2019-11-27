@@ -31,6 +31,7 @@ public:
 
   int GetNumberOfFields();
   CRecordField *GetRecordField(int x);
+  CRecordField *GetRecordFieldByName(char *Name);
   void SetFieldSignature(char *newSignature);
   void ParseFDNField();
 

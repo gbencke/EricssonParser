@@ -115,11 +115,11 @@ void CTable::AddRecord(CRecord *toAdd) {
   this->_NumberRecords++;
 }
 
-int CTable::GetRecordNecessarySize(int fieldToUse) {
+int CTable::GetRecordNecessarySize(char * fieldToUse) {
   int MaxSize = 0;
 
   for (int x = 0; x < this->_NumberRecords; x++) {
-    CRecordField *currentField = this->_Records[x]->GetRecordField(fieldToUse);
+    CRecordField *currentField = this->_Records[x]->GetRecordFieldByName(fieldToUse);
     if (!currentField) {
       continue;
     }
@@ -137,7 +137,7 @@ char *CTable::GetDDLCreateSQL() {
     _DDLCreateSQL = new char[200 * (this->_NumberTableFields + 1)];
     _DDLCreateSQL[0] = 0;
 
-    sprintf(_DDLCreateSQL, "DROP TABLE IF EXISTS %s;\n\nCREATE TABLE %s (",
+    sprintf(_DDLCreateSQL, "\n\nDROP TABLE IF EXISTS %s;\n\nCREATE TABLE %s (",
             this->_TableName, this->_TableName);
     strcat(_DDLCreateSQL,
            "\n  `id` bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,");
@@ -145,20 +145,11 @@ char *CTable::GetDDLCreateSQL() {
       char tmpField[1000];
       char tmpFieldType[100];
 
-      int RecordSize = this->GetRecordNecessarySize(x);
-      if (RecordSize < 100) {
-        RecordSize = 100;
-      } else if (RecordSize > 100 && RecordSize < 255) {
-        RecordSize = 255;
-      } else if (RecordSize > 255) {
-        RecordSize = 0;
+      int RecordSize = this->GetRecordNecessarySize(this->_TableFields[x]->GetFieldName());
+      if(RecordSize == 0){
+	  RecordSize = 100;
       }
-      if (RecordSize) {
-        sprintf(tmpFieldType, " varchar(%d) DEFAULT NULL ", RecordSize);
-      } else {
-        strcpy(tmpFieldType, " text DEFAULT NULL ");
-      }
-
+      sprintf(tmpFieldType, " varchar(%d) DEFAULT NULL ", RecordSize + 10);
       sprintf(tmpField, "\n    %s%s %s,", this->_FieldNamePrefix,
               camelCase(this->_TableFields[x]->GetFieldName()), tmpFieldType);
 
@@ -195,7 +186,7 @@ void CTable::AddIndex(char *Record) {
   if (fieldsInIndex) {
     fieldsInIndex = 0;
 
-    strcat(Record, "CREATE INDEX idx_");
+    strcat(Record, "\nCREATE INDEX idx_");
 
     for (int x = 0; x < this->_NumberTableFields; x++) {
       char *TableFieldName =
