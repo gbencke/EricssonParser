@@ -20,12 +20,16 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#include "constants.h"
+
 CRecordField::CRecordField(const char *Key, const char *Value) {
   _Key = new char[strlen(Key) + 2];
   strcpy(_Key, Key);
 
   _Value = new char[strlen(Value) + 2];
   strcpy(_Value, Value);
+
+
 }
 
 CRecordField::~CRecordField() {}

@@ -146,9 +146,15 @@ char *CTable::GetDDLCreateSQL() {
       char tmpFieldType[100];
 
       int RecordSize = this->GetRecordNecessarySize(this->_TableFields[x]->GetFieldName());
+
       if(RecordSize == 0){
-	  RecordSize = 100;
+         RecordSize = 100;
       }
+
+      if(RecordSize>MAX_VALUE_SIZE){
+	  RecordSize = MAX_VALUE_SIZE;
+      }
+
       sprintf(tmpFieldType, " varchar(%d) DEFAULT NULL ", RecordSize + 10);
       sprintf(tmpField, "\n    %s%s %s,", this->_FieldNamePrefix,
               camelCase(this->_TableFields[x]->GetFieldName()), tmpFieldType);
@@ -274,6 +280,11 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
         strcat(RecordSQL, "NULL");
         strcat(RecordSQL, ",");
       }else{
+
+        if(strlen(currentFieldValue) > MAX_VALUE_SIZE){
+           currentFieldValue[MAX_VALUE_SIZE] = 0;
+        }
+
         strcat(RecordSQL, "\'");
         strcat(RecordSQL, currentFieldValue);
         strcat(RecordSQL, "\',");

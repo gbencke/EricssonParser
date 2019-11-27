@@ -23,4 +23,6 @@
 #define MAX_TABLE_FIELDS 0xFFF
 #define MAX_RECORDS_PER_TABLE 0xFF;
 
+#define MAX_VALUE_SIZE 16000
+
 #endif /* CONSTANTS_H */
