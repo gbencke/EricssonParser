@@ -20,6 +20,7 @@
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
+#include <algorithm>
 
 #include "CParser.h"
 #include "CRecord.h"
@@ -290,10 +291,27 @@ void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
   this->_RecordList->AddRecord(CurrentRecord);
 }
 
+void findAndReplaceAll(std::string & data, std::string toSearch, std::string replaceStr)
+{
+        // Get the first occurrence
+        size_t pos = data.find(toSearch);
+ 
+        // Repeat till end is reached
+        while( pos != std::string::npos)
+        {
+                // Replace this occurrence of Sub String
+                data.replace(pos, toSearch.size(), replaceStr);
+                // Get the next occurrence from the current position
+                pos =data.find(toSearch, pos + replaceStr.size());
+        }
+}
+
 void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
                               CRecord *ParentRecord, char *StructName) {
 
   std::string toParse(RecordToParse);
+
+  findAndReplaceAll(toParse,"\\\'","  ");
 
   antlr4::ANTLRInputStream input(toParse);
   JsonLexer lexer(&input);
