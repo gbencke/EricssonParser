@@ -13,5 +13,4 @@ export PARSER_OUTPUT_FOLDER=./output
 
 rm -f $PARSER_OUTPUT_FOLDER/*
 
-#valgrind --tool=massif ./bin/parser
-./bin/parser
+valgrind ./bin/parser
