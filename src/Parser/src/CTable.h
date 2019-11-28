@@ -54,7 +54,7 @@ private:
   int _HasParentTable;
 
   void RecreateInternalTable();
-  int GetRecordNecessarySize(char* fieldToUse);
+  int GetRecordNecessarySize(char *fieldToUse);
   void AddIndex(char *Record);
 };
 

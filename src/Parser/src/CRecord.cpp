@@ -99,12 +99,16 @@ int CRecord::AddStructureField(CRecordField *toAdd) {
 }
 
 int CRecord::AddField(CRecordField *toAdd) {
+  int IsFDN = 0;
+  if (strcmp("FDN", toAdd->GetKey()) == 0) {
+    IsFDN = 1;
+  }
   if (this->_NumberFields > (this->_MaxFields - 10)) {
     this->ResizeFieldTable();
   }
   this->_Fields[this->_NumberFields] = toAdd;
   this->_NumberFields++;
-  if (this->_NumberFields == 1) {
+  if (IsFDN) {
     ParseFDNField();
   }
 
@@ -112,10 +116,12 @@ int CRecord::AddField(CRecordField *toAdd) {
     Parser->AddStructRecord(toAdd->GetValue(), this->GetFieldSignature(), this,
                             toAdd->GetKey());
   } else {
-    for (int x = 0; x < this->_NumberFields - 1; x++) {
-      if (strcmp(this->_Fields[x]->GetKey(), toAdd->GetKey()) == 0) {
-        this->_NumberFields--;
-        break;
+    if (!IsFDN) {
+      for (int x = 0; x < this->_NumberFields - 1; x++) {
+        if (strcmp(this->_Fields[x]->GetKey(), toAdd->GetKey()) == 0) {
+          this->_NumberFields--;
+          break;
+        }
       }
     }
   }
@@ -203,18 +209,18 @@ char *CRecord::GetFieldSignature() {
 
 int CRecord::GetNumberOfFields() { return this->_NumberFields; }
 
-CRecordField *CRecord::GetRecordField(int x) { 
-    if(x >= this->_NumberFields){
-	return NULL;
-    }
-    return this->_Fields[x]; 
+CRecordField *CRecord::GetRecordField(int x) {
+  if (x >= this->_NumberFields) {
+    return NULL;
+  }
+  return this->_Fields[x];
 }
 
-CRecordField *CRecord::GetRecordFieldByName(char *FieldName) { 
-    for(int x=0;x<this->_NumberFields;x++){
-	if(strcmp(FieldName, this->_Fields[x]->GetKey()) == 0 ){
-	    return this->_Fields[x]; 
-	}
+CRecordField *CRecord::GetRecordFieldByName(char *FieldName) {
+  for (int x = 0; x < this->_NumberFields; x++) {
+    if (strcasecmp(FieldName, this->_Fields[x]->GetKey()) == 0) {
+      return this->_Fields[x];
     }
-    return NULL;
+  }
+  return NULL;
 }

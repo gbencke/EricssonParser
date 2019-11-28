@@ -218,7 +218,7 @@ void CParser::GenerateDDL() {
   fclose(output);
 }
 
-int AllowFork = 0;
+int AllowFork = 1;
 
 void CParser::GenerateDML() {
   int NumberProcesses = 0;

@@ -28,8 +28,6 @@ CRecordField::CRecordField(const char *Key, const char *Value) {
 
   _Value = new char[strlen(Value) + 2];
   strcpy(_Value, Value);
-
-
 }
 
 CRecordField::~CRecordField() {}

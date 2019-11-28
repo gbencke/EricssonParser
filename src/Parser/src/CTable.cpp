@@ -115,11 +115,12 @@ void CTable::AddRecord(CRecord *toAdd) {
   this->_NumberRecords++;
 }
 
-int CTable::GetRecordNecessarySize(char * fieldToUse) {
+int CTable::GetRecordNecessarySize(char *fieldToUse) {
   int MaxSize = 0;
 
   for (int x = 0; x < this->_NumberRecords; x++) {
-    CRecordField *currentField = this->_Records[x]->GetRecordFieldByName(fieldToUse);
+    CRecordField *currentField =
+        this->_Records[x]->GetRecordFieldByName(fieldToUse);
     if (!currentField) {
       continue;
     }
@@ -145,14 +146,15 @@ char *CTable::GetDDLCreateSQL() {
       char tmpField[1000];
       char tmpFieldType[100];
 
-      int RecordSize = this->GetRecordNecessarySize(this->_TableFields[x]->GetFieldName());
+      int RecordSize =
+          this->GetRecordNecessarySize(this->_TableFields[x]->GetFieldName());
 
-      if(RecordSize == 0){
-         RecordSize = 100;
+      if (RecordSize == 0) {
+        RecordSize = 100;
       }
 
-      if(RecordSize>MAX_VALUE_SIZE){
-	  RecordSize = MAX_VALUE_SIZE;
+      if (RecordSize > MAX_VALUE_SIZE) {
+        RecordSize = MAX_VALUE_SIZE;
       }
 
       sprintf(tmpFieldType, " varchar(%d) DEFAULT NULL ", RecordSize + 10);
@@ -261,10 +263,10 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
     RecordSQL[strlen(RecordSQL) - 1] = 0;
     strcat(RecordSQL, ") VALUES (");
 
-
     for (int y = 1; y < this->_NumberTableFields; y++) {
       CTableField *currentTableField = this->_TableFields[y];
-      CRecordField *currentField = currentRecord->GetRecordFieldByName(currentTableField->GetFieldName());
+      CRecordField *currentField = currentRecord->GetRecordFieldByName(
+          currentTableField->GetFieldName());
 
       if (!currentField) {
         strcat(RecordSQL, "");
@@ -275,14 +277,14 @@ void CTable::GenerateDML(char *outputFolder, char *fileName) {
 
       char *currentFieldValue = currentField->GetValue();
 
-      if(strcmp("<empty>", currentFieldValue) == 0){
+      if (strcmp("<empty>", currentFieldValue) == 0) {
         strcat(RecordSQL, "");
         strcat(RecordSQL, "NULL");
         strcat(RecordSQL, ",");
-      }else{
+      } else {
 
-        if(strlen(currentFieldValue) > MAX_VALUE_SIZE){
-           currentFieldValue[MAX_VALUE_SIZE] = 0;
+        if (strlen(currentFieldValue) > MAX_VALUE_SIZE) {
+          currentFieldValue[MAX_VALUE_SIZE] = 0;
         }
 
         strcat(RecordSQL, "\'");
