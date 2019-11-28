@@ -2,6 +2,7 @@ data.analisys/
 src/Parser/build/
 src/Parser/data/
 src/Parser/output/
+src/Parser/output.edff.original.txt/
 src/Parser/dist
 src/Parser/rapidjson
 src/Parser/bin/parser

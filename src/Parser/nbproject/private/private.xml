@@ -9,6 +9,7 @@
         <group>
             <file>file:/mnt/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/3rdparty/antlr4_runtime/runtime/Cpp/runtime/src/ANTLRErrorListener.cpp</file>
             <file>file:/mnt/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/src/CRecord.cpp</file>
+            <file>file:/mnt/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/src/CRecordField.cpp</file>
             <file>file:/mnt/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/src/constants.h</file>
             <file>file:/mnt/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/src/main.cpp</file>
             <file>file:/mnt/git/188.Parse.text.file.to.mysql.db.in.parallel.using.multiple.cores/src/Parser/src/CParser.cpp</file>
