@@ -10,6 +10,7 @@
  *
  * Created on November 9, 2019, 3:08 PM
  */
+#include <algorithm>
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +21,6 @@
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
-#include <algorithm>
 
 #include "CParser.h"
 #include "CRecord.h"
@@ -71,12 +71,12 @@ int CParser::MMapFile() {
 
   if (this->_DataFileFd == -1) {
     printf("Error opening the file...");
-    return PARSER_ERROR;
+    exit(-1);
   }
 
   if (fstat(this->_DataFileFd, &sb) == -1) {
     printf("Error running fstat");
-    return PARSER_ERROR;
+    exit(-1);
   }
 
   this->_DataFileSize = sb.st_size;
@@ -85,7 +85,7 @@ int CParser::MMapFile() {
                              this->_DataFileFd, 0);
   if (this->_addr == MAP_FAILED) {
     printf("Error in mapping");
-    return PARSER_ERROR;
+    exit(-1);
   }
 
   return (PARSER_SUCCESS);
@@ -218,6 +218,8 @@ void CParser::GenerateDDL() {
   fclose(output);
 }
 
+int AllowFork = 0;
+
 void CParser::GenerateDML() {
   int NumberProcesses = 0;
   int NumberOfTables = this->_TableList->GetNumberOfTables();
@@ -229,11 +231,15 @@ void CParser::GenerateDML() {
                            strlen(CurrentTable->GetTableName()) + 30];
     sprintf(DMLFileName, "%s.DML.SQL", CurrentTable->GetTableName());
 
-    if (fork()) {
+    if (AllowFork) {
+      if (fork()) {
 
+      } else {
+        CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
+        exit(0);
+      }
     } else {
       CurrentTable->GenerateDML(this->_OutputFolder, DMLFileName);
-      exit(0);
     }
   }
 }
@@ -291,19 +297,18 @@ void CParser::AddStructRecord(JsonParser::ObjContext *obj, char *RecordToParse,
   this->_RecordList->AddRecord(CurrentRecord);
 }
 
-void findAndReplaceAll(std::string & data, std::string toSearch, std::string replaceStr)
-{
-        // Get the first occurrence
-        size_t pos = data.find(toSearch);
- 
-        // Repeat till end is reached
-        while( pos != std::string::npos)
-        {
-                // Replace this occurrence of Sub String
-                data.replace(pos, toSearch.size(), replaceStr);
-                // Get the next occurrence from the current position
-                pos =data.find(toSearch, pos + replaceStr.size());
-        }
+void findAndReplaceAll(std::string &data, std::string toSearch,
+                       std::string replaceStr) {
+  // Get the first occurrence
+  size_t pos = data.find(toSearch);
+
+  // Repeat till end is reached
+  while (pos != std::string::npos) {
+    // Replace this occurrence of Sub String
+    data.replace(pos, toSearch.size(), replaceStr);
+    // Get the next occurrence from the current position
+    pos = data.find(toSearch, pos + replaceStr.size());
+  }
 }
 
 void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
@@ -311,7 +316,7 @@ void CParser::AddStructRecord(char *RecordToParse, char *ParentTable,
 
   std::string toParse(RecordToParse);
 
-  findAndReplaceAll(toParse,"\\\'","  ");
+  findAndReplaceAll(toParse, "\\\'", "  ");
 
   antlr4::ANTLRInputStream input(toParse);
   JsonLexer lexer(&input);
