@@ -103,6 +103,15 @@ int CRecord::AddField(CRecordField *toAdd) {
   if (strcmp("FDN", toAdd->GetKey()) == 0) {
     IsFDN = 1;
   }
+
+    if (!IsFDN) {
+      for (int x = 0; x < this->_NumberFields; x++) {
+        if (strcasecmp(this->_Fields[x]->GetKey(), toAdd->GetKey()) == 0) {
+          return this->_NumberFields;
+        }
+      }
+    }
+
   if (this->_NumberFields > (this->_MaxFields - 10)) {
     this->ResizeFieldTable();
   }
@@ -115,15 +124,6 @@ int CRecord::AddField(CRecordField *toAdd) {
   if (this->IsStruct(toAdd) && !this->_ParentTable) {
     Parser->AddStructRecord(toAdd->GetValue(), this->GetFieldSignature(), this,
                             toAdd->GetKey());
-  } else {
-    if (!IsFDN) {
-      for (int x = 0; x < this->_NumberFields - 1; x++) {
-        if (strcmp(this->_Fields[x]->GetKey(), toAdd->GetKey()) == 0) {
-          this->_NumberFields--;
-          break;
-        }
-      }
-    }
   }
   return this->_NumberFields;
 }
